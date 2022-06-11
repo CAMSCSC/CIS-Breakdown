@@ -16,7 +16,7 @@ To see the rest of the pages, click [here][toc].
 
 [CIS Benchmarks]: https://downloads.cisecurity.org/#/
 [Cyberpatriot]: https://www.uscyberpatriot.org/home
-[toc]: https://brokenfloppydisk.github.io/CIS-Checklist-Breakdown/genindex.html
+[toc]: https://brokenfloppydisk.github.io/CIS-Checklist-Breakdown/about/about.html
  
 ## Contributing
 
