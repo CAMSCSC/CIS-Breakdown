@@ -33,9 +33,10 @@ goto end
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 
 :github
-copy .\source\README.md .\
+type .\source\about\about.md >> README.md
+(echo: & echo|set /p="#") >> README.md
+type .\source\about\contributing.md >> README.md
 make html
-
 
 :end
 popd
