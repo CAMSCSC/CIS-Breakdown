@@ -8,7 +8,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 set SOURCEDIR=source
-set BUILDDIR=docs
+set BUILDDIR=build
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
@@ -36,7 +36,12 @@ goto end
 type .\source\about\about.md >> README.md
 (echo: & echo|set /p="#") >> README.md
 type .\source\about\contributing.md >> README.md
-make html
+.\make.bat html
 
 :end
+echo Copying files to documentation output directory...
+robocopy .\build\html\ .\docs\ /NFL /NDL /NP /NS /NC /NJS /NJH
+echo Creating .nojekyll...
+echo: > .\docs\.nojekyll
+echo Build complete.
 popd
