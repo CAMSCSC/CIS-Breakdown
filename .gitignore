@@ -1,0 +1,5 @@
+# Ignore VSCode Config
+*.vscode
+
+# Ignore Sphinx build output (pages output is found in /docs instead)
+/build
