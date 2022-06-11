@@ -33,7 +33,7 @@ goto end
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 
 :github
-type .\source\about\about.md >> README.md
+type .\source\about\about.md > README.md
 (echo: & echo|set /p="#") >> README.md
 type .\source\about\contributing.md >> README.md
 .\make.bat html
