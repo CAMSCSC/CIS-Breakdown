@@ -33,8 +33,9 @@ goto end
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 
 :github
+copy .\source\README.md .\
 make html
-robocopy ./build/html/ ./docs
+
 
 :end
 popd
