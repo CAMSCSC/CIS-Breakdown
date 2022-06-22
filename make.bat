@@ -40,7 +40,7 @@ type .\source\about\contributing.md >> README.md
 
 :end
 echo Copying files to documentation output directory...
-robocopy .\build\html\ .\docs\ /NFL /NDL /NP /NS /NC /NJS /NJH
+robocopy .\build\html\ .\docs\ /NFL /NDL /NP /NS /NC /NJS /NJH /E /S
 echo Creating .nojekyll...
 echo: > .\docs\.nojekyll
 echo Build complete.
