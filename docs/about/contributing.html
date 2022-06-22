@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Ubuntu 18 CIS Benchmark" href="../systems/ubuntu.html" /><link rel="prev" title="CIS Benchmark Breakdown" href="about.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Debian 10 CIS Benchmark" href="../systems/debian.html" /><link rel="prev" title="CIS Benchmark Breakdown" href="about.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
         <title>Contributing - CIS Benchmark Breakdown</title>
@@ -161,10 +161,14 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Systems:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu.html">Ubuntu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systems/debian.html">Debian</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systems/windows.html">Windows 10</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systems/server.html">Windows Server</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu/1-filesystem_config.html">Filesystem Configuration</a></li>
 </ul>
 
 </div>
@@ -208,11 +212,11 @@
 would like to help summarize. (See our examples for more info.)</p>
 <p>Then, install the required python dependencies.</p>
 <p>Windows:</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="p">-</span><span class="n">3</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">myst_parser</span>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="p">-</span><span class="n">3</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-upgrade</span> <span class="n">sphinx</span> <span class="n">myst_parser</span> <span class="n">pygments</span>
 </pre></div>
 </div>
 <p>Mac/Linux:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install sphinx myst_parser
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install --upgrade sphinx myst_parser pygments
 </pre></div>
 </div>
 <p>Then, clone the git repository and add your contributions to <code class="docutils literal notranslate"><span class="pre">/source</span></code>. Add
@@ -235,12 +239,12 @@ greatly appreciated.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../systems/ubuntu.html">
+          <a class="next-page" href="../systems/debian.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Ubuntu 18 CIS Benchmark</div>
+                <div class="title">Debian 10 CIS Benchmark</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>

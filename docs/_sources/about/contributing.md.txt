@@ -12,13 +12,13 @@ Then, install the required python dependencies.
 Windows:
 
 ```powershell
-py -3 -m pip install sphinx myst_parser
+py -3 -m pip install --upgrade sphinx myst_parser pygments
 ```
 
 Mac/Linux:
 
 ```bash
-python3 -m pip install sphinx myst_parser
+python3 -m pip install --upgrade sphinx myst_parser pygments
 ```
 
 Then, clone the git repository and add your contributions to `/source`. Add

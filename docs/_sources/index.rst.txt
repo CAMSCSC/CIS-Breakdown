@@ -17,10 +17,16 @@ Welcome to CIS-Breakdown's documentation!
    :maxdepth: 3
    :caption: Systems:
 
-   Ubuntu <./systems/ubuntu.md>
    Debian <./systems/debian.md>
    Windows 10 <./systems/windows.md>
    Windows Server <./systems/server.md>
+
+.. toctree:: 
+   :maxdepth: 3
+   :caption: Ubuntu:
+
+   Home <./systems/ubuntu.md>
+   Filesystem Configuration <./systems/ubuntu/1-filesystem_config.md>
 
 Indices and tables
 ==================
