@@ -22,7 +22,8 @@ github:
 	@echo "\n#" -n >> README.md
 	@cat ./source/about/contributing.md >> README.md
 	@echo Copying files to docs directory
-	@cp -r ./build/html/ ./docs/
+	@rm -rf ./docs
+	@cp -r ./build/html ./docs
 	@echo Creating .nojekyll
 	@echo "" > ./docs/.nojekyll
 
