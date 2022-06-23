@@ -17,7 +17,6 @@ To see the rest of the pages, click [here][toc].
 [CIS Benchmarks]: https://downloads.cisecurity.org/#/
 [Cyberpatriot]: https://www.uscyberpatriot.org/home
 [toc]: https://camscsc.github.io/CIS-Checklist-Breakdown/
-\n# -n
 # Contributing
 
 ```{important}
