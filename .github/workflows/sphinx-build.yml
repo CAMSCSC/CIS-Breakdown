@@ -31,7 +31,6 @@ jobs:
     - name: Create README.md
       run: |
         cat ./source/about/about.md > README.md
-        echo "\n#" -n >> README.md
         cat ./source/about/contributing.md >> README.md
     - name: Create .nojekyll
       run: |
