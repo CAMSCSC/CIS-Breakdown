@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade -r requirements.txt
     - name: Build Sphinx for Github Pages
       run: |
-        python -m sphinx source build html
+        python -m sphinx source build
     - name: Move build to docs directory
       run: |
         rm -rf ./docs
