@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Debian 10 CIS Benchmark" href="../systems/debian.html" /><link rel="prev" title="CIS Benchmark Breakdown" href="about.html" />
 
     <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
@@ -221,7 +221,8 @@ would like to help summarize. (See our examples for more info.)</p>
 </div>
 <p>Then, clone the git repository and add your contributions to <code class="docutils literal notranslate"><span class="pre">/source</span></code>. Add
 your contributions to <code class="docutils literal notranslate"><span class="pre">/source/index.rst</span></code> to make sure they appear on the
-website and then build the webpage.</p>
+website.</p>
+<p>To build your changes (not necessary), do:</p>
 <p>Windows:</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">./</span><span class="n">make</span><span class="p">.</span><span class="n">bat</span> <span class="n">github</span>
 </pre></div>
@@ -230,8 +231,9 @@ website and then build the webpage.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make github
 </pre></div>
 </div>
-<p>Then open a pull request to publish your changes! Any help on this project is
-greatly appreciated.</p>
+<p>Then open a pull request to publish your changes! Do not commit the /docs
+folder, as github actions is set to automatically build sphinx. Any help
+on this project is greatly appreciated!</p>
 </section>
 
         </article>

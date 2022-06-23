@@ -23,7 +23,9 @@ python3 -m pip install --upgrade sphinx myst_parser pygments
 
 Then, clone the git repository and add your contributions to `/source`. Add
 your contributions to `/source/index.rst` to make sure they appear on the
-website and then build the webpage.
+website. 
+
+To build your changes (not necessary), do:
 
 Windows:
 
@@ -37,7 +39,8 @@ Mac/Linux:
 make github
 ```
 
-Then open a pull request to publish your changes! Any help on this project is
-greatly appreciated.
+Then open a pull request to publish your changes! Do not commit the /docs 
+folder, as github actions is set to automatically build sphinx. Any help 
+on this project is greatly appreciated!
 
 [CIS Benchmarks]: https://downloads.cisecurity.org/#/
