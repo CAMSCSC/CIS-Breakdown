@@ -37,8 +37,8 @@ jobs:
         touch ./docs/.nojekyll
     - name: Commit and push changes
       run: |
-        git config --global user.name "brokenfloppydisk"
-        git config --global user.email "brokenflopydisk@users.noreply.github.com"
+        git config --global user.name "CAMSCSC
+        git config --global user.email "CAMSCSC@users.noreply.github.com"
         git add ./.
         git commit -m "Build latest version"
         git push
