@@ -30,9 +30,16 @@ jobs:
         python -m sphinx source docs
     - name: Create README.md
       run: |
-        cat ./source/about/about.md >> README.md
+        cat ./source/about/about.md > README.md
         echo "\n#" -n >> README.md
         cat ./source/about/contributing.md >> README.md
     - name: Create .nojekyll
       run: |
-        touch ./docs/.nojekyll    
+        touch ./docs/.nojekyll
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "brokenfloppydisk"
+        git config --global user.email "brokenflopydisk@users.noreply.github.com"
+        git add ./.
+        git commit -m "Build latest version"
+        git push
