@@ -26,7 +26,8 @@ Welcome to CIS-Breakdown's documentation!
    :caption: Ubuntu:
    
    Overview <./systems/ubuntu/overview.md>
-   Filesystem Configuration <./systems/ubuntu/1-filesystem_config.md>
+   Filesystem Configuration <./systems/ubuntu/1.1.md>
+   APT Configuration <./systems/ubuntu/1.2.md>
 
 Indices and tables
 ==================
