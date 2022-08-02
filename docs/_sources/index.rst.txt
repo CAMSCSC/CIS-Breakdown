@@ -24,8 +24,8 @@ Welcome to CIS-Breakdown's documentation!
 .. toctree:: 
    :maxdepth: 3
    :caption: Ubuntu:
-
-   Home <./systems/ubuntu.md>
+   
+   Overview <./systems/ubuntu/overview.md>
    Filesystem Configuration <./systems/ubuntu/1-filesystem_config.md>
 
 Indices and tables
