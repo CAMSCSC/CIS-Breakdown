@@ -16,10 +16,13 @@
 - 1.2.1 - Configure package manager repositories
 - 1.2.2 - Configure package manager GPG keys
 
-## 1.3-1.4 - Filesystem Integrity Checking
+## [1.3 - Filesystem Integrity Checking](./1.3.md)
 
-- 1.3.1 - 1.3.2 - Enable AIDE
-- 1.4 - Bootloader configuration (skip)
+- 1.3.1 - 1.3.2 - Enable AIDE (skip)
+
+## [1.4 - Bootloader Configuration](./1.4.md)
+
+- 1.4 - Bootloader configuration
 
 ## Additional Process Hardening
 
