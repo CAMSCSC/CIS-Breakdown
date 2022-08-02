@@ -28,6 +28,8 @@ Welcome to CIS-Breakdown's documentation!
    Overview <./systems/ubuntu/overview.md>
    Filesystem Configuration <./systems/ubuntu/1.1.md>
    APT Configuration <./systems/ubuntu/1.2.md>
+   AIDE Configuration <./systems/ubuntu/1.3.md>
+   GRUB Configuration <./systems/ubuntu/1.4.md>
 
 Indices and tables
 ==================
