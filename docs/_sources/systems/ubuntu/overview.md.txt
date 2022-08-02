@@ -1,6 +1,6 @@
 # Overview - Ubuntu 18.04
 
-## Filesystems
+## [Filesystems](./1.1.md)
 
 - 1.1.1 - Disable unnecessary filesystems
 - 1.1.2 - 1.1.5 - /tmp/ configuration
@@ -11,7 +11,7 @@
 - 1.1.23 - disable automounting
 - 1.1.24 - disable USB storage
 
-## Configure Software Updates
+## [Configure Software Updates](./1.2.md)
 
 - 1.2.1 - Configure package manager repositories
 - 1.2.2 - Configure package manager GPG keys
