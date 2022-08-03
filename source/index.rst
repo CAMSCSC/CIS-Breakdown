@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to CIS-Breakdown's documentation!
+Welcome to CIS-Breakdown!
 =========================================
 
 .. toctree::
@@ -26,10 +26,15 @@ Welcome to CIS-Breakdown's documentation!
    :caption: Ubuntu:
    
    Overview <./systems/ubuntu/overview.md>
-   Filesystem Configuration <./systems/ubuntu/1.1.md>
-   APT Configuration <./systems/ubuntu/1.2.md>
-   AIDE Configuration <./systems/ubuntu/1.3.md>
-   GRUB Configuration <./systems/ubuntu/1.4.md>
+   Filesystem Configuration <./systems/ubuntu/1/1.1.md>
+   APT Configuration <./systems/ubuntu/1/1.2.md>
+   AIDE Configuration <./systems/ubuntu/1/1.3.md>
+   GRUB Configuration <./systems/ubuntu/1/1.4.md>
+   Misc Processes <./systems/ubuntu/1/1.5.md>
+   AppArmor <./systems/ubuntu/1/1.6.md>
+   Warning Banners <./systems/ubuntu/1/1.7.md>
+   GDM Configuration <./systems/ubuntu/1/1.8.md>
+   Install Updates <./systems/ubuntu/1/1.9.md>
 
 Indices and tables
 ==================
