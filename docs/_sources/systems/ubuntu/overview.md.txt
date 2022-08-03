@@ -1,6 +1,6 @@
 # Overview - Ubuntu 18.04
 
-## [1.1 - Filesystems](./1.1.md)
+## [1.1 - Filesystems](./1/1.1.md)
 
 - 1.1.1 - Disable unnecessary filesystems
 - 1.1.2 - 1.1.5 - /tmp/ configuration
@@ -11,35 +11,39 @@
 - 1.1.23 - disable automounting
 - 1.1.24 - disable USB storage
 
-## [1.2 - Configure Software Updates](./1.2.md)
+## [1.2 - Configure Software Updates](./1/1.2.md)
 
 - 1.2.1 - Configure package manager repositories
 - 1.2.2 - Configure package manager GPG keys
 
-## [1.3 - Filesystem Integrity Checking](./1.3.md)
+## [1.3 - Filesystem Integrity Checking](./1/1.3.md)
 
 - 1.3.1 - 1.3.2 - Enable AIDE (skip)
 
-## [1.4 - Bootloader Configuration](./1.4.md)
+## [1.4 - Bootloader Configuration](./1/1.4.md)
 
 - 1.4 - Bootloader configuration
 
-## Additional Process Hardening
+## [1.5 - Additional Process Hardening](./1/1.5.md)
 
 - 1.5.2 - ASLR (Address space location randomization)
 - 1.5.3 - Disable prelink (for ASLR)
 - 1.5.4 - Restrict core dumps
 
-## Mandatory Access Control (MAC)
+## [1.6 - Mandatory Access Control (MAC)](./1/1.6.md)
 
 - 1.6.1.1 - 1.6.1.4 - AppArmor
 
-## Command Line Warning Banners
+## [1.7 - Command Line Warning Banners](./1/1.7.md)
 
 - 1.7.2 - 1.7.4 - Modify permissions
-- 1.8 - GDM - skip
 
-## Update Software (APT)
+## [1.8 - GNOME Display Manager Configuration](./1/1.8.md)
+
+- 1.8.2 - 1.8.3 - GDM configuration
+- 1.8.4 - Ensure XDCMP is not enabled
+
+## [1.9 - Update Software (APT)](./1/1.9.md)
 
 - 1.9 - apt-upgrade
 

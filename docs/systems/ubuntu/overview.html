@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1.1 Filesystem Configuration" href="1.1.html" /><link rel="prev" title="Windows Server 2019 CIS Benchmark" href="../server.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1.1 Filesystem Configuration" href="1/1.1.html" /><link rel="prev" title="Windows Server 2019 CIS Benchmark" href="../server.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>Overview - Ubuntu 18.04 - CIS Benchmark Breakdown</title>
@@ -168,10 +168,15 @@
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.1.html">Filesystem Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.2.html">APT Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.3.html">AIDE Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.4.html">GRUB Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.1.html">Filesystem Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.2.html">APT Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.3.html">AIDE Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.4.html">GRUB Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.5.html">Misc Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.6.html">AppArmor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.7.html">Warning Banners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.8.html">GDM Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1/1.9.html">Install Updates</a></li>
 </ul>
 
 </div>
@@ -208,7 +213,7 @@
           <section id="overview-ubuntu-18-04">
 <h1>Overview - Ubuntu 18.04<a class="headerlink" href="#overview-ubuntu-18-04" title="Permalink to this heading">#</a></h1>
 <section id="filesystems">
-<h2><a class="reference internal" href="1.1.html"><span class="doc std std-doc">1.1 - Filesystems</span></a><a class="headerlink" href="#filesystems" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.1.html"><span class="doc std std-doc">1.1 - Filesystems</span></a><a class="headerlink" href="#filesystems" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.1.1 - Disable unnecessary filesystems</p></li>
 <li><p>1.1.2 - 1.1.5 - /tmp/ configuration</p></li>
@@ -221,26 +226,26 @@
 </ul>
 </section>
 <section id="configure-software-updates">
-<h2><a class="reference internal" href="1.2.html"><span class="doc std std-doc">1.2 - Configure Software Updates</span></a><a class="headerlink" href="#configure-software-updates" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.2.html"><span class="doc std std-doc">1.2 - Configure Software Updates</span></a><a class="headerlink" href="#configure-software-updates" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.2.1 - Configure package manager repositories</p></li>
 <li><p>1.2.2 - Configure package manager GPG keys</p></li>
 </ul>
 </section>
 <section id="filesystem-integrity-checking">
-<h2><a class="reference internal" href="1.3.html"><span class="doc std std-doc">1.3 - Filesystem Integrity Checking</span></a><a class="headerlink" href="#filesystem-integrity-checking" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.3.html"><span class="doc std std-doc">1.3 - Filesystem Integrity Checking</span></a><a class="headerlink" href="#filesystem-integrity-checking" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.3.1 - 1.3.2 - Enable AIDE (skip)</p></li>
 </ul>
 </section>
 <section id="bootloader-configuration">
-<h2><a class="reference internal" href="1.4.html"><span class="doc std std-doc">1.4 - Bootloader Configuration</span></a><a class="headerlink" href="#bootloader-configuration" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.4.html"><span class="doc std std-doc">1.4 - Bootloader Configuration</span></a><a class="headerlink" href="#bootloader-configuration" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.4 - Bootloader configuration</p></li>
 </ul>
 </section>
 <section id="additional-process-hardening">
-<h2>Additional Process Hardening<a class="headerlink" href="#additional-process-hardening" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.5.html"><span class="doc std std-doc">1.5 - Additional Process Hardening</span></a><a class="headerlink" href="#additional-process-hardening" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.5.2 - ASLR (Address space location randomization)</p></li>
 <li><p>1.5.3 - Disable prelink (for ASLR)</p></li>
@@ -248,20 +253,26 @@
 </ul>
 </section>
 <section id="mandatory-access-control-mac">
-<h2>Mandatory Access Control (MAC)<a class="headerlink" href="#mandatory-access-control-mac" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.6.html"><span class="doc std std-doc">1.6 - Mandatory Access Control (MAC)</span></a><a class="headerlink" href="#mandatory-access-control-mac" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.6.1.1 - 1.6.1.4 - AppArmor</p></li>
 </ul>
 </section>
 <section id="command-line-warning-banners">
-<h2>Command Line Warning Banners<a class="headerlink" href="#command-line-warning-banners" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.7.html"><span class="doc std std-doc">1.7 - Command Line Warning Banners</span></a><a class="headerlink" href="#command-line-warning-banners" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.7.2 - 1.7.4 - Modify permissions</p></li>
-<li><p>1.8 - GDM - skip</p></li>
+</ul>
+</section>
+<section id="gnome-display-manager-configuration">
+<h2><a class="reference internal" href="1/1.8.html"><span class="doc std std-doc">1.8 - GNOME Display Manager Configuration</span></a><a class="headerlink" href="#gnome-display-manager-configuration" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>1.8.2 - 1.8.3 - GDM configuration</p></li>
+<li><p>1.8.4 - Ensure XDCMP is not enabled</p></li>
 </ul>
 </section>
 <section id="update-software-apt">
-<h2>Update Software (APT)<a class="headerlink" href="#update-software-apt" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1/1.9.html"><span class="doc std std-doc">1.9 - Update Software (APT)</span></a><a class="headerlink" href="#update-software-apt" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.9 - apt-upgrade</p></li>
 </ul>
@@ -381,7 +392,7 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="1.1.html">
+          <a class="next-page" href="1/1.1.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
@@ -438,10 +449,11 @@
 <li><a class="reference internal" href="#configure-software-updates"><span class="xref myst">1.2 - Configure Software Updates</span></a></li>
 <li><a class="reference internal" href="#filesystem-integrity-checking"><span class="xref myst">1.3 - Filesystem Integrity Checking</span></a></li>
 <li><a class="reference internal" href="#bootloader-configuration"><span class="xref myst">1.4 - Bootloader Configuration</span></a></li>
-<li><a class="reference internal" href="#additional-process-hardening">Additional Process Hardening</a></li>
-<li><a class="reference internal" href="#mandatory-access-control-mac">Mandatory Access Control (MAC)</a></li>
-<li><a class="reference internal" href="#command-line-warning-banners">Command Line Warning Banners</a></li>
-<li><a class="reference internal" href="#update-software-apt">Update Software (APT)</a></li>
+<li><a class="reference internal" href="#additional-process-hardening"><span class="xref myst">1.5 - Additional Process Hardening</span></a></li>
+<li><a class="reference internal" href="#mandatory-access-control-mac"><span class="xref myst">1.6 - Mandatory Access Control (MAC)</span></a></li>
+<li><a class="reference internal" href="#command-line-warning-banners"><span class="xref myst">1.7 - Command Line Warning Banners</span></a></li>
+<li><a class="reference internal" href="#gnome-display-manager-configuration"><span class="xref myst">1.8 - GNOME Display Manager Configuration</span></a></li>
+<li><a class="reference internal" href="#update-software-apt"><span class="xref myst">1.9 - Update Software (APT)</span></a></li>
 <li><a class="reference internal" href="#special-purpose-services">Special Purpose Services</a></li>
 <li><a class="reference internal" href="#disable-unused-network-protocols-and-devices">Disable unused network protocols and devices</a></li>
 <li><a class="reference internal" href="#network-parameters">Network Parameters</a></li>
