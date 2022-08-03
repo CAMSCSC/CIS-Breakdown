@@ -35,6 +35,7 @@ Welcome to CIS-Breakdown!
    Warning Banners <./systems/ubuntu/1/1.7.md>
    GDM Configuration <./systems/ubuntu/1/1.8.md>
    Install Updates <./systems/ubuntu/1/1.9.md>
+   Services <./systems/ubuntu/2.md>
 
 Indices and tables
 ==================

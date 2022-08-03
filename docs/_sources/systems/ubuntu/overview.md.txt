@@ -47,14 +47,14 @@
 
 - 1.9 - apt-upgrade
 
-## Special Purpose Services
+## [2 - Services](./2.md)
 
 - 2.1.1.1 - 2.1.1.4 - Time sync services (skip)
 - 2.1.2 - 2.1.17 - Disable services
 - 2.2.1 - 2.2.6 - Disable services clients
 - 2.3 - Disable/mask unnecessary services
 
-## Disable unused network protocols and devices
+## [3.1 - Disable unused network protocols and devices](./3.md)
 
 - 3.1.1 - Disable IPv6
 - 3.1.2 - Disable WiFi
