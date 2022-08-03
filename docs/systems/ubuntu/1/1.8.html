@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="1.9 - Ensure updates, patches, and additional security software are installed" href="1.9.html" /><link rel="prev" title="1.7 - Command Line Warning Banners" href="1.7.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>1.8 - GNOME Display Manager (GDM) - CIS Benchmark Breakdown</title>
+        <title>1.8.2 - 1.8.3 - Enable warning banner and disable-user-list - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -166,17 +166,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../server.html">Windows Server</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.1.html">Filesystem Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.2.html">APT Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.3.html">AIDE Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.4.html">GRUB Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.5.html">Misc Processes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.6.html">AppArmor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.7.html">Warning Banners</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">GDM Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.9.html">Install Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1.html">Initial Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2.html">Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3.html">Network Configuration</a></li>
 </ul>
@@ -206,16 +198,14 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="gnome-display-manager-gdm">
-<h1>1.8 - GNOME Display Manager (GDM)<a class="headerlink" href="#gnome-display-manager-gdm" title="Permalink to this heading">#</a></h1>
-<section id="enable-warning-banner-and-disable-user-list">
-<h2>1.8.2 - 1.8.3 - Enable warning banner and disable-user-list<a class="headerlink" href="#enable-warning-banner-and-disable-user-list" title="Permalink to this heading">#</a></h2>
+          <section id="enable-warning-banner-and-disable-user-list">
+<h1>1.8.2 - 1.8.3 - Enable warning banner and disable-user-list<a class="headerlink" href="#enable-warning-banner-and-disable-user-list" title="Permalink to this heading">#</a></h1>
 <p>Make sure that <code class="docutils literal notranslate"><span class="pre">/etc/gdm3/greeter.dconf-defaults</span></code> contains:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">org</span><span class="o">/</span><span class="n">gnome</span><span class="o">/</span><span class="n">login</span><span class="o">-</span><span class="n">screen</span><span class="p">]</span>
 <span class="n">banner</span><span class="o">-</span><span class="n">message</span><span class="o">-</span><span class="n">enable</span><span class="o">=</span><span class="n">true</span>
@@ -226,9 +216,8 @@
 <p>Then reload GDM by running <code class="docutils literal notranslate"><span class="pre">dpkg-reconfigure</span> <span class="pre">gdm3</span></code>.</p>
 </section>
 <section id="ensure-xdcmp-is-not-enabled">
-<h2>1.8.4 - Ensure XDCMP is not enabled<a class="headerlink" href="#ensure-xdcmp-is-not-enabled" title="Permalink to this heading">#</a></h2>
+<h1>1.8.4 - Ensure XDCMP is not enabled<a class="headerlink" href="#ensure-xdcmp-is-not-enabled" title="Permalink to this heading">#</a></h1>
 <p>Ensure that <code class="docutils literal notranslate"><span class="pre">/etc/gdm3/custom.conf</span></code> does not contain <code class="docutils literal notranslate"><span class="pre">Enable=true</span></code> by running <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/etc/gdm3/custom.conf</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">Enable</span></code></p>
-</section>
 </section>
 
         </article>
@@ -236,26 +225,8 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="1.9.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">1.9 - Ensure updates, patches, and additional security software are installed</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="1.7.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">1.7 - Command Line Warning Banners</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -276,28 +247,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">1.8 - GNOME Display Manager (GDM)</a><ul>
-<li><a class="reference internal" href="#enable-warning-banner-and-disable-user-list">1.8.2 - 1.8.3 - Enable warning banner and disable-user-list</a></li>
-<li><a class="reference internal" href="#ensure-xdcmp-is-not-enabled">1.8.4 - Ensure XDCMP is not enabled</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

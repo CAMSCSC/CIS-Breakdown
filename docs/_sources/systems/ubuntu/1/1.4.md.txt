@@ -1,6 +1,4 @@
-# 1.4 - Bootloader Configuration
-
-## 1.4.1 - Ensure permissions on bootloader config are not overridden
+### 1.4.1 - Ensure permissions on bootloader config are not overridden
 
 In `/usr/sbin/grub-mkconfig` find:
 
@@ -26,7 +24,7 @@ This can be run using the script found [here][grub script], which can be run by 
 source <(curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh)
 ```
 
-## 1.4.2 - Set GRUB password
+### 1.4.2 - Set GRUB password
 
 Create an encrypted password with: `sudo grub-mkpasswd-pbkdf2`
 
@@ -40,7 +38,7 @@ EOF
 
 and replace `<username>` and `<encrypted-password>`.
 
-## 1.4.3 - Set grub configuration permissions
+### 1.4.3 - Set grub configuration permissions
 
 Restrict grub configuration permissions by running:
 
@@ -49,7 +47,7 @@ chown root:root /boot/grub/grub.cfg
 chmod u-wx,go-rwx /boot/grub/grub.cfg
 ```
 
-## 1.4.4 - Require password for single user mode
+### 1.4.4 - Require password for single user mode
 
 Run `passwd root` and follow the prompts.
 

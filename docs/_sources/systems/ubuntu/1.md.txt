@@ -1,0 +1,46 @@
+# 1 - Initial Configuration
+
+## 1.1 - Filesystem Configuration
+
+```{include} ./1/1.1.md
+```
+
+## 1.2 - Configure Software Updates
+
+```{include} ./1/1.2.md
+```
+
+## 1.3 - Filesystem Integrity Checking
+
+```{include} ./1/1.3.md
+```
+
+## 1.4 - Bootloader Configuration
+
+```{include} ./1/1.4.md
+```
+
+## 1.5 - Additional Process Hardening
+
+```{include} ./1/1.5.md
+```
+
+## 1.6 - Mandatory Access Control
+
+```{include} ./1/1.6.md
+```
+
+## 1.7 - Command Line Warning Banners
+
+```{include} ./1/1.7.md
+```
+
+## 1.8 - GNOME Display Manager (GDM)
+
+```{include} ./1/1.8.md
+```
+
+## 1.9 - Ensure updates, patches, and additional security software are installed
+
+```{include} ./1/1.9.md
+```

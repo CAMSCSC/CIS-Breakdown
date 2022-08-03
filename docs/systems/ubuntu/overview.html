@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1.1 Filesystem Configuration" href="1/1.1.html" /><link rel="prev" title="Windows Server 2019 CIS Benchmark" href="../server.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1 - Initial Configuration" href="1.html" /><link rel="prev" title="Windows Server 2019 CIS Benchmark" href="../server.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>Overview - Ubuntu 18.04 - CIS Benchmark Breakdown</title>
@@ -168,15 +168,7 @@
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.1.html">Filesystem Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.2.html">APT Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.3.html">AIDE Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.4.html">GRUB Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.5.html">Misc Processes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.6.html">AppArmor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.7.html">Warning Banners</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.8.html">GDM Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.9.html">Install Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">Initial Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.html">Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3.html">Network Configuration</a></li>
 </ul>
@@ -215,7 +207,7 @@
           <section id="overview-ubuntu-18-04">
 <h1>Overview - Ubuntu 18.04<a class="headerlink" href="#overview-ubuntu-18-04" title="Permalink to this heading">#</a></h1>
 <section id="filesystems">
-<h2><a class="reference internal" href="1/1.1.html"><span class="doc std std-doc">1.1 - Filesystems</span></a><a class="headerlink" href="#filesystems" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1.html#filesystem-configuration"><span class="std std-doc">1.1 - Filesystems</span></a><a class="headerlink" href="#filesystems" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.1.1 - Disable unnecessary filesystems</p></li>
 <li><p>1.1.2 - 1.1.5 - /tmp/ configuration</p></li>
@@ -228,26 +220,26 @@
 </ul>
 </section>
 <section id="configure-software-updates">
-<h2><a class="reference internal" href="1/1.2.html"><span class="doc std std-doc">1.2 - Configure Software Updates</span></a><a class="headerlink" href="#configure-software-updates" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1.html#configure-software-updates"><span class="std std-doc">1.2 - Configure Software Updates</span></a><a class="headerlink" href="#configure-software-updates" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.2.1 - Configure package manager repositories</p></li>
 <li><p>1.2.2 - Configure package manager GPG keys</p></li>
 </ul>
 </section>
 <section id="filesystem-integrity-checking">
-<h2><a class="reference internal" href="1/1.3.html"><span class="doc std std-doc">1.3 - Filesystem Integrity Checking</span></a><a class="headerlink" href="#filesystem-integrity-checking" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1.html#filesystem-integrity-checking"><span class="std std-doc">1.3 - Filesystem Integrity Checking</span></a><a class="headerlink" href="#filesystem-integrity-checking" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.3.1 - 1.3.2 - Enable AIDE (skip)</p></li>
 </ul>
 </section>
 <section id="bootloader-configuration">
-<h2><a class="reference internal" href="1/1.4.html"><span class="doc std std-doc">1.4 - Bootloader Configuration</span></a><a class="headerlink" href="#bootloader-configuration" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1.html#bootloader-configuration"><span class="std std-doc">1.4 - Bootloader Configuration</span></a><a class="headerlink" href="#bootloader-configuration" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.4 - Bootloader configuration</p></li>
 </ul>
 </section>
 <section id="additional-process-hardening">
-<h2><a class="reference internal" href="1/1.5.html"><span class="doc std std-doc">1.5 - Additional Process Hardening</span></a><a class="headerlink" href="#additional-process-hardening" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="1.html#additional-process-hardening"><span class="std std-doc">1.5 - Additional Process Hardening</span></a><a class="headerlink" href="#additional-process-hardening" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>1.5.2 - ASLR (Address space location randomization)</p></li>
 <li><p>1.5.3 - Disable prelink (for ASLR)</p></li>
@@ -280,7 +272,7 @@
 </ul>
 </section>
 <section id="services">
-<h2><a class="reference internal" href="2.html"><span class="doc std std-doc">2 - Services</span></a><a class="headerlink" href="#services" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference internal" href="2.html"><span class="doc std std-doc">2.1 - 2.3 - Services</span></a><a class="headerlink" href="#services" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>2.1.1.1 - 2.1.1.4 - Time sync services (skip)</p></li>
 <li><p>2.1.2 - 2.1.17 - Disable services</p></li>
@@ -394,12 +386,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="1/1.1.html">
+          <a class="next-page" href="1.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">1.1 Filesystem Configuration</div>
+                <div class="title">1 - Initial Configuration</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -456,7 +448,7 @@
 <li><a class="reference internal" href="#command-line-warning-banners"><span class="xref myst">1.7 - Command Line Warning Banners</span></a></li>
 <li><a class="reference internal" href="#gnome-display-manager-configuration"><span class="xref myst">1.8 - GNOME Display Manager Configuration</span></a></li>
 <li><a class="reference internal" href="#update-software-apt"><span class="xref myst">1.9 - Update Software (APT)</span></a></li>
-<li><a class="reference internal" href="#services"><span class="xref myst">2 - Services</span></a></li>
+<li><a class="reference internal" href="#services"><span class="xref myst">2.1 - 2.3 - Services</span></a></li>
 <li><a class="reference internal" href="#disable-unused-network-protocols-and-devices"><span class="xref myst">3.1 - Disable unused network protocols and devices</span></a></li>
 <li><a class="reference internal" href="#network-parameters"><span class="xref myst">3.2 - 3.3 - Network Parameters</span></a></li>
 <li><a class="reference internal" href="#uncommon-network-protocols"><span class="xref myst">3.4 - Uncommon Network Protocols</span></a></li>

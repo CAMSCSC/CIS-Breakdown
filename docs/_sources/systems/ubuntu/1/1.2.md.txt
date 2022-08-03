@@ -1,6 +1,4 @@
-# 1.2 - Configure Software Updates
-
-## 1.2.1 - Configure package manager repositories
+### 1.2.1 - Configure package manager repositories
 
 Run `apt-cache policy` to see a list of remote repositories. 
 
@@ -19,7 +17,7 @@ Scan through the repositories to check for suspicious repositories.
 Most repositories should be from <http://security.ubuntu.com> or 
 <http://us.archive.ubuntu.com>.
 
-## 1.2.2 - Configure package manager GPG keys
+### 1.2.2 - Configure package manager GPG keys
 
 Run `apt-key list` to list the GPG keys used by apt. Ensure that these come
 from valid sources (e.g.: `ftpmaster@ubuntu.com` or `cdimage@ubuntu.com`)

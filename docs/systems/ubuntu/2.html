@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="3 - Network Configuration" href="3.html" /><link rel="prev" title="1.9 - Ensure updates, patches, and additional security software are installed" href="1/1.9.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="3 - Network Configuration" href="3.html" /><link rel="prev" title="1 - Initial Configuration" href="1.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>2 - Services - CIS Benchmark Breakdown</title>
@@ -168,15 +168,7 @@
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.1.html">Filesystem Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.2.html">APT Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.3.html">AIDE Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.4.html">GRUB Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.5.html">Misc Processes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.6.html">AppArmor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.7.html">Warning Banners</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.8.html">GDM Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1/1.9.html">Install Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">Initial Configuration</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3.html">Network Configuration</a></li>
 </ul>
@@ -214,18 +206,17 @@
         <article role="main">
           <section id="services">
 <h1>2 - Services<a class="headerlink" href="#services" title="Permalink to this heading">#</a></h1>
-<section id="time-sync-services-skip">
-<h2>2.1.1.1 - 2.1.1.4 - Time Sync Services (skip)<a class="headerlink" href="#time-sync-services-skip" title="Permalink to this heading">#</a></h2>
-<p>Configure the system to use timesyncd, ntp, or chrony.</p>
-</section>
+<section id="disable-unused-services">
+<h2>2.1 - Disable Unused Services<a class="headerlink" href="#disable-unused-services" title="Permalink to this heading">#</a></h2>
 <section id="uninstall-services">
-<h2>2.1.2 - 2.1.14, 2.1.16 - 2.1.17 - Uninstall Services<a class="headerlink" href="#uninstall-services" title="Permalink to this heading">#</a></h2>
+<h3>2.1.2 - 2.1.14, 2.1.16 - 2.1.17 - Uninstall Services<a class="headerlink" href="#uninstall-services" title="Permalink to this heading">#</a></h3>
 <p>Uninstall Xwin, Avahi Server, CUPS, DHCP server, LDAP server, NFS, DNS server, FTP server, HTTP server, IMAP and POP3 server, Samba, HTTP Proxy Server, SNMP Server, rsync, and NIS Server.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>systemctl stop avahi-daemon.service
 systemctl stop avahi-daemon.socket
-apt purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-server bind9 vsftpd apache2 dovecot-imapd dovecot-pop3d courier-imap cyrus-imap samba squid snmpd rsync nis
+apt-get purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-server bind9 vsftpd apache2 dovecot-imapd dovecot-pop3d courier-imap cyrus-imap samba squid snmpd rsync nis
 </pre></div>
 </div>
+</section>
 </section>
 <section id="configure-mail-transfer-agent-to-be-local-only">
 <h2>2.1.15 - Configure mail transfer agent to be local only<a class="headerlink" href="#configure-mail-transfer-agent-to-be-local-only" title="Permalink to this heading">#</a></h2>
@@ -246,12 +237,15 @@ apt purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-serve
 </div>
 <p>Then restart exim4 by running <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">exim4</span></code>.</p>
 </section>
+<section id="service-clients">
+<h2>2.2 Service Clients<a class="headerlink" href="#service-clients" title="Permalink to this heading">#</a></h2>
 <section id="disable-service-clients">
-<h2>2.2.1 - 2.2.6 - Disable Service Clients<a class="headerlink" href="#disable-service-clients" title="Permalink to this heading">#</a></h2>
+<h3>2.2.1 - 2.2.6 - Disable Service Clients<a class="headerlink" href="#disable-service-clients" title="Permalink to this heading">#</a></h3>
 <p>Remove nis, rsh, talk, telnet, LDAP, and RPC.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt purge nis rsh-client talk telnet idap-utils rpcbind
 </pre></div>
 </div>
+</section>
 </section>
 <section id="remove-or-mask-nonessential-services">
 <h2>2.3 - Remove or mask nonessential services<a class="headerlink" href="#remove-or-mask-nonessential-services" title="Permalink to this heading">#</a></h2>
@@ -275,14 +269,14 @@ apt purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-serve
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="1/1.9.html">
+          <a class="prev-page" href="1.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1.9 - Ensure updates, patches, and additional security software are installed</div>
+                <div class="title">1 - Initial Configuration</div>
                 
               </div>
             </a>
@@ -319,10 +313,15 @@ apt purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-serve
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">2 - Services</a><ul>
-<li><a class="reference internal" href="#time-sync-services-skip">2.1.1.1 - 2.1.1.4 - Time Sync Services (skip)</a></li>
+<li><a class="reference internal" href="#disable-unused-services">2.1 - Disable Unused Services</a><ul>
 <li><a class="reference internal" href="#uninstall-services">2.1.2 - 2.1.14, 2.1.16 - 2.1.17 - Uninstall Services</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#configure-mail-transfer-agent-to-be-local-only">2.1.15 - Configure mail transfer agent to be local only</a></li>
+<li><a class="reference internal" href="#service-clients">2.2 Service Clients</a><ul>
 <li><a class="reference internal" href="#disable-service-clients">2.2.1 - 2.2.6 - Disable Service Clients</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#remove-or-mask-nonessential-services">2.3 - Remove or mask nonessential services</a></li>
 </ul>
 </li>

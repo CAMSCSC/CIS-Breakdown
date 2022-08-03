@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="1.2 - Configure Software Updates" href="1.2.html" /><link rel="prev" title="Overview - Ubuntu 18.04" href="../overview.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>1.1 Filesystem Configuration - CIS Benchmark Breakdown</title>
+        <title>1.1.1 Disable unused filesystems - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -166,17 +166,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../server.html">Windows Server</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Filesystem Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.2.html">APT Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.3.html">AIDE Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.4.html">GRUB Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.5.html">Misc Processes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.6.html">AppArmor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.7.html">Warning Banners</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.8.html">GDM Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1.9.html">Install Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1.html">Initial Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2.html">Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3.html">Network Configuration</a></li>
 </ul>
@@ -212,114 +204,42 @@
           </label>
         </div>
         <article role="main">
-          <section id="filesystem-configuration">
-<h1>1.1 Filesystem Configuration<a class="headerlink" href="#filesystem-configuration" title="Permalink to this heading">#</a></h1>
-<section id="disable-unused-filesystems">
-<h2>1.1.1 Disable unused filesystems<a class="headerlink" href="#disable-unused-filesystems" title="Permalink to this heading">#</a></h2>
-<section id="disable-filesystem-mounting">
-<h3>Disable filesystem mounting<a class="headerlink" href="#disable-filesystem-mounting" title="Permalink to this heading">#</a></h3>
-<p>Disable the mounting of cramfs, freevxfs, jffs2, hfs, hfsplus, and udf filesystems. These filesystems are usually unnecessary, and can provide additional entry points for attackers.</p>
-<section id="vulnerability-information">
-<h4>Vulnerability Information<a class="headerlink" href="#vulnerability-information" title="Permalink to this heading">#</a></h4>
-<p>The vulnerable filesystems are:</p>
+          <section id="disable-unused-filesystems">
+<h1>1.1.1 Disable unused filesystems<a class="headerlink" href="#disable-unused-filesystems" title="Permalink to this heading">#</a></h1>
+<section id="disable-mounting-of-unnecessary-filesystems">
+<h2>1.1.1.1 - 1.1.1.6 Disable mounting of unnecessary filesystems<a class="headerlink" href="#disable-mounting-of-unnecessary-filesystems" title="Permalink to this heading">#</a></h2>
+<p>Disable mounting of the following filesystems:</p>
 <ul class="simple">
-<li><p>cramfs: stores small-footprint read-only files</p></li>
-<li><p>freevxfs: free version of <a class="reference external" href="https://en.wikipedia.org/wiki/Veritas_File_System">vxfs</a> (for Veritas/HP-UX)</p></li>
-<li><p>jffs2: log filesystem used in flash memory devices</p></li>
-<li><p>hfs: hierarchical filesystem used to mount MacOS filesystems</p></li>
-<li><p>hfsplus: newer version of hfs</p></li>
-<li><p>udf: universal disk format, used for writing DVDs</p></li>
+<li><p>cramfs</p></li>
+<li><p>freevxfs</p></li>
+<li><p>jffs2</p></li>
+<li><p>hfs</p></li>
+<li><p>hfsplus</p></li>
+<li><p>udf</p></li>
 </ul>
-</section>
-<section id="auditing-and-remediation">
-<h4>Auditing and Remediation<a class="headerlink" href="#auditing-and-remediation" title="Permalink to this heading">#</a></h4>
-<p>The <a class="reference external" href="https://linux.die.net/man/8/modprobe">modprobe</a> program can be used to check if these filesystem modules are installed.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>modprobe -n -v cramfs <span class="p">|</span> grep -E <span class="s1">&#39;(cramfs|install)&#39;</span>
-modprobe -n -v freevxfs <span class="p">|</span> grep -E <span class="s1">&#39;(freevxfs|install)&#39;</span>
-<span class="c1"># etc...</span>
+<p>To ensure a filesystem is not mounted:</p>
+<p>Create and edit a file <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/MODULE_NAME.conf</span> </code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span> <span class="n">MODULE_NAME</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">true</span>
 </pre></div>
 </div>
-<p>To disable these filesystems in the current session, use <a class="reference external" href="https://linux.die.net/man/8/rmmod">rmmod</a>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmmod cramfs
-rmmod freevxfs
-<span class="c1"># etc...</span>
-</pre></div>
-</div>
-<p>To disable these filesystems permanently, add/modify <code class="docutils literal notranslate"><span class="pre">install</span></code> lines in <a class="reference external" href="https://man7.org/linux/man-pages/man5/modprobe.d.5.html#COMMANDS">modprobe.d</a>, the configuration directory for modprobe.</p>
-<p>Add to <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d</span></code> a file (e.g.: <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/cramfs.conf</span></code>) containing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span> <span class="n">FILESYSTEM_TO_DISABLE</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">true</span>
-</pre></div>
-</div>
-<p>On system startup, this replaces the command to run the filesystem with <code class="docutils literal notranslate"><span class="pre">/bin/true</span></code>, a placeholder command that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> for success.</p>
+<p>Then run <code class="docutils literal notranslate"><span class="pre">rmmod</span> <span class="pre">MODULE_NAME</span></code></p>
 </section>
 </section>
-<section id="fstab-configuration">
-<h3>fstab Configuration<a class="headerlink" href="#fstab-configuration" title="Permalink to this heading">#</a></h3>
 <section id="configure-tmp">
-<h4>Configure /tmp<a class="headerlink" href="#configure-tmp" title="Permalink to this heading">#</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">/tmp</span></code> (the temporary directory) should be configured to be its own filesystem, using tmpfs, with the options <code class="docutils literal notranslate"><span class="pre">nodev</span></code>, <code class="docutils literal notranslate"><span class="pre">nosuid</span></code>, and <code class="docutils literal notranslate"><span class="pre">noexec</span></code> on.</p>
-<section id="option-1-modify-fstab">
-<h5>Option 1: Modify fstab<a class="headerlink" href="#option-1-modify-fstab" title="Permalink to this heading">#</a></h5>
-<ol class="arabic simple">
-<li><p>Modify <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code> to contain:</p></li>
-</ol>
-<div class="highlight-linuxconfig notranslate"><div class="highlight"><pre><span></span>tmpfs <span class="s">/tmp tmpfs defaults,rw,nosuid,nodev,noexec,relatime 0 0</span><span class="w"></span>
+<h1>1.1.2 - 1.1.5 Configure /tmp<a class="headerlink" href="#configure-tmp" title="Permalink to this heading">#</a></h1>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code> to contain:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tmpfs</span> <span class="o">/</span><span class="n">tmp</span> <span class="n">tmpfs</span> <span class="n">defaults</span><span class="p">,</span><span class="n">rw</span><span class="p">,</span><span class="n">nosuid</span><span class="p">,</span><span class="n">nodev</span><span class="p">,</span><span class="n">noexec</span><span class="p">,</span><span class="n">relatime</span> <span class="mi">0</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>By default, the size will be 50% of ram, but it can also be modified using the <code class="docutils literal notranslate"><span class="pre">size</span></code> parameter. For example:</p>
-<div class="highlight-linuxconfig notranslate"><div class="highlight"><pre><span></span>tmpfs <span class="s">/tmp tmpfs rw,noexec,nodev,nosuid,size=2G 0 0</span><span class="w"></span>
+<p>Then remount the <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> filesystem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mount</span> <span class="o">-</span><span class="n">o</span> <span class="n">remount</span><span class="p">,</span><span class="n">nodev</span> <span class="o">/</span><span class="n">tmp</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">o</span> <span class="n">remount</span><span class="p">,</span><span class="n">nosuid</span> <span class="o">/</span><span class="n">tmp</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">o</span> <span class="n">remount</span><span class="p">,</span><span class="n">noexec</span> <span class="o">/</span><span class="n">tmp</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The columns in fstab do not have to be aligned, but can be aligned with: <code class="docutils literal notranslate"><span class="pre">column</span> <span class="pre">-t</span> <span class="pre">/etc/fstab</span></code>. (Found in <a class="reference external" href="https://unix.stackexchange.com/questions/96037/how-to-align-fstab-entries-easily">this post</a>.)</p>
-</div>
-</section>
-<section id="option-2-use-tmp-mount">
-<h5>Option 2: Use tmp.mount<a class="headerlink" href="#option-2-use-tmp-mount" title="Permalink to this heading">#</a></h5>
-<ol class="arabic simple">
-<li><p>Delete the entry for /tmp in <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code>, as fstab overrides tmp.mount.</p></li>
-<li><p>Edit <code class="docutils literal notranslate"><span class="pre">/etc/systemd/system/tmp.mount</span></code> to be:</p></li>
-</ol>
-<div class="highlight-linuxconfig notranslate"><div class="highlight"><pre><span></span><span class="s">[Mount]</span><span class="w"></span>
-What<span class="s">=tmpfs</span><span class="w"></span>
-Where<span class="s">=/tmp</span><span class="w"></span>
-Type<span class="s">=tmpfs</span><span class="w"></span>
-Options<span class="s">=mode=1777,strictatime,nosuid,nodev,noexec</span><span class="w"></span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>Reload systemd: <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">daemon-reload</span></code></p></li>
-<li><p>Enable tmp.mount <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--now</span> <span class="pre">enable</span> <span class="pre">tmp.mount</span></code></p></li>
-</ol>
-</section>
 </section>
 <section id="configure-dev-shm">
-<h4>Configure /dev/shm<a class="headerlink" href="#configure-dev-shm" title="Permalink to this heading">#</a></h4>
-<p>This is mostly identical to configuring <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>. <code class="docutils literal notranslate"><span class="pre">/dev/shm</span></code> is a shared memory directory.</p>
-<p>In <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code>, add:</p>
-<div class="highlight-linuxconfig notranslate"><div class="highlight"><pre><span></span>tmpfs <span class="s">/dev/shm tmpfs defaults,noexec,nodev,nosuid,seclabel 0 0</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Then remount <code class="docutils literal notranslate"><span class="pre">/dev/shm</span></code> by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mount -o remount,noexec,nodev,nosuid /dev/shm
-</pre></div>
-</div>
-</section>
-<section id="move-directories-to-separate-partitions">
-<h4>Move directories to separate partitions<a class="headerlink" href="#move-directories-to-separate-partitions" title="Permalink to this heading">#</a></h4>
-<p>These steps apply to <code class="docutils literal notranslate"><span class="pre">/var</span></code>, <code class="docutils literal notranslate"><span class="pre">/var/tmp</span></code>, <code class="docutils literal notranslate"><span class="pre">/var/log</span></code>, and <code class="docutils literal notranslate"><span class="pre">/var/log/audit</span></code>.</p>
-<p>These directories should be mounted to separate partitions to avoid resource exhaustion.</p>
-<p>Check if they are mounted by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findmnt /var
-findmnt /var/tmp
-</pre></div>
-</div>
-<p>If this does not show that <code class="docutils literal notranslate"><span class="pre">/var</span></code> or <code class="docutils literal notranslate"><span class="pre">/var/tmp</span></code> is mounted, modify <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code> to mount it on its own partition.</p>
-<p><code class="docutils literal notranslate"><span class="pre">/var/tmp</span></code> and any removable media partitions should also have the noexec, nodev, and nosuid properties set.</p>
-</section>
-</section>
-</section>
+<h1>1.1.6 - 1.1.9 Configure /dev/shm<a class="headerlink" href="#configure-dev-shm" title="Permalink to this heading">#</a></h1>
 </section>
 
         </article>
@@ -327,26 +247,8 @@ findmnt /var/tmp
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="1.2.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">1.2 - Configure Software Updates</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../overview.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Overview - Ubuntu 18.04</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -379,27 +281,12 @@ findmnt /var/tmp
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1.1 Filesystem Configuration</a><ul>
-<li><a class="reference internal" href="#disable-unused-filesystems">1.1.1 Disable unused filesystems</a><ul>
-<li><a class="reference internal" href="#disable-filesystem-mounting">Disable filesystem mounting</a><ul>
-<li><a class="reference internal" href="#vulnerability-information">Vulnerability Information</a></li>
-<li><a class="reference internal" href="#auditing-and-remediation">Auditing and Remediation</a></li>
+<li><a class="reference internal" href="#">1.1.1 Disable unused filesystems</a><ul>
+<li><a class="reference internal" href="#disable-mounting-of-unnecessary-filesystems">1.1.1.1 - 1.1.1.6 Disable mounting of unnecessary filesystems</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#fstab-configuration">fstab Configuration</a><ul>
-<li><a class="reference internal" href="#configure-tmp">Configure /tmp</a><ul>
-<li><a class="reference internal" href="#option-1-modify-fstab">Option 1: Modify fstab</a></li>
-<li><a class="reference internal" href="#option-2-use-tmp-mount">Option 2: Use tmp.mount</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#configure-dev-shm">Configure /dev/shm</a></li>
-<li><a class="reference internal" href="#move-directories-to-separate-partitions">Move directories to separate partitions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#configure-tmp">1.1.2 - 1.1.5 Configure /tmp</a></li>
+<li><a class="reference internal" href="#configure-dev-shm">1.1.6 - 1.1.9 Configure /dev/shm</a></li>
 </ul>
 
           </div>

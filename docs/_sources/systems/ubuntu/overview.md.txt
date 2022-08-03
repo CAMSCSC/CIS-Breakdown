@@ -1,6 +1,6 @@
 # Overview - Ubuntu 18.04
 
-## [1.1 - Filesystems](./1/1.1.md)
+## [1.1 - Filesystems](./1.md#11---filesystem-configuration)
 
 - 1.1.1 - Disable unnecessary filesystems
 - 1.1.2 - 1.1.5 - /tmp/ configuration
@@ -11,20 +11,20 @@
 - 1.1.23 - disable automounting
 - 1.1.24 - disable USB storage
 
-## [1.2 - Configure Software Updates](./1/1.2.md)
+## [1.2 - Configure Software Updates](./1.md#12---configure-software-updates)
 
 - 1.2.1 - Configure package manager repositories
 - 1.2.2 - Configure package manager GPG keys
 
-## [1.3 - Filesystem Integrity Checking](./1/1.3.md)
+## [1.3 - Filesystem Integrity Checking](./1.md#13---filesystem-integrity-checking)
 
 - 1.3.1 - 1.3.2 - Enable AIDE (skip)
 
-## [1.4 - Bootloader Configuration](./1/1.4.md)
+## [1.4 - Bootloader Configuration](./1.md#14---bootloader-configuration)
 
 - 1.4 - Bootloader configuration
 
-## [1.5 - Additional Process Hardening](./1/1.5.md)
+## [1.5 - Additional Process Hardening](./1.md#15---additional-process-hardening)
 
 - 1.5.2 - ASLR (Address space location randomization)
 - 1.5.3 - Disable prelink (for ASLR)
@@ -47,7 +47,7 @@
 
 - 1.9 - apt-upgrade
 
-## [2 - Services](./2.md)
+## [2.1 - 2.3 - Services](./2.md)
 
 - 2.1.1.1 - 2.1.1.4 - Time sync services (skip)
 - 2.1.2 - 2.1.17 - Disable services
