@@ -59,16 +59,16 @@
 - 3.1.1 - Disable IPv6
 - 3.1.2 - Disable WiFi
 
-## Network Parameters
+## [3.2 - 3.3 - Network Parameters](./3.md#32---host-network-parameters)
 
 - 3.2.1 - 3.2.2 - Network Parameters (host)
 - 3.3.1 - 3.3.9 - Network Parameters (host and router)
 
-## Uncommon Network Protocols
+## [3.4 - Uncommon Network Protocols](./3.md#34---uncommon-network-protocols)
 
 - 3.4.1 - 3.4.4 - Disable uncommon network protocols
 
-## Firewall
+## [3.5 - Firewall](./3.md#35---firewall-configuration)
 
 - 3.5.1.1 - 3.5.1.7 - Install and configure UFW (use GUFW)
 - 3.5.2.x - Configure nftables (skip)
