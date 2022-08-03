@@ -1,0 +1,41 @@
+# 1.5 - Additional Process Hardening
+
+## 1.5.2 - Enable ASLR
+
+Edit `/etc/sysctl.conf` and add `kernel.randomize_va_space = 2`
+
+Then remove aslr overrides by running [this script][aslr script].
+You can run the script by running:
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh)
+```
+
+[aslr script]: https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh
+
+## 1.5.3 - Disable Prelink
+
+Run `prelink -ua` to revert prelinked binaries, and `apt purge prelink` to uninstall it.
+
+## 1.5.4 - Restrict Coredump
+
+To `/etc/security/limits.conf` add:
+```
+* hard core 0
+```
+
+To `/etc/sysctl.conf` add:
+```
+fs.suid_dumpable = 0
+```
+
+Then run `sysctl -w fs.suid_dumpable=0`.
+
+Run `systemctl is-enabled coredump.service` to check if systemd-coredump is installed.
+If it is installed, to `/etc/systemd/coredump.conf` add:
+```
+Storage=none
+ProcessSizeMax=0
+```
+and run `systemctl daemon-reload`.
+

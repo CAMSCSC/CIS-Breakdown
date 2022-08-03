@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="1.3 - Filesystem Integrity Checking" href="1.3.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="1.9 - Ensure updates, patches, and additional security software are installed" href="1.9.html" /><link rel="prev" title="1.7 - Command Line Warning Banners" href="1.7.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>1.4 - Bootloader Configuration - CIS Benchmark Breakdown</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+        <title>1.8 - GNOME Display Manager (GDM) - CIS Benchmark Breakdown</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
+      <a href="../../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,12 +143,12 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
   <span class="sidebar-brand-text">CIS Benchmark Breakdown</span>
   
-</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
@@ -156,22 +156,27 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">About:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/contributing.html">Contributing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Systems:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../debian.html">Debian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../windows.html">Windows 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../server.html">Windows Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../debian.html">Debian</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../windows.html">Windows 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../server.html">Windows Server</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.1.html">Filesystem Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.2.html">APT Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.3.html">AIDE Configuration</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">GRUB Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.4.html">GRUB Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.5.html">Misc Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.6.html">AppArmor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.7.html">Warning Banners</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">GDM Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.9.html">Install Updates</a></li>
 </ul>
 
 </div>
@@ -205,52 +210,22 @@
           </label>
         </div>
         <article role="main">
-          <section id="bootloader-configuration">
-<h1>1.4 - Bootloader Configuration<a class="headerlink" href="#bootloader-configuration" title="Permalink to this heading">#</a></h1>
-<section id="ensure-permissions-on-bootloader-config-are-not-overridden">
-<h2>1.4.1 - Ensure permissions on bootloader config are not overridden<a class="headerlink" href="#ensure-permissions-on-bootloader-config-are-not-overridden" title="Permalink to this heading">#</a></h2>
-<p>In <code class="docutils literal notranslate"><span class="pre">/usr/sbin/grub-mkconfig</span></code> find:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;x</span><span class="si">${</span><span class="nv">grub_cfg</span><span class="si">}</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;x&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> ! grep <span class="s2">&quot;^password&quot;</span> <span class="si">${</span><span class="nv">grub_cfg</span><span class="si">}</span>.new &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-
-    chmod <span class="m">444</span> <span class="si">${</span><span class="nv">grub_cfg</span><span class="si">}</span>.new <span class="o">||</span> <span class="nb">true</span>
-
-<span class="k">fi</span>
+          <section id="gnome-display-manager-gdm">
+<h1>1.8 - GNOME Display Manager (GDM)<a class="headerlink" href="#gnome-display-manager-gdm" title="Permalink to this heading">#</a></h1>
+<section id="enable-warning-banner-and-disable-user-list">
+<h2>1.8.2 - 1.8.3 - Enable warning banner and disable-user-list<a class="headerlink" href="#enable-warning-banner-and-disable-user-list" title="Permalink to this heading">#</a></h2>
+<p>Make sure that <code class="docutils literal notranslate"><span class="pre">/etc/gdm3/greeter.dconf-defaults</span></code> contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">org</span><span class="o">/</span><span class="n">gnome</span><span class="o">/</span><span class="n">login</span><span class="o">-</span><span class="n">screen</span><span class="p">]</span>
+<span class="n">banner</span><span class="o">-</span><span class="n">message</span><span class="o">-</span><span class="n">enable</span><span class="o">=</span><span class="n">true</span>
+<span class="n">banner</span><span class="o">-</span><span class="n">messsage</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;warning text&#39;</span>
+<span class="n">disable</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="nb">list</span><span class="o">=</span><span class="n">true</span>
 </pre></div>
 </div>
-<p>and change to:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;x%{grub_cfg}&quot;</span> !<span class="o">=</span> <span class="s2">&quot;x&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    chmod <span class="m">400</span> <span class="si">${</span><span class="nv">grub_cfg</span><span class="si">}</span>.new <span class="o">||</span> <span class="nb">true</span>
-<span class="k">fi</span>
-</pre></div>
-</div>
-<p>This can be run using the script found <a class="reference external" href="https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh">here</a>, which can be run by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh<span class="o">)</span>
-</pre></div>
-</div>
+<p>Then reload GDM by running <code class="docutils literal notranslate"><span class="pre">dpkg-reconfigure</span> <span class="pre">gdm3</span></code>.</p>
 </section>
-<section id="set-grub-password">
-<h2>1.4.2 - Set GRUB password<a class="headerlink" href="#set-grub-password" title="Permalink to this heading">#</a></h2>
-<p>Create an encrypted password with: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">grub-mkpasswd-pbkdf2</span></code></p>
-<p>Then edit <code class="docutils literal notranslate"><span class="pre">/etc/grub.d</span></code> to include:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
-<span class="nb">set</span> <span class="n">superusers</span><span class="o">=</span><span class="s2">&quot;&lt;username&gt;&quot;</span>
-<span class="n">password_pbkdf2</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">encrypted</span><span class="o">-</span><span class="n">passord</span><span class="o">&gt;</span>
-<span class="n">EOF</span>
-</pre></div>
-</div>
-<p>and replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;encrypted-password&gt;</span></code>.</p>
-</section>
-<section id="set-grub-configuration-permissions">
-<h2>1.4.3 - Set grub configuration permissions<a class="headerlink" href="#set-grub-configuration-permissions" title="Permalink to this heading">#</a></h2>
-<p>Restrict grub configuration permissions by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chown root:root /boot/grub/grub.cfg
-chmod u-wx,go-rwx /boot/grub/grub.cfg
-</pre></div>
-</div>
-</section>
-<section id="require-password-for-single-user-mode">
-<h2>1.4.4 - Require password for single user mode<a class="headerlink" href="#require-password-for-single-user-mode" title="Permalink to this heading">#</a></h2>
-<p>Run <code class="docutils literal notranslate"><span class="pre">passwd</span> <span class="pre">root</span></code> and follow the prompts.</p>
+<section id="ensure-xdcmp-is-not-enabled">
+<h2>1.8.4 - Ensure XDCMP is not enabled<a class="headerlink" href="#ensure-xdcmp-is-not-enabled" title="Permalink to this heading">#</a></h2>
+<p>Ensure that <code class="docutils literal notranslate"><span class="pre">/etc/gdm3/custom.conf</span></code> does not contain <code class="docutils literal notranslate"><span class="pre">Enable=true</span></code> by running <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/etc/gdm3/custom.conf</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">Enable</span></code></p>
 </section>
 </section>
 
@@ -259,15 +234,23 @@ chmod u-wx,go-rwx /boot/grub/grub.cfg
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="1.3.html">
+          <a class="next-page" href="1.9.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">1.9 - Ensure updates, patches, and additional security software are installed</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="1.7.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1.3 - Filesystem Integrity Checking</div>
+                <div class="title">1.7 - Command Line Warning Banners</div>
                 
               </div>
             </a>
@@ -303,11 +286,9 @@ chmod u-wx,go-rwx /boot/grub/grub.cfg
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1.4 - Bootloader Configuration</a><ul>
-<li><a class="reference internal" href="#ensure-permissions-on-bootloader-config-are-not-overridden">1.4.1 - Ensure permissions on bootloader config are not overridden</a></li>
-<li><a class="reference internal" href="#set-grub-password">1.4.2 - Set GRUB password</a></li>
-<li><a class="reference internal" href="#set-grub-configuration-permissions">1.4.3 - Set grub configuration permissions</a></li>
-<li><a class="reference internal" href="#require-password-for-single-user-mode">1.4.4 - Require password for single user mode</a></li>
+<li><a class="reference internal" href="#">1.8 - GNOME Display Manager (GDM)</a><ul>
+<li><a class="reference internal" href="#enable-warning-banner-and-disable-user-list">1.8.2 - 1.8.3 - Enable warning banner and disable-user-list</a></li>
+<li><a class="reference internal" href="#ensure-xdcmp-is-not-enabled">1.8.4 - Ensure XDCMP is not enabled</a></li>
 </ul>
 </li>
 </ul>
@@ -319,11 +300,11 @@ chmod u-wx,go-rwx /boot/grub/grub.cfg
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/furo.js"></script>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
     </body>
 </html>

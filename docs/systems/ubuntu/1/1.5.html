@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1.3 - Filesystem Integrity Checking" href="1.3.html" /><link rel="prev" title="1.1 Filesystem Configuration" href="1.1.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="1.6 - Mandatory Access Control" href="1.6.html" /><link rel="prev" title="1.4 - Bootloader Configuration" href="1.4.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>1.2 - Configure Software Updates - CIS Benchmark Breakdown</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+        <title>1.5 - Additional Process Hardening - CIS Benchmark Breakdown</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
+      <a href="../../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,12 +143,12 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
   <span class="sidebar-brand-text">CIS Benchmark Breakdown</span>
   
-</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
@@ -156,22 +156,27 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">About:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/contributing.html">Contributing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Systems:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../debian.html">Debian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../windows.html">Windows 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../server.html">Windows Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../debian.html">Debian</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../windows.html">Windows 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../server.html">Windows Server</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.1.html">Filesystem Configuration</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">APT Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.2.html">APT Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.3.html">AIDE Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.4.html">GRUB Configuration</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Misc Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.6.html">AppArmor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.7.html">Warning Banners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.8.html">GDM Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.9.html">Install Updates</a></li>
 </ul>
 
 </div>
@@ -205,28 +210,39 @@
           </label>
         </div>
         <article role="main">
-          <section id="configure-software-updates">
-<h1>1.2 - Configure Software Updates<a class="headerlink" href="#configure-software-updates" title="Permalink to this heading">#</a></h1>
-<section id="configure-package-manager-repositories">
-<h2>1.2.1 - Configure package manager repositories<a class="headerlink" href="#configure-package-manager-repositories" title="Permalink to this heading">#</a></h2>
-<p>Run <code class="docutils literal notranslate"><span class="pre">apt-cache</span> <span class="pre">policy</span></code> to see a list of remote repositories.</p>
-<p>The output should be similar to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Package</span> <span class="n">files</span><span class="p">:</span>
- <span class="mi">100</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">status</span>
-     <span class="n">release</span> <span class="n">a</span><span class="o">=</span><span class="n">now</span>
- <span class="mi">500</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">us</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span> <span class="n">focal</span><span class="o">/</span><span class="n">main</span> <span class="n">amd64</span> <span class="n">Packages</span>
-     <span class="n">release</span> <span class="n">v</span><span class="o">=</span><span class="mf">18.04</span><span class="p">,</span><span class="n">o</span><span class="o">=</span><span class="n">Ubuntu</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="n">focal</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="n">focal</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="n">Ubuntu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">main</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">amd64</span>
-     <span class="n">origin</span> <span class="n">us</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">com</span>
+          <section id="additional-process-hardening">
+<h1>1.5 - Additional Process Hardening<a class="headerlink" href="#additional-process-hardening" title="Permalink to this heading">#</a></h1>
+<section id="enable-aslr">
+<h2>1.5.2 - Enable ASLR<a class="headerlink" href="#enable-aslr" title="Permalink to this heading">#</a></h2>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> and add <code class="docutils literal notranslate"><span class="pre">kernel.randomize_va_space</span> <span class="pre">=</span> <span class="pre">2</span></code></p>
+<p>Then remove aslr overrides by running <a class="reference external" href="https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh">this script</a>.
+You can run the script by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh<span class="o">)</span>
 </pre></div>
 </div>
-<p>Scan through the repositories to check for suspicious repositories.
-Most repositories should be from <a class="reference external" href="http://security.ubuntu.com">http://security.ubuntu.com</a> or
-<a class="reference external" href="http://us.archive.ubuntu.com">http://us.archive.ubuntu.com</a>.</p>
 </section>
-<section id="configure-package-manager-gpg-keys">
-<h2>1.2.2 - Configure package manager GPG keys<a class="headerlink" href="#configure-package-manager-gpg-keys" title="Permalink to this heading">#</a></h2>
-<p>Run <code class="docutils literal notranslate"><span class="pre">apt-key</span> <span class="pre">list</span></code> to list the GPG keys used by apt. Ensure that these come
-from valid sources (e.g.: <code class="docutils literal notranslate"><span class="pre">ftpmaster&#64;ubuntu.com</span></code> or <code class="docutils literal notranslate"><span class="pre">cdimage&#64;ubuntu.com</span></code>)</p>
+<section id="disable-prelink">
+<h2>1.5.3 - Disable Prelink<a class="headerlink" href="#disable-prelink" title="Permalink to this heading">#</a></h2>
+<p>Run <code class="docutils literal notranslate"><span class="pre">prelink</span> <span class="pre">-ua</span></code> to revert prelinked binaries, and <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">purge</span> <span class="pre">prelink</span></code> to uninstall it.</p>
+</section>
+<section id="restrict-coredump">
+<h2>1.5.4 - Restrict Coredump<a class="headerlink" href="#restrict-coredump" title="Permalink to this heading">#</a></h2>
+<p>To <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code> add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">hard</span> <span class="n">core</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>To <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span><span class="o">.</span><span class="n">suid_dumpable</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Then run <code class="docutils literal notranslate"><span class="pre">sysctl</span> <span class="pre">-w</span> <span class="pre">fs.suid_dumpable=0</span></code>.</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">is-enabled</span> <span class="pre">coredump.service</span></code> to check if systemd-coredump is installed.
+If it is installed, to <code class="docutils literal notranslate"><span class="pre">/etc/systemd/coredump.conf</span></code> add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Storage</span><span class="o">=</span><span class="n">none</span>
+<span class="n">ProcessSizeMax</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>and run <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">daemon-reload</span></code>.</p>
 </section>
 </section>
 
@@ -235,23 +251,23 @@ from valid sources (e.g.: <code class="docutils literal notranslate"><span class
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="1.3.html">
+          <a class="next-page" href="1.6.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">1.3 - Filesystem Integrity Checking</div>
+                <div class="title">1.6 - Mandatory Access Control</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="1.1.html">
+          <a class="prev-page" href="1.4.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1.1 Filesystem Configuration</div>
+                <div class="title">1.4 - Bootloader Configuration</div>
                 
               </div>
             </a>
@@ -287,9 +303,10 @@ from valid sources (e.g.: <code class="docutils literal notranslate"><span class
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1.2 - Configure Software Updates</a><ul>
-<li><a class="reference internal" href="#configure-package-manager-repositories">1.2.1 - Configure package manager repositories</a></li>
-<li><a class="reference internal" href="#configure-package-manager-gpg-keys">1.2.2 - Configure package manager GPG keys</a></li>
+<li><a class="reference internal" href="#">1.5 - Additional Process Hardening</a><ul>
+<li><a class="reference internal" href="#enable-aslr">1.5.2 - Enable ASLR</a></li>
+<li><a class="reference internal" href="#disable-prelink">1.5.3 - Disable Prelink</a></li>
+<li><a class="reference internal" href="#restrict-coredump">1.5.4 - Restrict Coredump</a></li>
 </ul>
 </li>
 </ul>
@@ -301,11 +318,11 @@ from valid sources (e.g.: <code class="docutils literal notranslate"><span class
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/furo.js"></script>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
     </body>
 </html>
