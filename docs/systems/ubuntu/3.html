@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="2 - Services" href="2.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>3 - Network Configuration - CIS Benchmark Breakdown</title>
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -166,7 +166,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../server.html">Windows Server</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1/1.1.html">Filesystem Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1/1.2.html">APT Configuration</a></li>
@@ -178,6 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1/1.8.html">GDM Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1/1.9.html">Install Updates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.html">Services</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Network Configuration</a></li>
 </ul>
 
 </div>
@@ -205,7 +206,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -213,6 +214,116 @@
         <article role="main">
           <section id="network-configuration">
 <h1>3 - Network Configuration<a class="headerlink" href="#network-configuration" title="Permalink to this heading">#</a></h1>
+<section id="disable-unused-network-protocols-and-devices">
+<h2>3.1 - Disable unused network protocols and devices<a class="headerlink" href="#disable-unused-network-protocols-and-devices" title="Permalink to this heading">#</a></h2>
+<p>Remove IPv6 by setting in <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">ipv6</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">disable_ipv6</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv6</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">disable_ipv6</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Then run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sysctl -w net.ipv6.conf.all.disable_ipv6<span class="o">=</span><span class="m">1</span>
+sysctl -w net.ipv6.conf.default.disasble_ipv6<span class="o">=</span><span class="m">1</span>
+sysctl -w net.ipv6.route.flush<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Then disable wifi by running <a class="reference external" href="https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/3.1.2.sh">this script</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">&lt;(curl</span> <span class="pre">-s</span> <span class="pre">https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/3.1.2.sh)</span></code></p>
+</section>
+<section id="host-network-parameters">
+<h2>3.2 - Host Network Parameters<a class="headerlink" href="#host-network-parameters" title="Permalink to this heading">#</a></h2>
+<p>Disable packet redirect sending by setting in <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">send_redirects</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">send_redirects</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Then run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sysctl -w net.ipv4.conf.all.send_redirects<span class="o">=</span><span class="m">0</span>
+sysctl -w net.ipv4.conf.default.send_redirects<span class="o">=</span><span class="m">0</span>
+sysctl -w net.ipv4.route.flush<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Disable IP forwarding by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -Els <span class="s2">&quot;^\s*net\.ipv4\.ip_forward\s*=\s*1&quot;</span> /etc/sysctl.conf /etc/sysctl.d/*.conf /usr/lib/sysctl.d/*.conf /run/sysctl.d/*.conf <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> filename<span class="p">;</span> <span class="k">do</span> sed -ri <span class="s2">&quot;s/^\s*(net\.ipv4\.ip_forward\s*)(=)(\s*\S+\b).*</span>$<span class="s2">/# *REMOVED* \1/&quot;</span> <span class="nv">$filename</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span> sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">0</span><span class="p">;</span> sysctl -w net.ipv4.route.flush<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</section>
+<section id="host-and-router-network-parameters">
+<h2>3.3 - Host and Router Network Parameters<a class="headerlink" href="#host-and-router-network-parameters" title="Permalink to this heading">#</a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> set:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">accept_source_route</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">accept_source_route</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">accept_redirects</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">accept_redirects</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">secure_redirects</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">secure_redirects</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">log_martians</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">log_martians</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">icmp_echo_ignore_broadcasts</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">icmp_ignore_bogus_error_responses</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">rp_filter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">rp_filter</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">tcp_syncookies</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">ipv6</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">accept_ra</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv6</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">accept_ra</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sysctl -w net.ipv4.conf.all.accept_source_route<span class="o">=</span><span class="m">0</span>
+sysctl -w net.ipv4.conf.default.accept_source_route<span class="o">=</span><span class="m">0</span>
+
+sysctl -w net.ipv4.conf.all.accept_redirects<span class="o">=</span><span class="m">0</span>
+sysctl -w net.ipv4.conf.default.accept_redirects<span class="o">=</span><span class="m">0</span>
+
+sysctl -w net.ipv4.conf.all.secure_redirects<span class="o">=</span><span class="m">0</span>
+sysctl -w net.ipv4.conf.default.secure_redirects<span class="o">=</span><span class="m">0</span>
+
+sysctl -w net.ipv4.conf.all.log_martians<span class="o">=</span><span class="m">1</span>
+sysctl -w net.ipv4.conf.default.log_martians<span class="o">=</span><span class="m">1</span>
+
+sysctl -w net.ipv4.icmp_echo_ignore_broadcasts<span class="o">=</span><span class="m">1</span>
+
+sysctl -w net.ipv4.icmp_ignore_bogus_error_responses<span class="o">=</span><span class="m">1</span>
+
+sysctl -w net.ipv4.conf.all.rp_filter<span class="o">=</span><span class="m">1</span>
+sysctl -w net.ipv4.conf.default.rp_filter<span class="o">=</span><span class="m">1</span>
+
+sysctl -w net.ipv4.tcp_syncookies<span class="o">=</span><span class="m">1</span>
+
+sysctl -w net.ipv6.conf.all.accept_ra<span class="o">=</span><span class="m">0</span>
+sysctl -w net.ipv6.conf.default.accept_ra<span class="o">=</span><span class="m">0</span>
+
+sysctl -w net.ipv4.route.flush<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</section>
+<section id="uncommon-network-protocols">
+<h2>3.4 - Uncommon Network Protocols<a class="headerlink" href="#uncommon-network-protocols" title="Permalink to this heading">#</a></h2>
+<p>Disable mounting of the following modules:</p>
+<ul class="simple">
+<li><p>dccp</p></li>
+<li><p>sctp</p></li>
+<li><p>rds</p></li>
+</ul>
+<p>Create/edit a file <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/MODULE_NAME.conf</span></code> that contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span> <span class="p">(</span><span class="n">MODULE_NAME</span><span class="p">)</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">true</span>
+</pre></div>
+</div>
+<p>Then run <code class="docutils literal notranslate"><span class="pre">rmmod</span> <span class="pre">MODULE_NAME</span></code> to remove the module in the current session.</p>
+</section>
+<section id="firewall-configuration">
+<h2>3.5 - Firewall Configuration<a class="headerlink" href="#firewall-configuration" title="Permalink to this heading">#</a></h2>
+<p>Run <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">gufw</span></code> to install gufw.</p>
+<p>Then run <code class="docutils literal notranslate"><span class="pre">gufw</span></code> to open the program, and change the settings to match the image below.</p>
+<p><img alt="UFW Configuration" src="../../_images/ufw.png" /></p>
+</section>
 </section>
 
         </article>
@@ -221,7 +332,17 @@
         
         <div class="related-pages">
           
-          
+          <a class="prev-page" href="2.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">2 - Services</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -242,8 +363,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">3 - Network Configuration</a><ul>
+<li><a class="reference internal" href="#disable-unused-network-protocols-and-devices">3.1 - Disable unused network protocols and devices</a></li>
+<li><a class="reference internal" href="#host-network-parameters">3.2 - Host Network Parameters</a></li>
+<li><a class="reference internal" href="#host-and-router-network-parameters">3.3 - Host and Router Network Parameters</a></li>
+<li><a class="reference internal" href="#uncommon-network-protocols">3.4 - Uncommon Network Protocols</a></li>
+<li><a class="reference internal" href="#firewall-configuration">3.5 - Firewall Configuration</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

@@ -54,7 +54,7 @@
 - 2.2.1 - 2.2.6 - Disable services clients
 - 2.3 - Disable/mask unnecessary services
 
-## [3.1 - Disable unused network protocols and devices](./3.md)
+## [3.1 - Disable unused network protocols and devices](./3.md#31---disable-unused-network-protocols-and-devices)
 
 - 3.1.1 - Disable IPv6
 - 3.1.2 - Disable WiFi
