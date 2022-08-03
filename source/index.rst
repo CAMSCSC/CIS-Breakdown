@@ -36,6 +36,7 @@ Welcome to CIS-Breakdown!
    GDM Configuration <./systems/ubuntu/1/1.8.md>
    Install Updates <./systems/ubuntu/1/1.9.md>
    Services <./systems/ubuntu/2.md>
+   Network Configuration <./systems/ubuntu/3.md>
 
 Indices and tables
 ==================
