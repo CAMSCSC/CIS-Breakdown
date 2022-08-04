@@ -29,6 +29,7 @@ Welcome to CIS-Breakdown!
    Initial Configuration <./systems/ubuntu/1.md>
    Services <./systems/ubuntu/2.md>
    Network Configuration <./systems/ubuntu/3.md>
+   Logging and Auditing <./systems/ubuntu/4.md>
 
 Indices and tables
 ==================
