@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Windows 10 CIS Benchmark" href="windows.html" /><link rel="prev" title="Contributing" href="../about/contributing.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>Debian 10 CIS Benchmark - CIS Benchmark Breakdown</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+        <title>4.2.1 - Configure rsyslog - CIS Benchmark Breakdown</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
+      <a href="../../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,12 +143,12 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
   <span class="sidebar-brand-text">CIS Benchmark Breakdown</span>
   
-</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
@@ -156,22 +156,22 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">About:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../about/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/contributing.html">Contributing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Systems:</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Debian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="server.html">Windows Server</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../debian.html">Debian</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../windows.html">Windows 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../server.html">Windows Server</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu/1.html">Initial Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu/2.html">Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu/3.html">Network Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu/4.html">Logging and Auditing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1.html">Initial Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2.html">Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3.html">Network Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4.html">Logging and Auditing</a></li>
 </ul>
 
 </div>
@@ -205,8 +205,30 @@
           </label>
         </div>
         <article role="main">
-          <section id="debian-10-cis-benchmark">
-<h1>Debian 10 CIS Benchmark<a class="headerlink" href="#debian-10-cis-benchmark" title="Permalink to this heading">#</a></h1>
+          <section id="configure-rsyslog">
+<h1>4.2.1 - Configure rsyslog<a class="headerlink" href="#configure-rsyslog" title="Permalink to this heading">#</a></h1>
+<p>Install rsyslog by running <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">rsyslog</span></code>.</p>
+<p>Enable the service by running <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--now</span> <span class="pre">enable</span> <span class="pre">rsyslog</span></code>.</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">/var/log/</span></code> to make sure that the log files are functional.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">/etc/rsyslog.conf</span></code> and <code class="docutils literal notranslate"><span class="pre">/etc/rsyslog.d/*.conf</span></code>, set all instances of <code class="docutils literal notranslate"><span class="pre">$FileCreateMode</span></code> to <code class="docutils literal notranslate"><span class="pre">0640</span></code>.</p>
+<p>(4.2.1.5 and 4.2.1.6 skipped)</p>
+</section>
+<section id="configure-journald">
+<h1>4.2.2 - Configure journald<a class="headerlink" href="#configure-journald" title="Permalink to this heading">#</a></h1>
+<p>In <code class="docutils literal notranslate"><span class="pre">/etc/systemd/journald.conf</span></code> add</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ForwardToSyslog</span><span class="o">=</span><span class="n">yes</span>
+<span class="n">Compress</span><span class="o">=</span><span class="n">yes</span>
+<span class="n">Storage</span><span class="o">=</span><span class="n">persistent</span>
+</pre></div>
+</div>
+</section>
+<section id="ensure-permissions-on-all-logfiles-are-configured">
+<h1>4.2.3 - Ensure permissions on all logfiles are configured<a class="headerlink" href="#ensure-permissions-on-all-logfiles-are-configured" title="Permalink to this heading">#</a></h1>
+<p>Set the permissions on all existing log files by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find /var/log -type f -exec chmod g-wx,o-rwx <span class="s2">&quot;{}&quot;</span> + -o -type d -exec chmod g-
+w,o-rwx <span class="s2">&quot;{}&quot;</span> +
+</pre></div>
+</div>
 </section>
 
         </article>
@@ -214,26 +236,8 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="windows.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Windows 10 CIS Benchmark</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../about/contributing.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Contributing</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -260,11 +264,11 @@
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/furo.js"></script>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
     </body>
 </html>

@@ -74,7 +74,7 @@
 - 3.5.2.x - Configure nftables (skip)
 - 3.5.3.x - Configure iptables (skip)
 
-## Configure System Auditing
+## [4.1 - Configure System Auditing](./4.md#41---configure-auditd)
 
 - 4.1.1 - 4.1.2 - Enable and configure auditd
 - 4.1.3 - Log date and time change events
