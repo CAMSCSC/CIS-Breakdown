@@ -12,8 +12,6 @@ Our target systems are Ubuntu 18, Debian 10, Windows 10, and Windows Server
 2019, which are the main images found in the AFA Cyberpatriot Competition.
 More information about the competition can be found [here][Cyberpatriot].
 
-To see the rest of the pages, click [here][toc].
-
 [CIS Benchmarks]: https://downloads.cisecurity.org/#/
 [Cyberpatriot]: https://www.uscyberpatriot.org/home
 [toc]: https://camscsc.github.io/CIS-Checklist-Breakdown/
