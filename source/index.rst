@@ -30,6 +30,7 @@ Welcome to CIS-Breakdown!
    Services <./systems/ubuntu/2.md>
    Network Configuration <./systems/ubuntu/3.md>
    Logging and Auditing <./systems/ubuntu/4.md>
+   Access, Authentication, and Authorization <./systems/ubuntu/5.md>
 
 Indices and tables
 ==================
