@@ -26,6 +26,7 @@ Welcome to CIS-Breakdown!
    :caption: Ubuntu:
    
    Overview <./systems/ubuntu/overview.md>
+   Basic Info <./systems/ubuntu/basic_info.md>
    Initial Configuration <./systems/ubuntu/1.md>
    Services <./systems/ubuntu/2.md>
    Network Configuration <./systems/ubuntu/3.md>

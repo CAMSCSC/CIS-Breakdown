@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="3 - Network Configuration" href="3.html" /><link rel="prev" title="1 - Initial Configuration" href="1.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1 - Initial Configuration" href="1.html" /><link rel="prev" title="Overview - Ubuntu 18.04" href="overview.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>2 - Services - CIS Benchmark Breakdown</title>
+        <title>0 - Basic Information - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -168,9 +168,9 @@
 <p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic_info.html">Basic Info</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Basic Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.html">Initial Configuration</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3.html">Network Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.html">Logging and Auditing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5.html">Access, Authentication, and Authorization</a></li>
@@ -207,54 +207,65 @@
           </label>
         </div>
         <article role="main">
-          <section id="services">
-<h1>2 - Services<a class="headerlink" href="#services" title="Permalink to this heading">#</a></h1>
-<section id="disable-unused-services">
-<h2>2.1 - Disable Unused Services<a class="headerlink" href="#disable-unused-services" title="Permalink to this heading">#</a></h2>
-<section id="uninstall-services">
-<h3>2.1.2 - 2.1.14, 2.1.16 - 2.1.17 - Uninstall Services<a class="headerlink" href="#uninstall-services" title="Permalink to this heading">#</a></h3>
-<p>Uninstall Xwin, Avahi Server, CUPS, DHCP server, LDAP server, NFS, DNS server, FTP server, HTTP server, IMAP and POP3 server, Samba, HTTP Proxy Server, SNMP Server, rsync, and NIS Server.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>systemctl stop avahi-daemon.service
-systemctl stop avahi-daemon.socket
-apt-get purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-server bind9 vsftpd apache2 dovecot-imapd dovecot-pop3d courier-imap cyrus-imap samba squid snmpd rsync nis
+          <section id="basic-information">
+<h1>0 - Basic Information<a class="headerlink" href="#basic-information" title="Permalink to this heading">#</a></h1>
+<p>Using the Ubuntu CIS benchmark requires a large amount of terminal usage.</p>
+<p>The terminal is a window where commands can be sent, and where most actions in Linux occur. To open the terminal, search for <code class="docutils literal notranslate"><span class="pre">terminal</span></code> in the search bar, or press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">alt</span> <span class="pre">+</span> <span class="pre">t</span></code>. This opens the terminal window, where you can type commands.</p>
+<section id="basic-commands">
+<h2>Basic Commands:<a class="headerlink" href="#basic-commands" title="Permalink to this heading">#</a></h2>
+<section id="grep">
+<h3><code class="docutils literal notranslate"><span class="pre">grep</span></code><a class="headerlink" href="#grep" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">grep</span></code> allows you to filter text.
+To use <code class="docutils literal notranslate"><span class="pre">grep</span></code>, type <code class="docutils literal notranslate"><span class="pre">grep</span></code>, the pattern you would like to match,
+and then the path of the file you would like to filter.
+For example, to filter for the word <code class="docutils literal notranslate"><span class="pre">ubuntu</span></code> in the file <code class="docutils literal notranslate"><span class="pre">ubuntu.txt</span></code>, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep ubuntu ubuntu.txt.
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">grep</span></code> can also be used to filter the output of another command.
+To do this, type the other command, and then <code class="docutils literal notranslate"> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">PATTERN</span></code> after it,
+replacing <code class="docutils literal notranslate"><span class="pre">PATTERN</span></code> with your pattern.
+For example, to filter the output of <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">test.sh</span></code> for the word <code class="docutils literal notranslate"><span class="pre">test</span></code>, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat test.sh <span class="p">|</span> grep test.
 </pre></div>
 </div>
 </section>
+<section id="cat">
+<h3><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cat</span></code> allows you to read a file. To use <code class="docutils literal notranslate"><span class="pre">cat</span></code>, type <code class="docutils literal notranslate"><span class="pre">cat</span></code>
+and the path of the file(s) you would like to read.
+These will be printed onto the console.</p>
 </section>
-<section id="configure-mail-transfer-agent-to-be-local-only">
-<h2>2.1.15 - Configure mail transfer agent to be local only<a class="headerlink" href="#configure-mail-transfer-agent-to-be-local-only" title="Permalink to this heading">#</a></h2>
-<p>Make sure that the mail transfer agent is only listening on loopback addresses (<code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code> or <code class="docutils literal notranslate"><span class="pre">::1</span></code>).</p>
-<p>Edit <code class="docutils literal notranslate"><span class="pre">/etc/exim4/update-exim4.conf.conf</span></code> to look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dc_eximconfig_configtype</span><span class="o">=</span><span class="s1">&#39;local&#39;</span>
-<span class="n">dc_local_interfaces</span><span class="o">=</span><span class="s1">&#39;127.0.0.1 ; ::1&#39;</span>
-<span class="n">dc_readhost</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-<span class="n">dc_relay_domains</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-<span class="n">dc_minimaldns</span><span class="o">=</span><span class="s1">&#39;false&#39;</span>
-<span class="n">dc_relay_nets</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-<span class="n">dc_smarthost</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-<span class="n">dc_use_split_config</span><span class="o">-</span><span class="s1">&#39;false&#39;</span>
-<span class="n">dc_hide_mailname</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-<span class="n">dc_mailname_in_oh</span><span class="o">=</span><span class="s1">&#39;true&#39;</span>
-<span class="n">dc_localdelivery</span><span class="o">=</span><span class="s1">&#39;mail_spool&#39;</span>
+<section id="nano">
+<h3><code class="docutils literal notranslate"><span class="pre">nano</span></code><a class="headerlink" href="#nano" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">nano</span></code> is a basic text editor. To use <code class="docutils literal notranslate"><span class="pre">nano</span></code>,
+type <code class="docutils literal notranslate"><span class="pre">nano</span></code> and then the path of the file (or the path of a new file).
+For example, to edit <code class="docutils literal notranslate"><span class="pre">passwords.txt</span></code>, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano passwords.txt
 </pre></div>
 </div>
-<p>Then restart exim4 by running <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">exim4</span></code>.</p>
+<p>This will turn the terminal into a basic GUI.
+To edit the file, move around the cursor with the arrow keys,
+and type in or delete the text you want.</p>
+<p>To save and exit, press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">x</span></code>.
+This will cause <code class="docutils literal notranslate"><span class="pre">nano</span></code> to ask whether or not to save, by entering <code class="docutils literal notranslate"><span class="pre">Y</span></code> or <code class="docutils literal notranslate"><span class="pre">N</span></code>.
+Then <code class="docutils literal notranslate"><span class="pre">nano</span></code> will ask for a file to save to, which defaults to the one that was opened.</p>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">nano</span></code> often requires <code class="docutils literal notranslate"><span class="pre">sudo</span></code> to edit files. See <a class="reference internal" href="#sudo"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">sudo</span></code></span></a> for more information.</p>
+</div>
 </section>
-<section id="service-clients">
-<h2>2.2 Service Clients<a class="headerlink" href="#service-clients" title="Permalink to this heading">#</a></h2>
-<section id="disable-service-clients">
-<h3>2.2.1 - 2.2.6 - Disable Service Clients<a class="headerlink" href="#disable-service-clients" title="Permalink to this heading">#</a></h3>
-<p>Remove nis, rsh, talk, telnet, LDAP, and RPC.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt purge nis rsh-client talk telnet idap-utils rpcbind
+<section id="sudo">
+<h3><code class="docutils literal notranslate"><span class="pre">sudo</span></code><a class="headerlink" href="#sudo" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span></code>, which stands for SuperUser DO, gives a command a higher permission level.
+It is often required to work with sensitive files.
+To use <code class="docutils literal notranslate"><span class="pre">sudo</span></code>, type <code class="docutils literal notranslate"><span class="pre">sudo</span></code> and another command after it.
+This will ask for your password, which is hidden while you type it.</p>
+<p>For example, to run <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">passwords.txt</span></code> with sudo, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano passwords.txt
 </pre></div>
 </div>
 </section>
-</section>
-<section id="remove-or-mask-nonessential-services">
-<h2>2.3 - Remove or mask nonessential services<a class="headerlink" href="#remove-or-mask-nonessential-services" title="Permalink to this heading">#</a></h2>
-<p>List services that are listening on a port by running <code class="docutils literal notranslate"><span class="pre">lsof</span> <span class="pre">-i</span> <span class="pre">-P</span> <span class="pre">-n</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">-v</span> <span class="pre">&quot;(ESTABLISHED)&quot;</span></code></p>
-<p>(A complete list of open ports can be obtained by using <code class="docutils literal notranslate"><span class="pre">ss</span></code>, such as <code class="docutils literal notranslate"><span class="pre">ss</span> <span class="pre">-ln</span></code>.)</p>
-<p>When a service is found, stop the service by running <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--now</span> <span class="pre">mask</span> <span class="pre">SERVICE_NAME</span></code> and uninstall by running <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">purge</span> <span class="pre">PACKAGE_NAME</span></code></p>
 </section>
 </section>
 
@@ -263,23 +274,23 @@ apt-get purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-s
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="3.html">
+          <a class="next-page" href="1.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">3 - Network Configuration</div>
+                <div class="title">1 - Initial Configuration</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="1.html">
+          <a class="prev-page" href="overview.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1 - Initial Configuration</div>
+                <div class="title">Overview - Ubuntu 18.04</div>
                 
               </div>
             </a>
@@ -315,17 +326,14 @@ apt-get purge xserver-xorg* avahi-daemon cups isc-dhcp-server slapd nfs-kernel-s
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">2 - Services</a><ul>
-<li><a class="reference internal" href="#disable-unused-services">2.1 - Disable Unused Services</a><ul>
-<li><a class="reference internal" href="#uninstall-services">2.1.2 - 2.1.14, 2.1.16 - 2.1.17 - Uninstall Services</a></li>
+<li><a class="reference internal" href="#">0 - Basic Information</a><ul>
+<li><a class="reference internal" href="#basic-commands">Basic Commands:</a><ul>
+<li><a class="reference internal" href="#grep"><code class="docutils literal notranslate"><span class="pre">grep</span></code></a></li>
+<li><a class="reference internal" href="#cat"><code class="docutils literal notranslate"><span class="pre">cat</span></code></a></li>
+<li><a class="reference internal" href="#nano"><code class="docutils literal notranslate"><span class="pre">nano</span></code></a></li>
+<li><a class="reference internal" href="#sudo"><code class="docutils literal notranslate"><span class="pre">sudo</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configure-mail-transfer-agent-to-be-local-only">2.1.15 - Configure mail transfer agent to be local only</a></li>
-<li><a class="reference internal" href="#service-clients">2.2 Service Clients</a><ul>
-<li><a class="reference internal" href="#disable-service-clients">2.2.1 - 2.2.6 - Disable Service Clients</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#remove-or-mask-nonessential-services">2.3 - Remove or mask nonessential services</a></li>
 </ul>
 </li>
 </ul>
