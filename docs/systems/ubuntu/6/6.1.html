@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>5.5.1 Set Shadow Suite Parameters - CIS Benchmark Breakdown</title>
+        <title>6.1.1 - Audit package permissions - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -208,73 +208,108 @@
           </label>
         </div>
         <article role="main">
-          <section id="set-shadow-suite-parameters">
-<h1>5.5.1 Set Shadow Suite Parameters<a class="headerlink" href="#set-shadow-suite-parameters" title="Permalink to this heading">#</a></h1>
-<p>In <code class="docutils literal notranslate"><span class="pre">/etc/login.defs</span></code> change the parameters to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PASS_MIN_DAYS</span> <span class="mi">1</span>
-<span class="n">PASS_MAX_DAYS</span> <span class="mi">365</span>
-<span class="n">PASS_WARN_AGE</span> <span class="mi">7</span>
+          <section id="audit-package-permissions">
+<h1>6.1.1 - Audit package permissions<a class="headerlink" href="#audit-package-permissions" title="Permalink to this heading">#</a></h1>
+<p>Running <code class="docutils literal notranslate"><span class="pre">dpkg</span> <span class="pre">--list</span></code> or <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">list</span> <span class="pre">--installed</span></code>
+shows a list of all installed packages on the system.</p>
+<p>Note: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">list</span> <span class="pre">--installed</span></code> likely will output too many lines to view, in the terminal,
+so <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">list</span> <span class="pre">--installed</span> <span class="pre">&gt;</span> <span class="pre">packages.txt</span></code> will output it to a file named <code class="docutils literal notranslate"><span class="pre">packages.txt</span></code>.</p>
+<p>Running <code class="docutils literal notranslate"><span class="pre">dpkg</span> <span class="pre">--verify</span> <span class="pre">PACKAGE_NAME</span></code> verifies the files in a package.
+The errors it returns are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Code</span> <span class="n">Meaning</span>
+<span class="n">S</span>    <span class="n">File</span> <span class="n">size</span> <span class="n">differs</span><span class="o">.</span>
+<span class="n">M</span>    <span class="n">File</span> <span class="n">mode</span> <span class="n">differs</span> <span class="p">(</span><span class="n">includes</span> <span class="n">permissions</span> <span class="ow">and</span> <span class="n">file</span> <span class="nb">type</span><span class="p">)</span><span class="o">.</span>
+<span class="mi">5</span>    <span class="n">The</span> <span class="n">MD5</span> <span class="n">checksum</span> <span class="n">differs</span><span class="o">.</span>
+<span class="n">D</span>    <span class="n">The</span> <span class="n">major</span> <span class="ow">and</span> <span class="n">minor</span> <span class="n">version</span> <span class="n">numbers</span> <span class="n">differ</span> <span class="n">on</span> <span class="n">a</span> <span class="n">device</span> <span class="n">file</span><span class="o">.</span>
+<span class="n">L</span>    <span class="n">A</span> <span class="n">mismatch</span> <span class="n">occurs</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">link</span><span class="o">.</span>
+<span class="n">U</span>    <span class="n">The</span> <span class="n">file</span> <span class="n">ownership</span> <span class="n">differs</span><span class="o">.</span>
+<span class="n">G</span>    <span class="n">The</span> <span class="n">file</span> <span class="n">group</span> <span class="n">owner</span> <span class="n">differs</span><span class="o">.</span>
+<span class="n">T</span>    <span class="n">The</span> <span class="n">file</span> <span class="n">time</span> <span class="p">(</span><span class="n">mtime</span><span class="p">)</span> <span class="n">differs</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Then run for every user:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>useradd -D -f <span class="m">30</span>
-chage --inactive <span class="m">30</span> &lt;user&gt;
-</pre></div>
-</div>
-<p>Make sure any users do not have a password change date in the future by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk -F : <span class="s1">&#39;/^[^:]+:[^!*]/{print $1}&#39;</span> /etc/shadow <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> -r usr<span class="p">;</span> <span class="k">do</span> <span class="o">[</span><span class="s2">&quot;</span><span class="k">$(</span>date --date<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>chage --list <span class="s2">&quot;</span><span class="nv">$usr</span><span class="s2">&quot;</span> <span class="p">|</span> grep <span class="s1">&#39;^Last password change&#39;</span> <span class="p">|</span> cut -d: -f2<span class="k">)</span><span class="s2">&quot;</span> +%s<span class="k">)</span><span class="s2">&quot;</span> -gt <span class="s2">&quot;</span><span class="k">$(</span>date <span class="s2">&quot;+%s&quot;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;user: </span><span class="nv">$usr</span><span class="s2"> password changedate: </span><span class="k">$(</span>chage --list <span class="s2">&quot;</span><span class="nv">$usr</span><span class="s2">&quot;</span> <span class="p">|</span> grep <span class="s1">&#39;^Last password change&#39;</span> <span class="p">|</span> cut -d: -f2<span class="k">)</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span>
-</pre></div>
-</div>
-<p>If a user has a password change date in the future, reset or expire the password.</p>
+<p>Verifying all packages can reveal security vulnerabilities, but is extremely time-consuming.</p>
 </section>
-<section id="secure-system-accounts">
-<h1>5.5.2 - Secure system accounts<a class="headerlink" href="#secure-system-accounts" title="Permalink to this heading">#</a></h1>
-<p>Set all system accounts to a non-login shell by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk -F: <span class="s1">&#39;$1!~/(root|sync|shutdown|halt|^\+)/ &amp;&amp; $3&lt;&#39;</span><span class="s2">&quot;</span><span class="k">$(</span>awk
-<span class="s1">&#39;/^\s*UID_MIN/{print $2}&#39;</span> /etc/login.defs<span class="k">)</span><span class="s2">&quot;</span><span class="s1">&#39; &amp;&amp;$7!~/((\/usr)?\/sbin\/nologin)/ &amp;&amp;</span>
-<span class="s1">$7!~/(\/bin)?\/false/ {print $1}&#39;</span>
-/etc/passwd <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> -r user<span class="p">;</span> <span class="k">do</span> usermod -s <span class="s2">&quot;</span><span class="k">$(</span>which nologin<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$user</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span>
+<section id="configure-important-file-permissions">
+<h1>6.1.2 - 6.1.9 - Configure important file permissions<a class="headerlink" href="#configure-important-file-permissions" title="Permalink to this heading">#</a></h1>
+<p>To ensure that the file permissions are set properly on important files and directories, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chown root:root /etc/passwd
+sudo chmod u-x,go-wx /etc/passwd
+sudo chown root:root /etc/passwd~
+sudo chmod u-x,go-wx /etc/passwd~
+sudo chown root:root /etc/group
+sudo chmod u-x,go-wx /etc/group
+sudo chown root:root /etc/group~
+sudo chmod u-x,go-wx /etc/group~
+sudo chown root:root /etc/shadow
+sudo chmod u-x,go-wx /etc/shadow
+sudo chown root:root /etc/shadow~
+sudo chmod u-x,go-wx /etc/shadow~
+sudo chown root:root /etc/gshadow
+sudo chmod u-x,go-wx /etc/gshadow
+sudo chown root:root /etc/gshadow~
+sudo chmod u-x,go-wx /etc/gshadow~
 </pre></div>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>To run all of these commands at once, paste them into a .sh file and run it with bash.</p>
+<p>Ex: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">bash</span> <span class="pre">script.sh</span></code></p>
 </div>
 </section>
-<section id="ensure-default-group-for-root-is-gid-0">
-<h1>5.5.3 - Ensure default group for root is GID 0<a class="headerlink" href="#ensure-default-group-for-root-is-gid-0" title="Permalink to this heading">#</a></h1>
-<p>Run <code class="docutils literal notranslate"><span class="pre">usermod</span> <span class="pre">-g</span> <span class="pre">0</span> <span class="pre">root</span></code>.</p>
+<section id="ensure-no-world-writable-files-exist">
+<h1>6.1.10 - Ensure no world writable files exist<a class="headerlink" href="#ensure-no-world-writable-files-exist" title="Permalink to this heading">#</a></h1>
+<p>To scan for world-writable files in local directories, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>df --local -P <span class="p">|</span> awk <span class="s1">&#39;{if (NR!=1) print $6}&#39;</span> <span class="p">|</span> xargs -I <span class="s1">&#39;{}&#39;</span> find <span class="s1">&#39;{}&#39;</span> -xdev -type f -perm -0002
+</pre></div>
+</div>
+<p>To search on individual partitions, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find PARTITION_NAME -xdev -type f -perm -0002
+</pre></div>
+</div>
+<p>If a world-writable file is found, remove miscellaneous write access on it by running <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">o-w</span> <span class="pre">FILENAME</span></code>.</p>
 </section>
-<section id="ensure-default-user-umask-is-027-or-more-restrictive">
-<h1>5.5.4 - Ensure default user umask is 027 or more restrictive<a class="headerlink" href="#ensure-default-user-umask-is-027-or-more-restrictive" title="Permalink to this heading">#</a></h1>
-<p>Run the following command to check if any files have an unrestrictive umask.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -RPi <span class="s1">&#39;(^|^[^#]*)\s*umask\s+([0-7][0-7][01][0-7]\b|[0-7][0-7][0-7][0-6]\b|[0-7][01][0-7]\b|[0-7][0-7][0-6]\b|(u=[rwx]{0,3},)?(g=[rwx]{0,3},)?o=[rwx]+\b|(u=[rwx]{1,3},)?g=[^rx]{1,3}(,o=[rwx]{0,3})?\b)&#39;</span> /etc/login.defs /etc/profile* /etc/bash.bashrc*
+<section id="check-for-unowned-ungrouped-files">
+<h1>6.1.11 - 6.1.12 - Check for unowned/ungrouped files<a class="headerlink" href="#check-for-unowned-ungrouped-files" title="Permalink to this heading">#</a></h1>
+<p>To scan for unowned files in local directories, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>df --local -P <span class="p">|</span> awk <span class="o">{</span><span class="s1">&#39;if (NR!=1) print $6&#39;</span><span class="o">}</span> <span class="p">|</span> xargs -I <span class="s1">&#39;{}&#39;</span> find <span class="s1">&#39;{}&#39;</span> -xdev -nouser
 </pre></div>
 </div>
-<p>Edit the returned files to change the umask to <code class="docutils literal notranslate"><span class="pre">027</span></code>. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UMASK</span>           <span class="mi">027</span>
+<p>To scan for ungrouped files in local directories, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>df --local -P <span class="p">|</span> awk <span class="s1">&#39;{if (NR!=1) print $6}&#39;</span> <span class="p">|</span> xargs -I <span class="s1">&#39;{}&#39;</span> find <span class="s1">&#39;{}&#39;</span> -xdev -nogroup
 </pre></div>
 </div>
-<p>Then, set the default umask by editing <code class="docutils literal notranslate"><span class="pre">/etc/login.defs</span></code>
-and make sure the following paramers are set:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UMASK</span> <span class="mi">027</span>
+<p>To search for unowned files in individual partitions, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find PARTITION_NAME -xdev -nouser
+</pre></div>
+</div>
+<p>To search for ungrouped files in individual partitions, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find PARTITION_NAME -xdev -nogroup
+</pre></div>
+</div>
+<p>If any files are found, assign them an owner or group by using <code class="docutils literal notranslate"><span class="pre">chown</span></code>.
+See <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">chown</span></code> for more information.</p>
+</section>
+<section id="audit-suid-and-sgid-executables">
+<h1>6.1.13 - 6.1.14 - Audit SUID and SGID executables<a class="headerlink" href="#audit-suid-and-sgid-executables" title="Permalink to this heading">#</a></h1>
+<p>To scan for SUID files locally, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>df --local -P <span class="p">|</span> awk <span class="s1">&#39;{if (NR!=1) print $6}&#39;</span> <span class="p">|</span> xargs -I <span class="s1">&#39;{}&#39;</span> find <span class="s1">&#39;{}&#39;</span> -xdev
+-type f -perm -4000
+</pre></div>
+</div>
+<p>To scan for SGID files locally, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>df --local -P <span class="p">|</span> awk <span class="s1">&#39;{if (NR!=1) print $6}&#39;</span> <span class="p">|</span> xargs -I <span class="s1">&#39;{}&#39;</span> find <span class="s1">&#39;{}&#39;</span> -xdev
+-type f -perm -2000
+</pre></div>
+</div>
+<p>To scan on individual partitions, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># SUID:</span>
+find PARTITION_NAME -xdev -type f -perm <span class="m">4000</span>
 
-<span class="n">USERGROUPS_ENAB</span> <span class="n">no</span>
+<span class="c1"># SGID:</span>
+find PARTITION_NAME -xdev -type f -perm <span class="m">2000</span>
 </pre></div>
 </div>
-</section>
-<section id="ensure-defualt-user-shell-timeout-is-900-seconds-or-less">
-<h1>5.5.5 Ensure defualt user shell timeout is 900 seconds or less<a class="headerlink" href="#ensure-defualt-user-shell-timeout-is-900-seconds-or-less" title="Permalink to this heading">#</a></h1>
-<p>Make sure that <code class="docutils literal notranslate"><span class="pre">TMOUT</span></code> is configured by running the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> f <span class="k">in</span> /etc/bash.bashrc /etc/profile /etc/profile.d/*.sh <span class="p">;</span> <span class="k">do</span> grep -Eq <span class="s1">&#39;(^|^[^#]*;)\s*(readonly|export(\s+[^$#;]+\s*)*)?\s*TMOUT=(900|[1-8][0-9][0-9]|[1-9][0-9]|[1-9])\b&#39;</span> <span class="nv">$f</span> <span class="o">&amp;&amp;</span> grep -Eq <span class="s1">&#39;(^|^[^#]*;)\s*readonly\s+TMOUT\b&#39;</span> <span class="nv">$f</span> <span class="o">&amp;&amp;</span> grep -Eq <span class="s1">&#39;(^|^[^#]*;)\s*export\s+([^$#;]+\s+)*TMOUT\b&#39;</span> <span class="nv">$f</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;TMOUT correctly configured in file: </span><span class="nv">$f</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span>
-</pre></div>
-</div>
-<p>If <code class="docutils literal notranslate"><span class="pre">TMOUT</span></code> is not configured correctly, open the file and ensure that it matches</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TMOUT</span><span class="o">=</span><span class="mi">900</span>
-<span class="n">readonly</span> <span class="n">TMOUT</span>
-<span class="n">export</span> <span class="n">TMOUT</span>
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">readonly</span> <span class="n">TMOUT</span><span class="o">=</span><span class="mi">900</span> <span class="p">;</span> <span class="n">export</span> <span class="n">TMOUT</span>
-</pre></div>
-</div>
+<p>For files that are found, review them, and either revoke the permissions of or delete rogue files.</p>
 </section>
 
         </article>

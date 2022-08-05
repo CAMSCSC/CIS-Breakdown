@@ -42,22 +42,10 @@ Then, clone the git repository and add your contributions to `/source`. Add
 your contributions to `/source/index.rst` to make sure they appear on the
 website. 
 
-To build your changes (not necessary), do:
+To build your changes, run `sphinx-build source docs`.
 
-Windows:
-
-```powershell
-./make.bat github
-```
-
-Mac/Linux:
-
-```bash
-make github
-```
-
-Then open a pull request to publish your changes! Do not commit the /docs 
-folder, as github actions is set to automatically build sphinx. Any help 
-on this project is greatly appreciated!
+Then open a pull request to publish your changes! 
+Please do not commit the `/docs` folder, as github actions is set to automatically build sphinx. 
+Any help on this project is greatly appreciated!
 
 [CIS Benchmarks]: https://downloads.cisecurity.org/#/

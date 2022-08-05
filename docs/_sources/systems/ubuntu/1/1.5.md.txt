@@ -6,10 +6,10 @@ Then remove aslr overrides by running [this script][aslr script].
 You can run the script by running:
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh)
+source <(curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Breakdown/main/scripts/1.4.1.sh)
 ```
 
-[aslr script]: https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh
+[aslr script]: https://raw.githubusercontent.com/CAMSCSC/CIS-Breakdown/main/scripts/1.4.1.sh
 
 ### 1.5.3 - Disable Prelink
 

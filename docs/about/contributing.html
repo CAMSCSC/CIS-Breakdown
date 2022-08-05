@@ -174,6 +174,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu/3.html">Network Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu/4.html">Logging and Auditing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu/5.html">Access, Authentication, and Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../systems/ubuntu/6.html">System Maintenance</a></li>
 </ul>
 
 </div>
@@ -227,18 +228,10 @@ would like to help summarize. (See our examples for more info.)</p>
 <p>Then, clone the git repository and add your contributions to <code class="docutils literal notranslate"><span class="pre">/source</span></code>. Add
 your contributions to <code class="docutils literal notranslate"><span class="pre">/source/index.rst</span></code> to make sure they appear on the
 website.</p>
-<p>To build your changes (not necessary), do:</p>
-<p>Windows:</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">./</span><span class="n">make</span><span class="p">.</span><span class="n">bat</span> <span class="n">github</span>
-</pre></div>
-</div>
-<p>Mac/Linux:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make github
-</pre></div>
-</div>
-<p>Then open a pull request to publish your changes! Do not commit the /docs
-folder, as github actions is set to automatically build sphinx. Any help
-on this project is greatly appreciated!</p>
+<p>To build your changes, run <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">source</span> <span class="pre">docs</span></code>.</p>
+<p>Then open a pull request to publish your changes!
+Please do not commit the <code class="docutils literal notranslate"><span class="pre">/docs</span></code> folder, as github actions is set to automatically build sphinx.
+Any help on this project is greatly appreciated!</p>
 </section>
 
         </article>

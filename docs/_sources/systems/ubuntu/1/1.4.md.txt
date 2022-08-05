@@ -21,7 +21,7 @@ fi
 This can be run using the script found [here][grub script], which can be run by running:
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh)
+source <(curl -s https://raw.githubusercontent.com/CAMSCSC/CIS-Breakdown/main/scripts/1.4.1.sh)
 ```
 
 ### 1.4.2 - Set GRUB password
@@ -51,4 +51,4 @@ chmod u-wx,go-rwx /boot/grub/grub.cfg
 
 Run `passwd root` and follow the prompts.
 
-[grub script]: https://raw.githubusercontent.com/CAMSCSC/CIS-Checklist-Breakdown/main/scripts/1.4.1.sh
+[grub script]: https://raw.githubusercontent.com/CAMSCSC/CIS-Breakdown/main/scripts/1.4.1.sh
