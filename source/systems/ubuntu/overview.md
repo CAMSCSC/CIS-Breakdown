@@ -1,5 +1,9 @@
 # Overview - Ubuntu 18.04
 
+## [Basic Info](./basic_info.md)
+
+Some of the steps in this CIS benchmark require some basic info, which is covered in this section.
+
 ## [1.1 - Filesystems](./1.md#11---filesystem-configuration)
 
 - 1.1.1 - Disable unnecessary filesystems
