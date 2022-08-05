@@ -112,17 +112,18 @@ Some of the steps in this CIS benchmark require some basic info, which is covere
 - 5.5.2 - 5.5.5 - Configure system accounts
 - 5.6 - 5.7 - Restrict root and su access
 
-## System File Permissions
+## [6.1 - System File Permissions](./6.md#61---system-file-permissions)
 
 - 6.1.1 - Audit package locations (manual, time-consuming)
 - 6.1.2 - 6.1.9 - Configure important directory permissions
 - 6.1.10 - Ensure no world-writable files
 - 6.1.11 - 6.1.12 - Check for unowned or ungrouped files
-- 6.1.13 - 6.1.14 - Audit SUID and GUID executables
+- 6.1.13 - 6.1.14 - Audit SUID and SGID executables
 
-## User and Group Settings
+## [6.2 - User and Group Settings](./6.md#62---user-and-group-settings)
 
-- 6.2.1 - 6.2.3 - Validate password integrity
+- 6.2.1 - 6.2.2 - Ensure password integrity
+- 6.2.3 - Ensure all groups in `/etc/passwd` exist in `/etc/group`
 - 6.2.4 - 6.2.6 - Configure home directories
 - 6.2.7 - 6.2.10 - Configure dot files
 - 6.2.11 - 6.2.12 - Validate root account integrity
