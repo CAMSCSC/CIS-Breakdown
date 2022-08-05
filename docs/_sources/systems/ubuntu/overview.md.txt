@@ -80,29 +80,29 @@
 - 4.1.3 - Log date and time change events
 - 4.1.4 - 4.1.17 - Configure auditd
 
-## Configure Logging
+## [4.2 - 4.3 - Configure Logging](./4.md#42---configure-logging)
 
 - 4.2.1 - Configure rsyslog
 - 4.2.2 - Configure journald
 - 4.2.3 - Configure log permissions
 - 4.3 - 4.4 - Configure logrotate
 
-## Configure time-based job schedulers
+## [5.1 - Configure time-based job schedulers](./5.md#51---configure-time-based-schedulers)
 
 - 5.1.1 - 5.1.8 - Configure cron
 - 5.1.9 - Configure AT
 
-## Configure sudo
+## [5.2 - Configure sudo](./5.md#52---configure-sudo)
 
 - 5.2.2 - 5.2.3 - Sudo configuration
 
-## Configure SSH Server
+## [5.3 - Configure SSH Server](./5.md#53---configure-ssh-server)
 - 5.3.1 - 5.3.22 - SSH Configuration
 
-## Configure PAM
+## [5.4 - Configure PAM](./5.md#54---configure-pam)
 - 5.4.1 - 5.4.4 - Configure PAM (Password authentication manager)
 
-## User Accounts and Environment
+## [5.5 - User Accounts and Environment](./5.md#55---user-accounts-and-environment)
 
 - 5.5.1.1 - 5.5.1.5 - Configure password requirements
 - 5.5.2 - 5.5.5 - Configure system accounts

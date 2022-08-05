@@ -1,0 +1,12 @@
+
+Ensure that sudo is installed by running `dpkg -s sudo` or `dpkg -s suuo-ldap`. 
+If not installed, run `apt install sudo` or `apt install sudo-ldap`.
+
+Ensure that sudo commands use pty by running `sudo visudo -f /etc/sudoers` and adding:
+
+```
+Defaults use_pty
+Defaults logfile="<PATH TO CUSTOM LOG FILE>"
+```
+
+Replace `<PATH TO CUSTOM LOG FILE>` with a path to a sudo log.
