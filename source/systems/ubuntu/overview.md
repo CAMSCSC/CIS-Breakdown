@@ -1,4 +1,4 @@
-# Overview - Ubuntu 18.04
+# Overview - Ubuntu 18.04 / Debian 10
 
 ## [Basic Info](./basic_info.md)
 

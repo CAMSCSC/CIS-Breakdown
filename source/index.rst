@@ -4,7 +4,19 @@
    contain the root `toctree` directive.
 
 Welcome to CIS-Breakdown!
-=========================================
+=========================
+
+CIS Benchmark Breakdown is a project by CAMS Computer Science and Cybersecurity
+Club, aimed at creating a summarization of the Center for Information
+Security's `Benchmarks <https://downloads.cisecurity.org/#/>`_.
+
+These benchmarks contain complete guides to locking down a system, but are
+often obtuse and hard to read. Our goal is to simplify them into a set of
+readable steps to follow in order to lock down a system.
+
+Our target systems are Ubuntu 18, Debian 10, Windows 10, and Windows Server
+2019, which are the main images found in the AFA Cyberpatriot Competition.
+More information about the competition can be found `here <https://www.uscyberpatriot.org/home>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -14,16 +26,20 @@ Welcome to CIS-Breakdown!
    Contributing <./about/contributing.md>
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Systems:
+   :maxdepth: 1
+   :caption: Windows:
 
-   Debian <./systems/debian.md>
-   Windows 10 <./systems/windows.md>
-   Windows Server <./systems/server.md>
+   Overview <./systems/windows/overview.md>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Windows Server:
+
+   Overview <./systems/server/overview.md>
 
 .. toctree:: 
    :maxdepth: 1
-   :caption: Ubuntu:
+   :caption: Ubuntu/Debian:
    
    Overview <./systems/ubuntu/overview.md>
    Basic Info <./systems/ubuntu/basic_info.md>
