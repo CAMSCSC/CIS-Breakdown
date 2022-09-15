@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="CIS Benchmark Breakdown" href="about/about.html" />
 
-    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
         <title>CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -159,13 +159,15 @@
 <li class="toctree-l1"><a class="reference internal" href="about/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about/contributing.html">Contributing</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Systems:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Windows:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="systems/debian.html">Debian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="systems/windows.html">Windows 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="systems/server.html">Windows Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="systems/windows/overview.html">Overview</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Windows Server:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="systems/server/overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ubuntu/Debian:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="systems/ubuntu/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="systems/ubuntu/basic_info.html">Basic Info</a></li>
@@ -210,6 +212,15 @@
         <article role="main">
           <section id="welcome-to-cis-breakdown">
 <h1>Welcome to CIS-Breakdown!<a class="headerlink" href="#welcome-to-cis-breakdown" title="Permalink to this heading">#</a></h1>
+<p>CIS Benchmark Breakdown is a project by CAMS Computer Science and Cybersecurity
+Club, aimed at creating a summarization of the Center for Information
+Security’s <a class="reference external" href="https://downloads.cisecurity.org/#/">Benchmarks</a>.</p>
+<p>These benchmarks contain complete guides to locking down a system, but are
+often obtuse and hard to read. Our goal is to simplify them into a set of
+readable steps to follow in order to lock down a system.</p>
+<p>Our target systems are Ubuntu 18, Debian 10, Windows 10, and Windows Server
+2019, which are the main images found in the AFA Cyberpatriot Competition.
+More information about the competition can be found <a class="reference external" href="https://www.uscyberpatriot.org/home">here</a>.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">About:</span></p>
 <ul>
@@ -218,15 +229,19 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Systems:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Windows:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="systems/debian.html">Debian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="systems/windows.html">Windows 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="systems/server.html">Windows Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="systems/windows/overview.html">Overview</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Ubuntu:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Windows Server:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="systems/server/overview.html">Overview</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Ubuntu/Debian:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="systems/ubuntu/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="systems/ubuntu/basic_info.html">Basic Info</a></li>
@@ -260,7 +275,7 @@
                 </div>
                 <div class="title">CIS Benchmark Breakdown</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           
         </div>
@@ -289,7 +304,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">

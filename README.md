@@ -14,7 +14,6 @@ More information about the competition can be found [here][Cyberpatriot].
 
 [CIS Benchmarks]: https://downloads.cisecurity.org/#/
 [Cyberpatriot]: https://www.uscyberpatriot.org/home
-[toc]: https://camscsc.github.io/CIS-Checklist-Breakdown/
 # Contributing
 
 ```{important}
