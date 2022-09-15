@@ -216,6 +216,36 @@
 <p>The terminal is a window where commands can be sent, and where most actions in Linux occur. To open the terminal, search for <code class="docutils literal notranslate"><span class="pre">terminal</span></code> in the search bar, or press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">alt</span> <span class="pre">+</span> <span class="pre">t</span></code>. This opens the terminal window, where you can type commands.</p>
 <section id="basic-commands">
 <h2>Basic Commands:<a class="headerlink" href="#basic-commands" title="Permalink to this heading">#</a></h2>
+<section id="man">
+<h3><code class="docutils literal notranslate"><span class="pre">man</span></code><a class="headerlink" href="#man" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">man</span></code> allows you to view the manual for a command.
+For example, to see the manual for <code class="docutils literal notranslate"><span class="pre">cat</span></code>, run <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">cat</span></code>.
+These manual pages can also be found online.</p>
+</section>
+<section id="cd">
+<h3><code class="docutils literal notranslate"><span class="pre">cd</span></code><a class="headerlink" href="#cd" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> allows you to <strong>c</strong>hange the current <strong>d</strong>irectory.
+For example, if you are in the directory <code class="docutils literal notranslate"><span class="pre">/home</span></code>, and would like to go to <code class="docutils literal notranslate"><span class="pre">/home/Documents</span></code>,
+you can run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/Documents
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> Documents
+</pre></div>
+</div>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> moves you up a directory (e.g.: from <code class="docutils literal notranslate"><span class="pre">/home/Documents</span></code> to <code class="docutils literal notranslate"><span class="pre">/home</span></code>)</p>
+</section>
+<section id="ls">
+<h3><code class="docutils literal notranslate"><span class="pre">ls</span></code><a class="headerlink" href="#ls" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ls</span></code> allows you to list the files in the current directory. See <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code> for more information.</p>
+</section>
+<section id="cat">
+<h3><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cat</span></code> allows you to read a file. To use <code class="docutils literal notranslate"><span class="pre">cat</span></code>, type <code class="docutils literal notranslate"><span class="pre">cat</span></code>
+and the path of the file(s) you would like to read.
+These will be printed onto the console.</p>
+</section>
 <section id="grep">
 <h3><code class="docutils literal notranslate"><span class="pre">grep</span></code><a class="headerlink" href="#grep" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">grep</span></code> allows you to filter text.
@@ -232,12 +262,6 @@ For example, to filter the output of <code class="docutils literal notranslate">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat test.sh <span class="p">|</span> grep test.
 </pre></div>
 </div>
-</section>
-<section id="cat">
-<h3><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">cat</span></code> allows you to read a file. To use <code class="docutils literal notranslate"><span class="pre">cat</span></code>, type <code class="docutils literal notranslate"><span class="pre">cat</span></code>
-and the path of the file(s) you would like to read.
-These will be printed onto the console.</p>
 </section>
 <section id="nano">
 <h3><code class="docutils literal notranslate"><span class="pre">nano</span></code><a class="headerlink" href="#nano" title="Permalink to this heading">#</a></h3>
@@ -258,9 +282,24 @@ Then <code class="docutils literal notranslate"><span class="pre">nano</span></c
 <p><code class="docutils literal notranslate"><span class="pre">nano</span></code> often requires <code class="docutils literal notranslate"><span class="pre">sudo</span></code> to edit files. See <a class="reference internal" href="#sudo"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">sudo</span></code></span></a> for more information.</p>
 </div>
 </section>
+<section id="gedit">
+<h3><code class="docutils literal notranslate"><span class="pre">gedit</span></code><a class="headerlink" href="#gedit" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gedit</span></code> is another basic text editor. To use <code class="docutils literal notranslate"><span class="pre">gedit</span></code>,
+type <code class="docutils literal notranslate"><span class="pre">gedit</span></code> and then the path of a file (or the path of a new file).
+For example, to edit <code class="docutils literal notranslate"><span class="pre">passwords.txt</span></code>, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gedit passwords.txt
+</pre></div>
+</div>
+<p>This will open a new window with a text editor similar to notepad.
+To save and close the file, press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">S</span></code> or the save button and close the window.</p>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">gedit</span></code> also often requires <code class="docutils literal notranslate"><span class="pre">sudo</span></code> to edit files. See <a class="reference internal" href="#sudo"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">sudo</span></code></span></a> for more information.</p>
+</div>
+</section>
 <section id="sudo">
 <h3><code class="docutils literal notranslate"><span class="pre">sudo</span></code><a class="headerlink" href="#sudo" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">sudo</span></code>, which stands for SuperUser DO, gives a command a higher permission level.
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span></code>, which stands for <strong>s</strong>uper<strong>u</strong>ser <strong>do</strong>, gives a command a higher permission level.
 It is often required to work with sensitive files.
 To use <code class="docutils literal notranslate"><span class="pre">sudo</span></code>, type <code class="docutils literal notranslate"><span class="pre">sudo</span></code> and another command after it.
 This will ask for your password, which is hidden while you type it.</p>
@@ -268,6 +307,18 @@ This will ask for your password, which is hidden while you type it.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano passwords.txt
 </pre></div>
 </div>
+</section>
+<section id="bash">
+<h3><code class="docutils literal notranslate"><span class="pre">bash</span></code><a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">bash</span></code>, which stands for <strong>b</strong>ourne-<strong>a</strong>gain <strong>sh</strong>ell, runs a shell script.
+Shell scripts end in <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and contain a list of commands to be run.
+These are often useful for automating tasks.</p>
+</section>
+<section id="find">
+<h3><code class="docutils literal notranslate"><span class="pre">find</span></code><a class="headerlink" href="#find" title="Permalink to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">find</span></code> command allows you to look for files matching a pattern.
+For example, to find a file with the name <code class="docutils literal notranslate"><span class="pre">myfile.txt</span></code>, run <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">myfile.txt</span></code>.
+This will return all of the possible locations for <code class="docutils literal notranslate"><span class="pre">myfile.txt</span></code> in the current directory.</p>
 </section>
 </section>
 </section>
@@ -331,10 +382,16 @@ This will ask for your password, which is hidden while you type it.</p>
             <ul>
 <li><a class="reference internal" href="#">0 - Basic Information</a><ul>
 <li><a class="reference internal" href="#basic-commands">Basic Commands:</a><ul>
-<li><a class="reference internal" href="#grep"><code class="docutils literal notranslate"><span class="pre">grep</span></code></a></li>
+<li><a class="reference internal" href="#man"><code class="docutils literal notranslate"><span class="pre">man</span></code></a></li>
+<li><a class="reference internal" href="#cd"><code class="docutils literal notranslate"><span class="pre">cd</span></code></a></li>
+<li><a class="reference internal" href="#ls"><code class="docutils literal notranslate"><span class="pre">ls</span></code></a></li>
 <li><a class="reference internal" href="#cat"><code class="docutils literal notranslate"><span class="pre">cat</span></code></a></li>
+<li><a class="reference internal" href="#grep"><code class="docutils literal notranslate"><span class="pre">grep</span></code></a></li>
 <li><a class="reference internal" href="#nano"><code class="docutils literal notranslate"><span class="pre">nano</span></code></a></li>
+<li><a class="reference internal" href="#gedit"><code class="docutils literal notranslate"><span class="pre">gedit</span></code></a></li>
 <li><a class="reference internal" href="#sudo"><code class="docutils literal notranslate"><span class="pre">sudo</span></code></a></li>
+<li><a class="reference internal" href="#bash"><code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
+<li><a class="reference internal" href="#find"><code class="docutils literal notranslate"><span class="pre">find</span></code></a></li>
 </ul>
 </li>
 </ul>
