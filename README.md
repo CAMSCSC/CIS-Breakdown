@@ -28,13 +28,13 @@ Then, install the required python dependencies.
 Windows:
 
 ```powershell
-py -3 -m pip install --upgrade sphinx myst_parser pygments
+py -3 -m pip install --upgrade sphinx myst_parser pygments furo
 ```
 
 Mac/Linux:
 
 ```bash
-python3 -m pip install --upgrade sphinx myst_parser pygments
+python3 -m pip install --upgrade sphinx myst_parser pygments furo
 ```
 
 Then, clone the git repository and add your contributions to `/source`. Add
