@@ -28,30 +28,20 @@ Then, install the required python dependencies.
 Windows:
 
 ```powershell
-py -3 -m pip install --upgrade sphinx myst_parser pygments furo
+py -3 -m pip install --upgrade sphinx myst_parser pygments
 ```
 
 Mac/Linux:
 
 ```bash
-python3 -m pip install --upgrade sphinx myst_parser pygments furo
+python3 -m pip install --upgrade sphinx myst_parser pygments
 ```
 
 Then, clone the git repository and add your contributions to `/source`. Add
 your contributions to `/source/index.rst` to make sure they appear on the
 website. 
 
-To build your changes, run
-
-```bash
-sphinx-build source docs
-```
-
-or
-
-```powershell
-python -m sphinx source docs
-```
+To build your changes, run `sphinx-build source docs`.
 
 Then open a pull request to publish your changes! 
 Please do not commit the `/docs` folder, as github actions is set to automatically build sphinx. 
