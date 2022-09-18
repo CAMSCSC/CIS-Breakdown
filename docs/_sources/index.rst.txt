@@ -30,6 +30,14 @@ More information about the competition can be found `here <https://www.uscyberpa
    :caption: Windows:
 
    Overview <./systems/windows/overview.md>
+   Account Policies <./systems/windows/1.md>
+   Local Policies <./systems/windows/2.md>
+   System Services <./systems/windows/5.md>
+   Windows Defender Firewall with Advanced Security <./systems/windows/9.md>
+   Advanced Audit Policy Config <./systems/windows/17.md>
+   Admin Templates (Computer) <./systems/windows/18.md>
+   Admin Templates (User) <./systems/windows/19.md>
+
 
 .. toctree::
    :maxdepth: 1

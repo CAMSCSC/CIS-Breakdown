@@ -1,0 +1,842 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
+        <title>18.8.3 - CIS Benchmark Breakdown</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">CIS Benchmark Breakdown</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">About:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Windows:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Windows Server:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ubuntu/Debian:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/basic_info.html">Basic Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/1.html">Initial Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/2.html">Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/3.html">Network Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/4.html">Logging and Auditing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/5.html">Access, Authentication, and Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu/6.html">System Maintenance</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="id1">
+<h1>18.8.3<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Audit Process
+Creation\Include command line in process creation events
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template AuditSettings.admx/adml that is included with the Microsoft Windows 8.1 &amp;
+Server 2012 R2 Administrative Templates (or newer).</p>
+</section>
+<section id="id2">
+<h1>18.8.4<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Force Updated Clients:
+Computer Configuration\Policies\Administrative Templates\System\Credentials
+Delegation\Encryption Oracle Remediation
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template CredSsp.admx/adml that is included with the Microsoft Windows 10 Release 1803
+Administrative Templates (or newer).</p>
+</section>
+<section id="id3">
+<h1>18.8.4.2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Credentials
+Delegation\Remote host allows delegation of non-exportable credentials
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template CredSsp.admx/adml that is included with the Microsoft Windows 10 Release 1703
+Administrative Templates (or newer).</p>
+</section>
+<section id="id4">
+<h1>18.8.5<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Guard\Turn On Virtualization Based Security
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DeviceGuard.admx/adml that is included with the Microsoft Windows 10 RTM
+(Release 1507) Administrative Templates (or newer).</p>
+</section>
+<section id="id5">
+<h1>18.8.5.2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Secure
+Boot and DMA Protection:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Guard\Turn On Virtualization Based Security: Select Platform Security Level
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DeviceGuard.admx/adml that is included with the Microsoft Windows 10 RTM
+(Release 1507) Administrative Templates (or newer).</p>
+</section>
+<section id="id6">
+<h1>18.8.5.3<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled
+with UEFI lock:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Guard\Turn On Virtualization Based Security: Virtualization Based Protection
+of Code Integrity
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DeviceGuard.admx/adml that is included with the Microsoft Windows 10 RTM
+(Release 1507) Administrative Templates (or newer).</p>
+</section>
+<section id="id7">
+<h1>18.8.5.4<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to TRUE:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Guard\Turn On Virtualization Based Security: Require UEFI Memory Attributes
+Table
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DeviceGuard.admx/adml that is included with the Microsoft Windows 10 Release
+1703 Administrative Templates (or newer).</p>
+</section>
+<section id="id8">
+<h1>18.8.5.5<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled
+with UEFI lock:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Guard\Turn On Virtualization Based Security: Credential Guard Configuration
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DeviceGuard.admx/adml that is included with the Microsoft Windows 10 Release
+1511 Administrative Templates (or newer).</p>
+</section>
+<section id="id9">
+<h1>18.8.5.6<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Guard\Turn On Virtualization Based Security: Secure Launch Configuration
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DeviceGuard.admx/adml that is included with the Microsoft Windows 10 Release
+1809 &amp; Server 2019 Administrative Templates (or newer).</p>
+</section>
+<section id="id10">
+<h1>18.8.7.1.1<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Device Installation Restrictions\Prevent installation of devices
+that match any of these device IDs
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with all versions of the Microsoft
+Windows Administrative Templates.</p>
+</section>
+<section id="id11">
+<h1>18.8.7.1.2<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
+and add PCI\CC_0C0A to the Device IDs list:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Device Installation Restrictions\Prevent installation of devices
+that match any of these device IDs
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with all versions of the Microsoft
+Windows Administrative Templates.   ### 18.8.7.1.3<br />
+To establish the recommended configuration via GP, set the following UI path to Enabled,
+and check the Also apply to matching devices that are already installed.
+checkbox:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Device Installation Restrictions\Prevent installation of devices
+that match any of these device IDs
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with all versions of the Microsoft
+Windows Administrative Templates.</p>
+</section>
+<section id="id12">
+<h1>18.8.7.1.4<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Device Installation Restrictions\Prevent installation of devices
+using drivers that match these device setup classes
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with all versions of the Microsoft
+Windows Administrative Templates.</p>
+</section>
+<section id="id13">
+<h1>18.8.7.1.5<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
+and add {d48179be-ec20-11d1-b6b8-00c04fa372a7}, {7ebefbc0-3200-11d2-b4c2-
+00a0C9697d07}, {c06ff265-ae09-48f0-812c-16753d7cba83}, and {6bdd1fc1-810f-11d0-
+bec7-08002be2092f} to the device setup classes list:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Device Installation Restrictions\Prevent installation of devices
+using drivers that match these device setup classes
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with all versions of the Microsoft
+Windows Administrative Templates.</p>
+</section>
+<section id="id14">
+<h1>18.8.7.1.6<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
+and check the Also apply to matching devices that are already installed.
+checkbox:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Device Installation Restrictions\Prevent installation of devices
+using drivers that match these device setup classes
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with all versions of the Microsoft
+Windows Administrative Templates.</p>
+</section>
+<section id="id15">
+<h1>18.8.7.2<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Device
+Installation\Prevent device metadata retrieval from the Internet
+Note: This Group Policy path is provided by the Group Policy template
+DeviceInstallation.admx/adml that is included with the Microsoft Windows 7 &amp; Server
+2008 R2 Administrative Templates, or with the Group Policy template
+DeviceSetup.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id16">
+<h1>18.8.14<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Good, unknown and bad but critical:
+Computer Configuration\Policies\Administrative Templates\System\Early Launch
+Antimalware\Boot-Start Driver Initialization Policy
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template EarlyLaunchAM.admx/adml that is included with the Microsoft Windows 8.0 &amp;
+Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id17">
+<h1>18.8.21<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
+then set the Do not apply during periodic background processing option to FALSE
+(unchecked):
+Computer Configuration\Policies\Administrative Templates\System\Group
+Policy\Configure registry policy processing
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template GroupPolicy.admx/adml that is included with the Microsoft Windows 8.0 &amp;
+Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id18">
+<h1>18.8.21.3<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
+then set the Process even if the Group Policy objects have not changed option to
+TRUE (checked):
+Computer Configuration\Policies\Administrative Templates\System\Group
+Policy\Configure registry policy processing
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template GroupPolicy.admx/adml that is included with the Microsoft Windows 8.0 &amp;
+Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id19">
+<h1>18.8.21.4<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Group
+Policy\Continue experiences on this device
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template GroupPolicy.admx/adml that is included with the Microsoft Windows 10 Release
+1607 &amp; Server 2016 Administrative Templates (or newer).</p>
+</section>
+<section id="id20">
+<h1>18.8.21.5<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Group
+Policy\Turn off background refresh of Group Policy
+Note: This Group Policy path is provided by the Group Policy template
+GroupPolicy.admx/adml that is included with all versions of the Microsoft Windows
+Administrative Templates.</p>
+</section>
+<section id="id21">
+<h1>18.8.22<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off access to
+the Store
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template ICM.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id22">
+<h1>18.8.22.1.2<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off downloading
+of print drivers over HTTP
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.   ### 18.8.22.1.3<br />
+To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off handwriting
+personalization data sharing
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template ShapeCollector.admx/adml that is included with the Microsoft Windows 7 &amp;
+Server 2008 R2 Administrative Templates (or newer).</p>
+</section>
+<section id="id23">
+<h1>18.8.22.1.4<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off handwriting
+recognition error reporting
+Note: This Group Policy path is provided by the Group Policy template
+InkWatson.admx/adml that is included with all versions of the Microsoft Windows
+Administrative Templates.</p>
+</section>
+<section id="id24">
+<h1>18.8.22.1.5<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off Internet
+Connection Wizard if URL connection is referring to Microsoft.com
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id25">
+<h1>18.8.22.1.6<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off Internet
+download for Web publishing and online ordering wizards
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id26">
+<h1>18.8.22.1.7<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off printing
+over HTTP
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id27">
+<h1>18.8.22.1.8<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off
+Registration if URL connection is referring to Microsoft.com
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id28">
+<h1>18.8.22.1.9<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off Search
+Companion content file updates
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id29">
+<h1>18.8.22.1.10<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off the “Order
+Prints” picture task
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id30">
+<h1>18.8.22.1.11<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off the
+“Publish to Web” task for files and folders
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id31">
+<h1>18.8.22.1.12<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off the Windows
+Messenger Customer Experience Improvement Program
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.   ### 18.8.22.1.13<br />
+To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off Windows
+Customer Experience Improvement Program
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id32">
+<h1>18.8.22.1.14<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Internet
+Communication Management\Internet Communication settings\Turn off Windows
+Error Reporting
+Note: This Group Policy path is provided by the Group Policy template ICM.admx/adml that
+is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id33">
+<h1>18.8.25<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Automatic:
+Computer Configuration\Policies\Administrative
+Templates\System\Kerberos\Support device authentication using certificate
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Kerberos.admx/adml that is included with the Microsoft Windows 10 RTM
+(Release 1507) Administrative Templates (or newer).</p>
+</section>
+<section id="id34">
+<h1>18.8.26<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Block All:
+Computer Configuration\Policies\Administrative Templates\System\Kernel DMA
+Protection\Enumeration policy for external devices incompatible with Kernel
+DMA Protection
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template DmaGuard.admx/adml that is included with the Microsoft Windows 10 Release
+1809 &amp; Server 2019 Administrative Templates (or newer).</p>
+</section>
+<section id="id35">
+<h1>18.8.27<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Locale
+Services\Disallow copying of user input methods to the system account for
+sign-in
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Globalization.admx/adml that is included with the Microsoft Windows 8.0 &amp;
+Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id36">
+<h1>18.8.28<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Logon\Block
+user from showing account details on sign-in
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Logon.admx/adml that is included with the Microsoft Windows 10 Release 1607 &amp;
+Server 2016 Administrative Templates (or newer).</p>
+</section>
+<section id="id37">
+<h1>18.8.28.2<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Logon\Do not
+display network selection UI
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Logon.admx/adml that is included with the Microsoft Windows 8.1 &amp; Server 2012
+R2 Administrative Templates (or newer).</p>
+</section>
+<section id="id38">
+<h1>18.8.28.3<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Logon\Do not
+enumerate connected users on domain-joined computers
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Logon.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id39">
+<h1>18.8.28.4<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative
+Templates\System\Logon\Enumerate local users on domain-joined computers
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Logon.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id40">
+<h1>18.8.28.5<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Logon\Turn
+off app notifications on the lock screen
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Logon.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id41">
+<h1>18.8.28.6<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Logon\Turn
+off picture password sign-in
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template CredentialProviders.admx/adml that is included with the Microsoft Windows
+8.0 &amp; Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id42">
+<h1>18.8.28.7<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Logon\Turn on
+convenience PIN sign-in
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template CredentialProviders.admx/adml that is included with the Microsoft Windows
+8.0 &amp; Server 2012 (non-R2) Administrative Templates (or newer).
+Note #2: In older Microsoft Windows Administrative Templates, this setting was initially
+named Turn on PIN sign-in, but it was renamed starting with the Windows 10 Release 1511
+Administrative Templates.</p>
+</section>
+<section id="id43">
+<h1>18.8.31<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\OS
+Policies\Allow Clipboard synchronization across devices
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template OSPolicy.admx/adml that is included with the Microsoft Windows 10 Release
+1809 &amp; Server 2019 Administrative Templates (or newer).</p>
+</section>
+<section id="id44">
+<h1>18.8.31.2<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\OS
+Policies\Allow upload of User Activities
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template OSPolicy.admx/adml that is included with the Microsoft Windows 10 Release
+1803 Administrative Templates (or newer).</p>
+</section>
+<section id="id45">
+<h1>18.8.34.6<a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Power
+Management\Sleep Settings\Allow network connectivity during connected-standby
+(on battery)
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Power.admx/adml that is included with the Microsoft Windows 10 Release 1607 &amp;
+Server 2016 Administrative Templates (or newer).</p>
+</section>
+<section id="id46">
+<h1>18.8.34.6.2<a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Power
+Management\Sleep Settings\Allow network connectivity during connected-standby
+(plugged in)
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Power.admx/adml that is included with the Microsoft Windows 10 Release 1607 &amp;
+Server 2016 Administrative Templates (or newer).   ### 18.8.34.6.3<br />
+To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Power
+Management\Sleep Settings\Allow standby states (S1-S3) when sleeping (on
+battery)
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Power.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id47">
+<h1>18.8.34.6.4<a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Power
+Management\Sleep Settings\Allow standby states (S1-S3) when sleeping (plugged
+in)
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Power.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id48">
+<h1>18.8.34.6.5<a class="headerlink" href="#id48" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Power
+Management\Sleep Settings\Require a password when a computer wakes (on
+battery)
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Power.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id49">
+<h1>18.8.34.6.6<a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Power
+Management\Sleep Settings\Require a password when a computer wakes (plugged
+in)
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template Power.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id50">
+<h1>18.8.36<a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Remote
+Assistance\Configure Offer Remote Assistance
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template RemoteAssistance.admx/adml that is included with the Microsoft Windows 8.0 &amp;
+Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id51">
+<h1>18.8.36.2<a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Remote
+Assistance\Configure Solicited Remote Assistance
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template RemoteAssistance.admx/adml that is included with the Microsoft Windows 8.0 &amp;
+Server 2012 (non-R2) Administrative Templates (or newer).   ### 18.8.37<br />
+To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Remote
+Procedure Call\Enable RPC Endpoint Mapper Client Authentication
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template RPC.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id52">
+<h1>18.8.37.2<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Authenticated:
+Computer Configuration\Policies\Administrative Templates\System\Remote
+Procedure Call\Restrict Unauthenticated RPC clients
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template RPC.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id53">
+<h1>18.8.48.5<a class="headerlink" href="#id53" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative
+Templates\System\Troubleshooting and Diagnostics\Microsoft Support Diagnostic
+Tool\Microsoft Support Diagnostic Tool: Turn on MSDT interactive
+communication with support provider
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template MSDT.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
+(non-R2) Administrative Templates (or newer).</p>
+</section>
+<section id="id54">
+<h1>18.8.48.11<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative
+Templates\System\Troubleshooting and Diagnostics\Windows Performance
+PerfTrack\Enable/Disable PerfTrack
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template PerformancePerftrack.admx/adml that is included with the Microsoft Windows 7
+&amp; Server 2008 R2 Administrative Templates (or newer).</p>
+</section>
+<section id="id55">
+<h1>18.8.50<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\User
+Profiles\Turn off the advertising ID
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy
+template UserProfiles.admx/adml that is included with the Microsoft Windows 8.1 &amp;
+Server 2012 R2 Administrative Templates (or newer).</p>
+</section>
+<section id="id56">
+<h1>18.8.53<a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Administrative Templates\System\Windows Time
+Service\Time Providers\Enable Windows NTP Client
+Note: This Group Policy path is provided by the Group Policy template W32Time.admx/adml
+that is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id57">
+<h1>18.8.53.1.2<a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h1>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Administrative Templates\System\Windows Time
+Service\Time Providers\Enable Windows NTP Server
+Note: This Group Policy path is provided by the Group Policy template W32Time.admx/adml
+that is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, CAMS CSC
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>

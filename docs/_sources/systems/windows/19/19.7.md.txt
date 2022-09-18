@@ -1,0 +1,70 @@
+### 19.7.4  
+To establish the recommended configuration via GP, set the following UI path to Disabled: 
+User Configuration\Policies\Administrative Templates\Windows 
+Components\Attachment Manager\Do not preserve zone information in file 
+attachments 
+Note: This Group Policy path is provided by the Group Policy template 
+AttachmentManager.admx/adml that is included with all versions of the Microsoft Windows 
+Administrative Templates. 
+### 19.7.4.2  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows 
+Components\Attachment Manager\Notify antivirus programs when opening 
+attachments 
+Note: This Group Policy path is provided by the Group Policy template 
+AttachmentManager.admx/adml that is included with all versions of the Microsoft Windows 
+Administrative Templates. 
+### 19.7.8  
+To establish the recommended configuration via GP, set the following UI path to Disabled: 
+User Configuration\Policies\Administrative Templates\Windows Components\Cloud 
+Content\Configure Windows spotlight on lock screen 
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy 
+template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release 
+1607 & Server 2016 Administrative Templates (or newer). 
+### 19.7.8.2  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows Components\Cloud 
+Content\Do not suggest third-party content in Windows spotlight 
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy 
+template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release 
+1607 & Server 2016 Administrative Templates (or newer). 
+### 19.7.8.3  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows Components\Cloud 
+Content\Do not use diagnostic data for tailored experiences 
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy 
+template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release 
+1703 Administrative Templates (or newer). 
+### 19.7.8.4  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows Components\Cloud 
+Content\Turn off all Windows spotlight features 
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy 
+template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release 
+1607 & Server 2016 Administrative Templates (or newer). 
+### 19.7.8.5  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows Components\Cloud 
+Content\Turn off Spotlight collection on Desktop 
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy 
+template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release 
+21H2 Administrative Templates (or newer).   ### 19.7.28  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows 
+Components\Network Sharing\Prevent users from sharing files within their 
+profile. 
+Note: This Group Policy path is provided by the Group Policy template Sharing.admx/adml 
+that is included with all versions of the Microsoft Windows Administrative Templates. 
+### 19.7.43  
+To establish the recommended configuration via GP, set the following UI path to Disabled: 
+User Configuration\Policies\Administrative Templates\Windows 
+Components\Windows Installer\Always install with elevated privileges 
+Note: This Group Policy path is provided by the Group Policy template MSI.admx/adml that 
+is included with all versions of the Microsoft Windows Administrative Templates. 
+### 19.7.47.2  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Windows 
+Components\Windows Media Player\Playback\Prevent Codec Download 
+Note: This Group Policy path is provided by the Group Policy template 
+WindowsMediaPlayer.admx/adml that is included with all versions of the Microsoft 
+Windows Administrative Templates. 
