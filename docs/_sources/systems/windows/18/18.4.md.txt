@@ -4,7 +4,7 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 (AutoAdminLogon) Enable Automatic Logon (not recommended) 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.2  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 Highest protection, source routing is completely disabled: 
@@ -13,7 +13,7 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 against packet spoofing) 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog   ### 18.4.3  
+settings ï¿½ Microsoft Security Guidance blog   ### 18.4.3  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 Highest protection, source routing is completely disabled: 
 Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS: 
@@ -21,7 +21,7 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 packet spoofing) 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.4  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 Computer Configuration\Policies\Administrative Templates\MSS 
@@ -29,14 +29,14 @@ Computer Configuration\Policies\Administrative Templates\MSS
 saved 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.5  
 To establish the recommended configuration via GP, set the following UI path to Disabled: 
 Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS: 
 (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.6  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 300,000 or 5 minutes (recommended): 
@@ -44,7 +44,7 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 (KeepAliveTime) How often keep-alive packets are sent in milliseconds 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.7  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS: 
@@ -52,7 +52,7 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 requests except from WINS servers 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.8  
 To establish the recommended configuration via GP, set the following UI path to Disabled: 
 Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS: 
@@ -60,14 +60,14 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 addresses (could lead to DoS) 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.9  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS: 
 (SafeDllSearchMode) Enable Safe DLL search mode (recommended) 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.10  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 5 or fewer seconds: 
@@ -76,7 +76,7 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 period expires (0 recommended) 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.11  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 3: 
@@ -85,7 +85,7 @@ Computer Configuration\Policies\Administrative Templates\MSS
 data is retransmitted 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.12  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 3: 
@@ -94,7 +94,7 @@ Computer Configuration\Policies\Administrative Templates\MSS
 is retransmitted 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 
 ### 18.4.13  
 To establish the recommended configuration via GP, set the following UI path to Enabled: 
 90% or less: 
@@ -103,4 +103,4 @@ Computer Configuration\Policies\Administrative Templates\MSS (Legacy)\MSS:
 system will generate a warning 
 Note: This Group Policy path does not exist by default. An additional Group Policy template 
 (MSS-legacy.admx/adml) is required - it is available from this TechNet blog post: The MSS 
-settings – Microsoft Security Guidance blog 
+settings ï¿½ Microsoft Security Guidance blog 

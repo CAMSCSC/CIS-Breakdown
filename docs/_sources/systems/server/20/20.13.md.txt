@@ -1,0 +1,4 @@
+
+### 20.13  
+Establish and implement a process for backing up log data to another system or media 
+other than the system being audited. 

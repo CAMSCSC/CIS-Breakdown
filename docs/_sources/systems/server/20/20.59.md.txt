@@ -1,0 +1,9 @@
+
+### 20.59  
+Remove any certificate installation files *.p12 and *.pfx found on a system. 
+Note: The Certificate Store can be loaded by executing the Microsoft Management Console 
+(MMC) and loading the Certificates snap-in. 
+Note #2: This does not apply to server-based applications that have a requirement for .p12 
+certificate files or Adobe PreFlight certificate files. Some applications create files with 
+extensions of .p12 that are not certificate installation files. Removal of non-certificate 
+installation files from systems is not required. These must be documented with the ISSO. 

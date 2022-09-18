@@ -1,0 +1,5 @@
+
+### 20.25  
+Ensure that domain-joined systems have a TPM that is configured for use. (Versions 2.0 or 
+1.2 support Credential Guard.) 
+Execute tpm.msc for configuration options in the Windows Operating System. 

@@ -1,0 +1,9 @@
+
+### 19.5.1.1  
+To establish the recommended configuration via GP, set the following UI path to Enabled: 
+User Configuration\Policies\Administrative Templates\Start Menu and 
+Taskbar\Notifications\Turn off toast notifications on the lock screen 
+Note: This Group Policy path may not exist by default. It is provided by the Group Policy 
+template WPN.admx/adml that is included with the Microsoft Windows 8.0 & Server 2012 
+(non-R2) Administrative Templates (or newer). 
+   

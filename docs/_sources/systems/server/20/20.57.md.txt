@@ -1,0 +1,14 @@
+
+### 20.57  
+To uninstall the SMBv1 protocol: 
+  Start Server Manager 
+  Select the server with the role 
+  Scroll down to ROLES AND FEATURES in the right pane 
+  Select Remove Roles and Features from the drop-down TASKS list 
+  Select the appropriate server on the Server Selection page and click Next 
+  Deselect SMB 1.0/CIFS File Sharing Support on the Features page 
+  Click next and Remove as prompted (if installed). 
+OR 
+  Open Windows PowerShell with elevated privileges (run as administrator) 
+  Type Uninstall-WindowsFeature -Name FS-SMB1 -Restart (Omit the Restart 
+parameter if an immediate restart of the system cannot be done.) 

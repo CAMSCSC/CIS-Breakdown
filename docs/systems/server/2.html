@@ -1,0 +1,1420 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
+        <title>Local Policies - CIS Benchmark Breakdown</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">CIS Benchmark Breakdown</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">CIS Benchmark Breakdown</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">About:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Windows:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../windows/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/1.html">Account Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/2.html">Local Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/5.html">System Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/9.html">Windows Defender Firewall with Advanced Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/17.html">Advanced Audit Policy Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/18.html">Admin Templates (Computer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/19.html">Admin Templates (User)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Windows Server:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">Account Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">Local Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.html">System Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">Windows Defender Firewall with Advanced Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17.html">Advanced Audit Policy Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18.html">Admin Templates (Computer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19.html">Admin Templates (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20.html">Additional STIG Settings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ubuntu/Debian:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/basic_info.html">Basic Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/1.html">Initial Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/2.html">Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/3.html">Network Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/4.html">Logging and Auditing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/5.html">Access, Authentication, and Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/6.html">System Maintenance</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="local-policies">
+<h1>Local Policies<a class="headerlink" href="#local-policies" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>2.2<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3>2.2<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Access Credential Manager as a trusted caller</p>
+</section>
+<section id="id3">
+<h3>2.2.2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Access this computer from the network</p>
+</section>
+<section id="id4">
+<h3>2.2.3<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Access this computer from the network</p>
+</section>
+<section id="id5">
+<h3>2.2.4<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Act as part of the operating system</p>
+</section>
+<section id="id6">
+<h3>2.2.5<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Add workstations to domain</p>
+</section>
+<section id="id7">
+<h3>2.2.6<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators, LOCAL SERVICE, NETWORK SERVICE:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Adjust memory quotas for a process</p>
+</section>
+<section id="id8">
+<h3>2.2.7<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Allow log on locally</p>
+</section>
+<section id="id9">
+<h3>2.2.8<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Allow log on through Remote Desktop Services</p>
+</section>
+<section id="id10">
+<h3>2.2.9<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Allow log on through Remote Desktop Services</p>
+</section>
+<section id="id11">
+<h3>2.2.10<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators.
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Back up files and directories</p>
+</section>
+<section id="id12">
+<h3>2.2.11<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators, LOCAL SERVICE:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Change the system time</p>
+</section>
+<section id="id13">
+<h3>2.2.12<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators, LOCAL SERVICE:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Change the time zone</p>
+</section>
+<section id="id14">
+<h3>2.2.13<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create a pagefile</p>
+</section>
+<section id="id15">
+<h3>2.2.14<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create a token object</p>
+</section>
+<section id="id16">
+<h3>2.2.15<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create global objects</p>
+</section>
+<section id="id17">
+<h3>2.2.16<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create permanent shared objects</p>
+</section>
+<section id="id18">
+<h3>2.2.17<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>To implement the recommended configuration state, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create symbolic links</p>
+</section>
+<section id="id19">
+<h3>2.2.18<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<p>To implement the recommended configuration state, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create symbolic links</p>
+</section>
+<section id="id20">
+<h3>2.2.19<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<p>To implement the recommended configuration state, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Create symbolic links</p>
+</section>
+<section id="id21">
+<h3>2.2.20<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Debug programs</p>
+</section>
+<section id="id22">
+<h3>2.2.21<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny access to this computer from the network</p>
+</section>
+<section id="id23">
+<h3>2.2.22<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny access to this computer from the network</p>
+</section>
+<section id="id24">
+<h3>2.2.23<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny access to this computer from the network</p>
+</section>
+<section id="id25">
+<h3>2.2.24<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on as a batch job</p>
+</section>
+<section id="id26">
+<h3>2.2.25<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on as a batch job</p>
+</section>
+<section id="id27">
+<h3>2.2.26<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests, Enterprise Admins Group, and Domain Admins Group:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on as a batch job</p>
+</section>
+<section id="id28">
+<h3>2.2.27<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on as a service</p>
+</section>
+<section id="id29">
+<h3>2.2.28<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on as a service</p>
+</section>
+<section id="id30">
+<h3>2.2.29<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Enterprise Admins Group and Domain Admins Group:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on as a service</p>
+</section>
+<section id="id31">
+<h3>2.2.30<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on locally</p>
+</section>
+<section id="id32">
+<h3>2.2.31<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on locally</p>
+</section>
+<section id="id33">
+<h3>2.2.32<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to include
+Guests, Enterprise Admins group, and Domain Admins group:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on locally</p>
+</section>
+<section id="id34">
+<h3>2.2.33<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on through Remote Desktop Services</p>
+</section>
+<section id="id35">
+<h3>2.2.34<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on through Remote Desktop Services</p>
+</section>
+<section id="id36">
+<h3>2.2.35<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Deny log on through Remote Desktop Services</p>
+</section>
+<section id="id37">
+<h3>2.2.36<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Enable computer and user accounts to be
+trusted for delegation</p>
+</section>
+<section id="id38">
+<h3>2.2.37<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Enable computer and user accounts to be
+trusted for delegation</p>
+</section>
+<section id="id39">
+<h3>2.2.38<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Force shutdown from a remote system</p>
+</section>
+<section id="id40">
+<h3>2.2.39<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to LOCAL
+SERVICE, NETWORK SERVICE:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Generate security audits</p>
+</section>
+<section id="id41">
+<h3>2.2.40<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Impersonate a client after authentication</p>
+</section>
+<section id="id42">
+<h3>2.2.41<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Impersonate a client after authentication</p>
+</section>
+<section id="id43">
+<h3>2.2.42<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Impersonate a client after authentication</p>
+</section>
+<section id="id44">
+<h3>2.2.43<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Increase scheduling priority</p>
+</section>
+<section id="id45">
+<h3>2.2.44<a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators, Window Manager\Window Manager Group:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Increase scheduling priority</p>
+</section>
+<section id="id46">
+<h3>2.2.45<a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Load and unload device drivers</p>
+</section>
+<section id="id47">
+<h3>2.2.46<a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Lock pages in memory</p>
+</section>
+<section id="id48">
+<h3>2.2.47<a class="headerlink" href="#id48" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Windows Settings\Security Settings\Local Policies\User
+Rights Assignment\Log on as a batch job</p>
+</section>
+<section id="id49">
+<h3>2.2.48<a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Manage auditing and security log</p>
+</section>
+<section id="id50">
+<h3>2.2.49<a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Manage auditing and security log</p>
+</section>
+<section id="id51">
+<h3>2.2.50<a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Manage auditing and security log</p>
+</section>
+<section id="id52">
+<h3>2.2.51<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Modify an object label</p>
+</section>
+<section id="id53">
+<h3>2.2.52<a class="headerlink" href="#id53" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Modify firmware environment values</p>
+</section>
+<section id="id54">
+<h3>2.2.53<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Perform volume maintenance tasks</p>
+</section>
+<section id="id55">
+<h3>2.2.54<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Profile single process</p>
+</section>
+<section id="id56">
+<h3>2.2.55<a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators, NT SERVICE\WdiServiceHost:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Profile system performance</p>
+</section>
+<section id="id57">
+<h3>2.2.56<a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to LOCAL
+SERVICE, NETWORK SERVICE:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Replace a process level token</p>
+</section>
+<section id="id58">
+<h3>2.2.57<a class="headerlink" href="#id58" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Restore files and directories</p>
+</section>
+<section id="id59">
+<h3>2.2.58<a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Shut down the system</p>
+</section>
+<section id="id60">
+<h3>2.2.59<a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to No One:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Synchronize directory service data</p>
+</section>
+<section id="id61">
+<h3>2.2.60<a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\User Rights Assignment\Take ownership of files or other objects</p>
+</section>
+</section>
+<section id="id62">
+<h2>2.3<a class="headerlink" href="#id62" title="Permalink to this heading">#</a></h2>
+<section id="id63">
+<h3>2.3.1.1<a class="headerlink" href="#id63" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Administrator account status</p>
+</section>
+<section id="id64">
+<h3>2.3.1.2<a class="headerlink" href="#id64" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Users
+can’t add or log on with Microsoft accounts:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Block Microsoft accounts</p>
+</section>
+<section id="id65">
+<h3>2.3.1.3<a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Guest account status</p>
+</section>
+<section id="id66">
+<h3>2.3.1.4<a class="headerlink" href="#id66" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Guest account status</p>
+</section>
+<section id="id67">
+<h3>2.3.1.5<a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Limit local account use of blank
+passwords to console logon only</p>
+</section>
+<section id="id68">
+<h3>2.3.1.6<a class="headerlink" href="#id68" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Rename administrator account</p>
+</section>
+<section id="id69">
+<h3>2.3.1.7<a class="headerlink" href="#id69" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Accounts: Rename guest account</p>
+</section>
+<section id="id70">
+<h3>2.3.2<a class="headerlink" href="#id70" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Audit: Force audit policy subcategory settings
+(Windows Vista or later) to override audit policy category settings</p>
+</section>
+<section id="id71">
+<h3>2.3.2.2<a class="headerlink" href="#id71" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Audit: Shut down system immediately if unable to
+log security audits</p>
+</section>
+<section id="id72">
+<h3>2.3.4<a class="headerlink" href="#id72" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Devices: Allowed to format and eject removable
+media</p>
+</section>
+<section id="id73">
+<h3>2.3.4.2<a class="headerlink" href="#id73" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Devices: Prevent users from installing printer
+drivers</p>
+</section>
+<section id="id74">
+<h3>2.3.5<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain controller: Allow server operators to
+schedule tasks</p>
+</section>
+<section id="id75">
+<h3>2.3.5.2<a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Not
+Configured:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain controller: Allow vulnerable Netlogon secure
+channel connections</p>
+</section>
+<section id="id76">
+<h3>2.3.5.3<a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Always:
+Computer Configuration\Policies\Windows Settings\Local Policies\Security
+Options\Domain controller: LDAP server channel binding token requirements
+Note: This Group Policy path requires the installation of the March 2020 (or later)
+Windows security update. With that update, Microsoft added this setting to the built-in OS
+security template.</p>
+</section>
+<section id="id77">
+<h3>2.3.5.4<a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Require
+signing:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain controller: LDAP server signing requirements</p>
+</section>
+<section id="id78">
+<h3>2.3.5.5<a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain controller: Refuse machine account password
+changes</p>
+</section>
+<section id="id79">
+<h3>2.3.6<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain member: Digitally encrypt or sign secure
+channel data (always)</p>
+</section>
+<section id="id80">
+<h3>2.3.6.2<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain member: Digitally encrypt secure channel
+data (when possible)</p>
+</section>
+<section id="id81">
+<h3>2.3.6.3<a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain member: Digitally sign secure channel data
+(when possible)</p>
+</section>
+<section id="id82">
+<h3>2.3.6.4<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain member: Disable machine account password
+changes</p>
+</section>
+<section id="id83">
+<h3>2.3.6.5<a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to 30 or
+fewer days, but not 0:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain member: Maximum machine account password age</p>
+</section>
+<section id="id84">
+<h3>2.3.6.6<a class="headerlink" href="#id84" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Domain member: Require strong (Windows 2000 or
+later) session key</p>
+</section>
+<section id="id85">
+<h3>2.3.7<a class="headerlink" href="#id85" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Do not require CTRL+ALT+DEL</p>
+</section>
+<section id="id86">
+<h3>2.3.7.2<a class="headerlink" href="#id86" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Don’t display last signed-in
+Note: In older versions of Microsoft Windows, this setting was named Interactive logon: Do
+not display last user name, but it was renamed starting with Windows Server 2019.</p>
+</section>
+<section id="id87">
+<h3>2.3.7.3<a class="headerlink" href="#id87" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to 900 or
+fewer seconds, but not 0:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Machine inactivity limit</p>
+</section>
+<section id="id88">
+<h3>2.3.7.4<a class="headerlink" href="#id88" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path to a
+value that is consistent with the security and operational requirements of your
+organization:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Message text for users
+attempting to log on</p>
+</section>
+<section id="id89">
+<h3>2.3.7.5<a class="headerlink" href="#id89" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path to a
+value that is consistent with the security and operational requirements of your
+organization:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Message title for users
+attempting to log on</p>
+</section>
+<section id="id90">
+<h3>2.3.7.6<a class="headerlink" href="#id90" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to 4 or
+fewer logon(s):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Number of previous logons to
+cache (in case domain controller is not available)</p>
+</section>
+<section id="id91">
+<h3>2.3.7.7<a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to a value
+between 5 and 14 days:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Prompt user to change password
+before expiration</p>
+</section>
+<section id="id92">
+<h3>2.3.7.8<a class="headerlink" href="#id92" title="Permalink to this heading">#</a></h3>
+<p>To implement the recommended configuration via GP, set the following UI path to
+Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Require Domain Controller
+Authentication to unlock workstation</p>
+</section>
+<section id="id93">
+<h3>2.3.7.9<a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Lock
+Workstation (or, if applicable for your environment, Force Logoff or Disconnect if a
+Remote Desktop Services session):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Smart card removal behavior</p>
+</section>
+<section id="id94">
+<h3>2.3.7.10<a class="headerlink" href="#id94" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Lock
+Workstation (or, if applicable for your environment, Force Logoff or Disconnect if a
+Remote Desktop Services session):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Interactive logon: Smart card removal behavior</p>
+</section>
+<section id="id95">
+<h3>2.3.8<a class="headerlink" href="#id95" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network client: Digitally sign
+communications (always)</p>
+</section>
+<section id="id96">
+<h3>2.3.8.2<a class="headerlink" href="#id96" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network client: Digitally sign
+communications (if server agrees)</p>
+</section>
+<section id="id97">
+<h3>2.3.8.3<a class="headerlink" href="#id97" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network client: Send unencrypted password
+to third-party SMB servers</p>
+</section>
+<section id="id98">
+<h3>2.3.9<a class="headerlink" href="#id98" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to 15 or
+fewer minute(s):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network server: Amount of idle time
+required before suspending session</p>
+</section>
+<section id="id99">
+<h3>2.3.9.2<a class="headerlink" href="#id99" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network server: Digitally sign
+communications (always)</p>
+</section>
+<section id="id100">
+<h3>2.3.9.3<a class="headerlink" href="#id100" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network server: Digitally sign
+communications (if client agrees)</p>
+</section>
+<section id="id101">
+<h3>2.3.9.4<a class="headerlink" href="#id101" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network server: Disconnect clients when
+logon hours expire</p>
+</section>
+<section id="id102">
+<h3>2.3.9.5<a class="headerlink" href="#id102" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Accept if
+provided by client (configuring to Required from client also conforms to the
+benchmark):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Microsoft network server: Server SPN target name
+validation level</p>
+</section>
+<section id="id103">
+<h3>2.3.10<a class="headerlink" href="#id103" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Allow anonymous SID/Name
+translation</p>
+</section>
+<section id="id104">
+<h3>2.3.10.2<a class="headerlink" href="#id104" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Do not allow anonymous enumeration
+of SAM accounts</p>
+</section>
+<section id="id105">
+<h3>2.3.10.3<a class="headerlink" href="#id105" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Do not allow anonymous enumeration
+of SAM accounts and shares</p>
+</section>
+<section id="id106">
+<h3>2.3.10.4<a class="headerlink" href="#id106" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Do not allow storage of passwords
+and credentials for network authentication</p>
+</section>
+<section id="id107">
+<h3>2.3.10.5<a class="headerlink" href="#id107" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Let Everyone permissions apply to
+anonymous users</p>
+</section>
+<section id="id108">
+<h3>2.3.10.6<a class="headerlink" href="#id108" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Named Pipes that can be accessed
+anonymously</p>
+</section>
+<section id="id109">
+<h3>2.3.10.7<a class="headerlink" href="#id109" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, configure the following UI path:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Named Pipes that can be accessed
+anonymously</p>
+</section>
+<section id="id110">
+<h3>2.3.10.8<a class="headerlink" href="#id110" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to:
+System\CurrentControlSet\Control\ProductOptions
+System\CurrentControlSet\Control\Server Applications
+Software\Microsoft\Windows NT\CurrentVersion
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Remotely accessible registry paths</p>
+</section>
+<section id="id111">
+<h3>2.3.10.9<a class="headerlink" href="#id111" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to:
+System\CurrentControlSet\Control\Print\Printers
+System\CurrentControlSet\Services\Eventlog
+Software\Microsoft\OLAP Server
+Software\Microsoft\Windows
+NT\CurrentVersion\Print
+Software\Microsoft\Windows NT\CurrentVersion\Windows
+System\CurrentControlSet\Control\ContentIndex
+System\CurrentControlSet\Control\Terminal Server
+System\CurrentControlSet\Control\Terminal Server\UserConfig
+System\CurrentControlSet\Control\Terminal Server\DefaultUserConfiguration
+Software\Microsoft\Windows NT\CurrentVersion\Perflib
+System\CurrentControlSet\Services\SysmonLog
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Remotely accessible registry paths
+and sub-paths
+When a server holds the Active Directory Certificate Services Role with Certification
+Authority Role Service, the above list should also include:
+System\CurrentControlSet\Services\CertSvc.
+When a server has the WINS Server Feature installed, the above list should also include:
+System\CurrentControlSet\Services\WINS</p>
+</section>
+<section id="id112">
+<h3>2.3.10.10<a class="headerlink" href="#id112" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Restrict anonymous access to Named
+Pipes and Shares</p>
+</section>
+<section id="id113">
+<h3>2.3.10.11<a class="headerlink" href="#id113" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Administrators: Remote Access: Allow:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Restrict clients allowed to make
+remote calls to SAM</p>
+</section>
+<section id="id114">
+<h3>2.3.10.12<a class="headerlink" href="#id114" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <blank>
+(i.e. None):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Shares that can be accessed
+anonymously</p>
+</section>
+<section id="id115">
+<h3>2.3.10.13<a class="headerlink" href="#id115" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Classic -
+local users authenticate as themselves:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network access: Sharing and security model for
+local accounts</p>
+</section>
+<section id="id116">
+<h3>2.3.11<a class="headerlink" href="#id116" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Allow Local System to use
+computer identity for NTLM</p>
+</section>
+<section id="id117">
+<h3>2.3.11.2<a class="headerlink" href="#id117" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Allow LocalSystem NULL session
+fallback</p>
+</section>
+<section id="id118">
+<h3>2.3.11.3<a class="headerlink" href="#id118" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network Security: Allow PKU2U authentication
+requests to this computer to use online identities</p>
+</section>
+<section id="id119">
+<h3>2.3.11.4<a class="headerlink" href="#id119" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Configure encryption types
+allowed for Kerberos</p>
+</section>
+<section id="id120">
+<h3>2.3.11.5<a class="headerlink" href="#id120" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Do not store LAN Manager hash
+value on next password change</p>
+</section>
+<section id="id121">
+<h3>2.3.11.6<a class="headerlink" href="#id121" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled.
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Force logoff when logon hours
+expire</p>
+</section>
+<section id="id122">
+<h3>2.3.11.7<a class="headerlink" href="#id122" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to: Send
+NTLMv2 response only. Refuse LM &amp; NTLM:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: LAN Manager authentication level</p>
+</section>
+<section id="id123">
+<h3>2.3.11.8<a class="headerlink" href="#id123" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Negotiate
+signing (configuring to Require signing also conforms to the benchmark):
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: LDAP client signing requirements</p>
+</section>
+<section id="id124">
+<h3>2.3.11.9<a class="headerlink" href="#id124" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Require
+NTLMv2 session security, Require 128-bit encryption:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Minimum session security for NTLM
+SSP based (including secure RPC) clients</p>
+</section>
+<section id="id125">
+<h3>2.3.11.10<a class="headerlink" href="#id125" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Require
+NTLMv2 session security, Require 128-bit encryption:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Network security: Minimum session security for NTLM
+SSP based (including secure RPC) servers</p>
+</section>
+<section id="id126">
+<h3>2.3.13<a class="headerlink" href="#id126" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\Shutdown: Allow system to be shut down without
+having to log on</p>
+</section>
+<section id="id127">
+<h3>2.3.14<a class="headerlink" href="#id127" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to User must
+enter a password each time they use a key:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\System Cryptography: Force strong key protection
+for user keys stored on the computer</p>
+</section>
+<section id="id128">
+<h3>2.3.14.2<a class="headerlink" href="#id128" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\System cryptography: Use FIPS compliant algorithms
+for encryption, hashing, and signing</p>
+</section>
+<section id="id129">
+<h3>2.3.15<a class="headerlink" href="#id129" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\System objects: Require case insensitivity for non-
+Windows subsystems</p>
+</section>
+<section id="id130">
+<h3>2.3.15.2<a class="headerlink" href="#id130" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\System objects: Strengthen default permissions of
+internal system objects (e.g. Symbolic Links)</p>
+</section>
+<section id="id131">
+<h3>2.3.17<a class="headerlink" href="#id131" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Admin Approval Mode for the
+Built-in Administrator account</p>
+</section>
+<section id="id132">
+<h3>2.3.17.2<a class="headerlink" href="#id132" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Allow UIAccess applications
+to prompt for elevation without using the secure desktop</p>
+</section>
+<section id="id133">
+<h3>2.3.17.3<a class="headerlink" href="#id133" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Prompt
+for consent on the secure desktop:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Behavior of the elevation
+prompt for administrators in Admin Approval Mode</p>
+</section>
+<section id="id134">
+<h3>2.3.17.4<a class="headerlink" href="#id134" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Prompt
+for consent on the secure desktop or Prompt for credentials on the secure
+desktop:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Behavior of the elevation
+prompt for administrators in Admin Approval Mode</p>
+</section>
+<section id="id135">
+<h3>2.3.17.5<a class="headerlink" href="#id135" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to
+Automatically deny elevation requests:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Behavior of the elevation
+prompt for standard users</p>
+</section>
+<section id="id136">
+<h3>2.3.17.6<a class="headerlink" href="#id136" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Detect application
+installations and prompt for elevation</p>
+</section>
+<section id="id137">
+<h3>2.3.17.7<a class="headerlink" href="#id137" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Only elevate UIAccess
+applications that are installed in secure locations</p>
+</section>
+<section id="id138">
+<h3>2.3.17.8<a class="headerlink" href="#id138" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Run all administrators in
+Admin Approval Mode</p>
+</section>
+<section id="id139">
+<h3>2.3.17.9<a class="headerlink" href="#id139" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Switch to the secure desktop
+when prompting for elevation</p>
+</section>
+<section id="id140">
+<h3>2.3.17.10<a class="headerlink" href="#id140" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
+Computer Configuration\Policies\Windows Settings\Security Settings\Local
+Policies\Security Options\User Account Control: Virtualize file and registry
+write failures to per-user locations</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, CAMS CSC
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Local Policies</a><ul>
+<li><a class="reference internal" href="#id1">2.2</a><ul>
+<li><a class="reference internal" href="#id2">2.2</a></li>
+<li><a class="reference internal" href="#id3">2.2.2</a></li>
+<li><a class="reference internal" href="#id4">2.2.3</a></li>
+<li><a class="reference internal" href="#id5">2.2.4</a></li>
+<li><a class="reference internal" href="#id6">2.2.5</a></li>
+<li><a class="reference internal" href="#id7">2.2.6</a></li>
+<li><a class="reference internal" href="#id8">2.2.7</a></li>
+<li><a class="reference internal" href="#id9">2.2.8</a></li>
+<li><a class="reference internal" href="#id10">2.2.9</a></li>
+<li><a class="reference internal" href="#id11">2.2.10</a></li>
+<li><a class="reference internal" href="#id12">2.2.11</a></li>
+<li><a class="reference internal" href="#id13">2.2.12</a></li>
+<li><a class="reference internal" href="#id14">2.2.13</a></li>
+<li><a class="reference internal" href="#id15">2.2.14</a></li>
+<li><a class="reference internal" href="#id16">2.2.15</a></li>
+<li><a class="reference internal" href="#id17">2.2.16</a></li>
+<li><a class="reference internal" href="#id18">2.2.17</a></li>
+<li><a class="reference internal" href="#id19">2.2.18</a></li>
+<li><a class="reference internal" href="#id20">2.2.19</a></li>
+<li><a class="reference internal" href="#id21">2.2.20</a></li>
+<li><a class="reference internal" href="#id22">2.2.21</a></li>
+<li><a class="reference internal" href="#id23">2.2.22</a></li>
+<li><a class="reference internal" href="#id24">2.2.23</a></li>
+<li><a class="reference internal" href="#id25">2.2.24</a></li>
+<li><a class="reference internal" href="#id26">2.2.25</a></li>
+<li><a class="reference internal" href="#id27">2.2.26</a></li>
+<li><a class="reference internal" href="#id28">2.2.27</a></li>
+<li><a class="reference internal" href="#id29">2.2.28</a></li>
+<li><a class="reference internal" href="#id30">2.2.29</a></li>
+<li><a class="reference internal" href="#id31">2.2.30</a></li>
+<li><a class="reference internal" href="#id32">2.2.31</a></li>
+<li><a class="reference internal" href="#id33">2.2.32</a></li>
+<li><a class="reference internal" href="#id34">2.2.33</a></li>
+<li><a class="reference internal" href="#id35">2.2.34</a></li>
+<li><a class="reference internal" href="#id36">2.2.35</a></li>
+<li><a class="reference internal" href="#id37">2.2.36</a></li>
+<li><a class="reference internal" href="#id38">2.2.37</a></li>
+<li><a class="reference internal" href="#id39">2.2.38</a></li>
+<li><a class="reference internal" href="#id40">2.2.39</a></li>
+<li><a class="reference internal" href="#id41">2.2.40</a></li>
+<li><a class="reference internal" href="#id42">2.2.41</a></li>
+<li><a class="reference internal" href="#id43">2.2.42</a></li>
+<li><a class="reference internal" href="#id44">2.2.43</a></li>
+<li><a class="reference internal" href="#id45">2.2.44</a></li>
+<li><a class="reference internal" href="#id46">2.2.45</a></li>
+<li><a class="reference internal" href="#id47">2.2.46</a></li>
+<li><a class="reference internal" href="#id48">2.2.47</a></li>
+<li><a class="reference internal" href="#id49">2.2.48</a></li>
+<li><a class="reference internal" href="#id50">2.2.49</a></li>
+<li><a class="reference internal" href="#id51">2.2.50</a></li>
+<li><a class="reference internal" href="#id52">2.2.51</a></li>
+<li><a class="reference internal" href="#id53">2.2.52</a></li>
+<li><a class="reference internal" href="#id54">2.2.53</a></li>
+<li><a class="reference internal" href="#id55">2.2.54</a></li>
+<li><a class="reference internal" href="#id56">2.2.55</a></li>
+<li><a class="reference internal" href="#id57">2.2.56</a></li>
+<li><a class="reference internal" href="#id58">2.2.57</a></li>
+<li><a class="reference internal" href="#id59">2.2.58</a></li>
+<li><a class="reference internal" href="#id60">2.2.59</a></li>
+<li><a class="reference internal" href="#id61">2.2.60</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">2.3</a><ul>
+<li><a class="reference internal" href="#id63">2.3.1.1</a></li>
+<li><a class="reference internal" href="#id64">2.3.1.2</a></li>
+<li><a class="reference internal" href="#id65">2.3.1.3</a></li>
+<li><a class="reference internal" href="#id66">2.3.1.4</a></li>
+<li><a class="reference internal" href="#id67">2.3.1.5</a></li>
+<li><a class="reference internal" href="#id68">2.3.1.6</a></li>
+<li><a class="reference internal" href="#id69">2.3.1.7</a></li>
+<li><a class="reference internal" href="#id70">2.3.2</a></li>
+<li><a class="reference internal" href="#id71">2.3.2.2</a></li>
+<li><a class="reference internal" href="#id72">2.3.4</a></li>
+<li><a class="reference internal" href="#id73">2.3.4.2</a></li>
+<li><a class="reference internal" href="#id74">2.3.5</a></li>
+<li><a class="reference internal" href="#id75">2.3.5.2</a></li>
+<li><a class="reference internal" href="#id76">2.3.5.3</a></li>
+<li><a class="reference internal" href="#id77">2.3.5.4</a></li>
+<li><a class="reference internal" href="#id78">2.3.5.5</a></li>
+<li><a class="reference internal" href="#id79">2.3.6</a></li>
+<li><a class="reference internal" href="#id80">2.3.6.2</a></li>
+<li><a class="reference internal" href="#id81">2.3.6.3</a></li>
+<li><a class="reference internal" href="#id82">2.3.6.4</a></li>
+<li><a class="reference internal" href="#id83">2.3.6.5</a></li>
+<li><a class="reference internal" href="#id84">2.3.6.6</a></li>
+<li><a class="reference internal" href="#id85">2.3.7</a></li>
+<li><a class="reference internal" href="#id86">2.3.7.2</a></li>
+<li><a class="reference internal" href="#id87">2.3.7.3</a></li>
+<li><a class="reference internal" href="#id88">2.3.7.4</a></li>
+<li><a class="reference internal" href="#id89">2.3.7.5</a></li>
+<li><a class="reference internal" href="#id90">2.3.7.6</a></li>
+<li><a class="reference internal" href="#id91">2.3.7.7</a></li>
+<li><a class="reference internal" href="#id92">2.3.7.8</a></li>
+<li><a class="reference internal" href="#id93">2.3.7.9</a></li>
+<li><a class="reference internal" href="#id94">2.3.7.10</a></li>
+<li><a class="reference internal" href="#id95">2.3.8</a></li>
+<li><a class="reference internal" href="#id96">2.3.8.2</a></li>
+<li><a class="reference internal" href="#id97">2.3.8.3</a></li>
+<li><a class="reference internal" href="#id98">2.3.9</a></li>
+<li><a class="reference internal" href="#id99">2.3.9.2</a></li>
+<li><a class="reference internal" href="#id100">2.3.9.3</a></li>
+<li><a class="reference internal" href="#id101">2.3.9.4</a></li>
+<li><a class="reference internal" href="#id102">2.3.9.5</a></li>
+<li><a class="reference internal" href="#id103">2.3.10</a></li>
+<li><a class="reference internal" href="#id104">2.3.10.2</a></li>
+<li><a class="reference internal" href="#id105">2.3.10.3</a></li>
+<li><a class="reference internal" href="#id106">2.3.10.4</a></li>
+<li><a class="reference internal" href="#id107">2.3.10.5</a></li>
+<li><a class="reference internal" href="#id108">2.3.10.6</a></li>
+<li><a class="reference internal" href="#id109">2.3.10.7</a></li>
+<li><a class="reference internal" href="#id110">2.3.10.8</a></li>
+<li><a class="reference internal" href="#id111">2.3.10.9</a></li>
+<li><a class="reference internal" href="#id112">2.3.10.10</a></li>
+<li><a class="reference internal" href="#id113">2.3.10.11</a></li>
+<li><a class="reference internal" href="#id114">2.3.10.12</a></li>
+<li><a class="reference internal" href="#id115">2.3.10.13</a></li>
+<li><a class="reference internal" href="#id116">2.3.11</a></li>
+<li><a class="reference internal" href="#id117">2.3.11.2</a></li>
+<li><a class="reference internal" href="#id118">2.3.11.3</a></li>
+<li><a class="reference internal" href="#id119">2.3.11.4</a></li>
+<li><a class="reference internal" href="#id120">2.3.11.5</a></li>
+<li><a class="reference internal" href="#id121">2.3.11.6</a></li>
+<li><a class="reference internal" href="#id122">2.3.11.7</a></li>
+<li><a class="reference internal" href="#id123">2.3.11.8</a></li>
+<li><a class="reference internal" href="#id124">2.3.11.9</a></li>
+<li><a class="reference internal" href="#id125">2.3.11.10</a></li>
+<li><a class="reference internal" href="#id126">2.3.13</a></li>
+<li><a class="reference internal" href="#id127">2.3.14</a></li>
+<li><a class="reference internal" href="#id128">2.3.14.2</a></li>
+<li><a class="reference internal" href="#id129">2.3.15</a></li>
+<li><a class="reference internal" href="#id130">2.3.15.2</a></li>
+<li><a class="reference internal" href="#id131">2.3.17</a></li>
+<li><a class="reference internal" href="#id132">2.3.17.2</a></li>
+<li><a class="reference internal" href="#id133">2.3.17.3</a></li>
+<li><a class="reference internal" href="#id134">2.3.17.4</a></li>
+<li><a class="reference internal" href="#id135">2.3.17.5</a></li>
+<li><a class="reference internal" href="#id136">2.3.17.6</a></li>
+<li><a class="reference internal" href="#id137">2.3.17.7</a></li>
+<li><a class="reference internal" href="#id138">2.3.17.8</a></li>
+<li><a class="reference internal" href="#id139">2.3.17.9</a></li>
+<li><a class="reference internal" href="#id140">2.3.17.10</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
+</html>

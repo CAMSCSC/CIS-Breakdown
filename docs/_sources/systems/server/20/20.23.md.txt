@@ -1,0 +1,5 @@
+
+### 20.23  
+If no certificate exists, install an approved certificate on the Domain Controller. 
+Note: The Certificate Store can be loaded by executing the Microsoft Management Console 
+(MMC) and loading the Certificates snap-in (Computer account). 

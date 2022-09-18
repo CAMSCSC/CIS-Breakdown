@@ -1,0 +1,5 @@
+
+### 20.24  
+Remove any Roles and Features or Programs and Features that are not required for the 
+domain controller to function. 
+   
