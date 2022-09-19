@@ -227,36 +227,7 @@
         <article role="main">
           <section id="id1">
 <h1>20.6<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>Configure the audit settings for Group Policy objects to include at least the following: Type</p>
-<ul class="simple">
-<li><p>Fail, Principal - Everyone, Access - Full Control, and Inherited from - None.
-Note: These audit settings apply to this object and all descendant objects or Descendant
-groupPolicyContainer objects.
-Open Active Directory Users and Computers
-Ensure Advanced Features is selected in the View menu
-Select System under the domain being reviewed
-Right-click Policies and select Properties
-Select the Security tab
-Select the Advanced button
-Select the Auditing tab
-Ensure at least the above auditing permissions are set.</p></li>
-</ul>
-<p>Note: The three Success types listed below are defaults inherited from the Parent Object.
-Where Special is listed in the summary screens for Access, detailed Permissions are
-provided for reference.
-Type - Success
-Principal - Everyone
-Access - Special (Permissions: Write all properties, Modify permissions; Properties:
-all “Write” type selected)
-Inherited from - Parent Object
-Applies to - Descendant groupPolicyContainer objects
-Two instances with the following summary information will be listed:
-Type - Success
-Principal - Everyone
-Access - blank (Permissions: none selected; Properties: one instance - Write gPLink,
-one instance - Write gPOptions)
-Inherited from - Parent Object
-Applies to - Descendant Organization Unit Objects</p>
+<p>Configure the audit settings for Group Policy objects to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>. Note: These audit settings apply to this object and all descendant objects or Descendant groupPolicyContainer objects.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click Policies and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Ensure at least the above auditing permissions are set.  Note: The three Success types listed below are defaults inherited from the Parent Object. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference.  Type - Success  Principal - Everyone  Access - Special (Permissions: Write all properties, Modify permissions; Properties: all “Write” type selected)  Inherited from - Parent Object Applies to - Descendant groupPolicyContainer objects Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - blank (Permissions: none selected; Properties: one instance - Write gPLink, one instance - Write gPOptions)  Inherited from - Parent Object Applies to - Descendant Organization Unit Objects</p>
 </section>
 
         </article>

@@ -1,4 +1,3 @@
 
 ### 20.35  
-Change passwords for manually managed application/service accounts at least annually or 
-when an administrator with knowledge of the password leaves the organization. 
+Change passwords for manually managed application/service accounts at least annually or when an administrator with knowledge of the password leaves the organization. 

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Overview - Windows 10 Server 2019" href="../server/overview.html" /><link rel="prev" title="Admin Templates (Computer)" href="18.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Overview - Windows 10 Server 2019" href="../server/overview.html" /><link rel="prev" title="18 - Admin Templates (Computer)" href="18.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
-        <title>Admin Templates (User) - CIS Benchmark Breakdown</title>
+        <title>19 - Admin Templates (User) - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -226,149 +226,77 @@
         </div>
         <article role="main">
           <section id="admin-templates-user">
-<h1>Admin Templates (User)<a class="headerlink" href="#admin-templates-user" title="Permalink to this heading">#</a></h1>
+<h1>19 - Admin Templates (User)<a class="headerlink" href="#admin-templates-user" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>19.1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="id2">
 <h3>19.1.3<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Control
-Panel\Personalization\Enable screen saver
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template ControlPanelDisplay.admx/adml that is included with the Microsoft Windows 7
-&amp; Server 2008 R2 Administrative Templates (or newer).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Control</span> <span class="pre">Panel\Personalization\Enable</span> <span class="pre">screen</span> <span class="pre">saver</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">ControlPanelDisplay.admx/adml</span></code> that is included with the Microsoft Windows 7 &amp; Server 2008 R2 Administrative Templates (or newer).</p>
 </section>
 <section id="id3">
 <h3>19.1.3.2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Control
-Panel\Personalization\Password protect the screen saver
-Note: This Group Policy path is provided by the Group Policy template
-ControlPanelDisplay.admx/adml that is included with all versions of the Microsoft
-Windows Administrative Templates.   ### 19.1.3.3<br />
-To establish the recommended configuration via GP, set the following UI path to Enabled:
-900 or fewer, but not 0:
-User Configuration\Policies\Administrative Templates\Control
-Panel\Personalization\Screen saver timeout
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template ControlPanelDisplay.admx/adml that is included with the Microsoft Windows 7
-&amp; Server 2008 R2 Administrative Templates (or newer).</p>
-</section>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Control</span> <span class="pre">Panel\Personalization\Password</span> <span class="pre">protect</span> <span class="pre">the</span> <span class="pre">screen</span> <span class="pre">saver</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">ControlPanelDisplay.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
 </section>
 <section id="id4">
-<h2>19.5<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<h3>19.1.3.3<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled:</span> <span class="pre">900</span> <span class="pre">or</span> <span class="pre">fewer,</span> <span class="pre">but</span> <span class="pre">not</span> <span class="pre">0</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Control</span> <span class="pre">Panel\Personalization\Screen</span> <span class="pre">saver</span> <span class="pre">timeout</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">ControlPanelDisplay.admx/adml</span></code> that is included with the Microsoft Windows 7 &amp; Server 2008 R2 Administrative Templates (or newer).</p>
+</section>
+</section>
 <section id="id5">
-<h3>19.5<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Start Menu and
-Taskbar\Notifications\Turn off toast notifications on the lock screen
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template WPN.admx/adml that is included with the Microsoft Windows 8.0 &amp; Server 2012
-(non-R2) Administrative Templates (or newer).</p>
-</section>
-</section>
+<h2>19.5<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <section id="id6">
-<h2>19.6<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<h3>19.5<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Start</span> <span class="pre">Menu</span> <span class="pre">and</span> <span class="pre">Taskbar\Notifications\Turn</span> <span class="pre">off</span> <span class="pre">toast</span> <span class="pre">notifications</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">lock</span> <span class="pre">screen</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">WPN.admx/adml</span></code> that is included with the Microsoft Windows 8.0 &amp; Server 2012 (non-R2) Administrative Templates (or newer).</p>
+</section>
+</section>
 <section id="id7">
-<h3>19.6.6<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\System\Internet
-Communication Management\Internet Communication Settings\Turn off Help
-Experience Improvement Program
-Note: This Group Policy path is provided by the Group Policy template
-HelpAndSupport.admx/adml that is included with all versions of the Microsoft Windows
-Administrative Templates.</p>
-</section>
-</section>
+<h2>19.6<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
 <section id="id8">
-<h2>19.7<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
-<section id="id9">
-<h3>19.7.4<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
-User Configuration\Policies\Administrative Templates\Windows
-Components\Attachment Manager\Do not preserve zone information in file
-attachments
-Note: This Group Policy path is provided by the Group Policy template
-AttachmentManager.admx/adml that is included with all versions of the Microsoft Windows
-Administrative Templates.</p>
+<h3>19.6.6<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled:</span></code> <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\System\Internet</span> <span class="pre">Communication</span> <span class="pre">Management\Internet</span> <span class="pre">Communication</span> <span class="pre">Settings\Turn</span> <span class="pre">off</span> <span class="pre">Help</span> <span class="pre">Experience</span> <span class="pre">Improvement</span> <span class="pre">Program</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">HelpAndSupport.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
 </section>
+</section>
+<section id="id9">
+<h2>19.7<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <section id="id10">
-<h3>19.7.4.2<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows
-Components\Attachment Manager\Notify antivirus programs when opening
-attachments
-Note: This Group Policy path is provided by the Group Policy template
-AttachmentManager.admx/adml that is included with all versions of the Microsoft Windows
-Administrative Templates.</p>
+<h3>19.7.4<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Attachment</span> <span class="pre">Manager\Do</span> <span class="pre">not</span> <span class="pre">preserve</span> <span class="pre">zone</span> <span class="pre">information</span> <span class="pre">in</span> <span class="pre">file</span> <span class="pre">attachments</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">AttachmentManager.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
 </section>
 <section id="id11">
-<h3>19.7.8<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
-User Configuration\Policies\Administrative Templates\Windows Components\Cloud
-Content\Configure Windows spotlight on lock screen
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release
-1607 &amp; Server 2016 Administrative Templates (or newer).</p>
+<h3>19.7.4.2<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Attachment</span> <span class="pre">Manager\Notify</span> <span class="pre">antivirus</span> <span class="pre">programs</span> <span class="pre">when</span> <span class="pre">opening</span> <span class="pre">attachments</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">AttachmentManager.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
 </section>
 <section id="id12">
-<h3>19.7.8.2<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows Components\Cloud
-Content\Do not suggest third-party content in Windows spotlight
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release
-1607 &amp; Server 2016 Administrative Templates (or newer).</p>
+<h3>19.7.8<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Cloud</span> <span class="pre">Content\Configure</span> <span class="pre">Windows</span> <span class="pre">spotlight</span> <span class="pre">on</span> <span class="pre">lock</span> <span class="pre">screen</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">CloudContent.admx/adml</span></code> that is included with the Microsoft Windows 10 Release 1607 &amp; Server 2016 Administrative Templates (or newer).</p>
 </section>
 <section id="id13">
-<h3>19.7.8.3<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows Components\Cloud
-Content\Do not use diagnostic data for tailored experiences
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release
-1703 Administrative Templates (or newer).</p>
+<h3>19.7.8.2<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Cloud</span> <span class="pre">Content\Do</span> <span class="pre">not</span> <span class="pre">suggest</span> <span class="pre">third-party</span> <span class="pre">content</span> <span class="pre">in</span> <span class="pre">Windows</span> <span class="pre">spotlight</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">CloudContent.admx/adml</span></code> that is included with the Microsoft Windows 10 Release 1607 &amp; Server 2016 Administrative Templates (or newer).</p>
 </section>
 <section id="id14">
-<h3>19.7.8.4<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows Components\Cloud
-Content\Turn off all Windows spotlight features
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release
-1607 &amp; Server 2016 Administrative Templates (or newer).</p>
+<h3>19.7.8.3<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Cloud</span> <span class="pre">Content\Do</span> <span class="pre">not</span> <span class="pre">use</span> <span class="pre">diagnostic</span> <span class="pre">data</span> <span class="pre">for</span> <span class="pre">tailored</span> <span class="pre">experiences</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">CloudContent.admx/adml</span></code> that is included with the Microsoft Windows 10 Release 1703 Administrative Templates (or newer).</p>
 </section>
 <section id="id15">
-<h3>19.7.8.5<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows Components\Cloud
-Content\Turn off Spotlight collection on Desktop
-Note: This Group Policy path may not exist by default. It is provided by the Group Policy
-template CloudContent.admx/adml that is included with the Microsoft Windows 10 Release
-21H2 Administrative Templates (or newer).   ### 19.7.28<br />
-To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows
-Components\Network Sharing\Prevent users from sharing files within their
-profile.
-Note: This Group Policy path is provided by the Group Policy template Sharing.admx/adml
-that is included with all versions of the Microsoft Windows Administrative Templates.</p>
+<h3>19.7.8.4<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Cloud</span> <span class="pre">Content\Turn</span> <span class="pre">off</span> <span class="pre">all</span> <span class="pre">Windows</span> <span class="pre">spotlight</span> <span class="pre">features</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">CloudContent.admx/adml</span></code> that is included with the Microsoft Windows 10 Release 1607 &amp; Server 2016 Administrative Templates (or newer).</p>
 </section>
 <section id="id16">
-<h3>19.7.43<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
-User Configuration\Policies\Administrative Templates\Windows
-Components\Windows Installer\Always install with elevated privileges
-Note: This Group Policy path is provided by the Group Policy template MSI.admx/adml that
-is included with all versions of the Microsoft Windows Administrative Templates.</p>
+<h3>19.7.8.5<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Cloud</span> <span class="pre">Content\Turn</span> <span class="pre">off</span> <span class="pre">Spotlight</span> <span class="pre">collection</span> <span class="pre">on</span> <span class="pre">Desktop</span> </code>Note: This Group Policy path may not exist by default. It is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">CloudContent.admx/adml</span></code> that is included with the Microsoft Windows 10 Release 21H2 Administrative Templates (or newer).</p>
 </section>
 <section id="id17">
-<h3>19.7.47.2<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-User Configuration\Policies\Administrative Templates\Windows
-Components\Windows Media Player\Playback\Prevent Codec Download
-Note: This Group Policy path is provided by the Group Policy template
-WindowsMediaPlayer.admx/adml that is included with all versions of the Microsoft
-Windows Administrative Templates.</p>
+<h3>19.7.28<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled:</span></code> <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Network</span> <span class="pre">Sharing\Prevent</span> <span class="pre">users</span> <span class="pre">from</span> <span class="pre">sharing</span> <span class="pre">files</span> <span class="pre">within</span> <span class="pre">their</span> <span class="pre">profile.</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">Sharing.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id18">
+<h3>19.7.43<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>: <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Windows</span> <span class="pre">Installer\Always</span> <span class="pre">install</span> <span class="pre">with</span> <span class="pre">elevated</span> <span class="pre">privileges</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">MSI.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
+</section>
+<section id="id19">
+<h3>19.7.47.2<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled:</span></code> <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\Windows</span> <span class="pre">Components\Windows</span> <span class="pre">Media</span> <span class="pre">Player\Playback\Prevent</span> <span class="pre">Codec</span> <span class="pre">Download</span> </code>Note: This Group Policy path is provided by the Group Policy template <code class="docutils literal notranslate"><span class="pre">WindowsMediaPlayer.admx/adml</span></code> that is included with all versions of the Microsoft Windows Administrative Templates.</p>
 </section>
 </section>
 </section>
@@ -394,7 +322,7 @@ Windows Administrative Templates.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Admin Templates (Computer)</div>
+                <div class="title">18 - Admin Templates (Computer)</div>
                 
               </div>
             </a>
@@ -430,30 +358,32 @@ Windows Administrative Templates.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Admin Templates (User)</a><ul>
+<li><a class="reference internal" href="#">19 - Admin Templates (User)</a><ul>
 <li><a class="reference internal" href="#id1">19.1</a><ul>
 <li><a class="reference internal" href="#id2">19.1.3</a></li>
 <li><a class="reference internal" href="#id3">19.1.3.2</a></li>
+<li><a class="reference internal" href="#id4">19.1.3.3</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">19.5</a><ul>
-<li><a class="reference internal" href="#id5">19.5</a></li>
+<li><a class="reference internal" href="#id5">19.5</a><ul>
+<li><a class="reference internal" href="#id6">19.5</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">19.6</a><ul>
-<li><a class="reference internal" href="#id7">19.6.6</a></li>
+<li><a class="reference internal" href="#id7">19.6</a><ul>
+<li><a class="reference internal" href="#id8">19.6.6</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">19.7</a><ul>
-<li><a class="reference internal" href="#id9">19.7.4</a></li>
-<li><a class="reference internal" href="#id10">19.7.4.2</a></li>
-<li><a class="reference internal" href="#id11">19.7.8</a></li>
-<li><a class="reference internal" href="#id12">19.7.8.2</a></li>
-<li><a class="reference internal" href="#id13">19.7.8.3</a></li>
-<li><a class="reference internal" href="#id14">19.7.8.4</a></li>
-<li><a class="reference internal" href="#id15">19.7.8.5</a></li>
-<li><a class="reference internal" href="#id16">19.7.43</a></li>
-<li><a class="reference internal" href="#id17">19.7.47.2</a></li>
+<li><a class="reference internal" href="#id9">19.7</a><ul>
+<li><a class="reference internal" href="#id10">19.7.4</a></li>
+<li><a class="reference internal" href="#id11">19.7.4.2</a></li>
+<li><a class="reference internal" href="#id12">19.7.8</a></li>
+<li><a class="reference internal" href="#id13">19.7.8.2</a></li>
+<li><a class="reference internal" href="#id14">19.7.8.3</a></li>
+<li><a class="reference internal" href="#id15">19.7.8.4</a></li>
+<li><a class="reference internal" href="#id16">19.7.8.5</a></li>
+<li><a class="reference internal" href="#id17">19.7.28</a></li>
+<li><a class="reference internal" href="#id18">19.7.43</a></li>
+<li><a class="reference internal" href="#id19">19.7.47.2</a></li>
 </ul>
 </li>
 </ul>

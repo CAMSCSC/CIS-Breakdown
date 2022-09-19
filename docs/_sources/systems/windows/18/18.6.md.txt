@@ -1,23 +1,7 @@
+
 ### 18.6  
-To establish the recommended configuration via GP, set the following UI path to Disabled: 
-Computer Configuration\Policies\Administrative Templates\Printers\Allow Print 
-Spooler to accept client connections 
-Note: This Group Policy path is provided by the Group Policy template 
-printing2.admx/adml that is included with all versions of the Microsoft Windows 
-Administrative Templates. 
+To establish the recommended configuration via GP, set the following UI path to `Disabled`: `Computer Configuration\Policies\Administrative Templates\Printers\Allow Print Spooler to accept client connections `Note: This Group Policy path is provided by the Group Policy template `printing2.admx/adml` that is included with all versions of the Microsoft Windows Administrative Templates. 
 ### 18.6.2  
-To establish the recommended configuration via GP, set the following UI path to Enabled: 
-Show warning and elevation prompt: 
-Computer Configuration\Policies\Administrative Templates\Printers\Point and 
-Print Restrictions: When installing drivers for a new connection 
-Note: This Group Policy path is provided by the Group Policy template 
-Printing.admx/adml that is included with all versions of the Microsoft Windows 
-Administrative Templates. 
+To establish the recommended configuration via GP, set the following UI path to `Enabled: Show warning and elevation prompt`: `Computer Configuration\Policies\Administrative Templates\Printers\Point and Print Restrictions: When installing drivers for a new connection `Note: This Group Policy path is provided by the Group Policy template `Printing.admx/adml` that is included with all versions of the Microsoft Windows Administrative Templates. 
 ### 18.6.3  
-To establish the recommended configuration via GP, set the following UI path to Enabled: 
-Show warning and elevation prompt: 
-Computer Configuration\Policies\Administrative Templates\Printers\Point and 
-Print Restrictions: When updating drivers for an existing connection 
-Note: This Group Policy path is provided by the Group Policy template 
-Printing.admx/adml that is included with all versions of the Microsoft Windows 
-Administrative Templates. 
+To establish the recommended configuration via GP, set the following UI path to `Enabled: Show warning and elevation prompt`: `Computer Configuration\Policies\Administrative Templates\Printers\Point and Print Restrictions: When updating drivers for an existing connection `Note: This Group Policy path is provided by the Group Policy template `Printing.admx/adml` that is included with all versions of the Microsoft Windows Administrative Templates. 

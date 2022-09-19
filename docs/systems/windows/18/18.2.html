@@ -227,61 +227,27 @@
         <article role="main">
           <section id="id1">
 <h1>18.2<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>In order to utilize LAPS, a minor Active Directory Schema update is required, and a Group
-Policy Client Side Extension (CSE) must be installed on each managed computer. When
-LAPS is installed, the file AdmPwd.dll must be present in the following location and
-registered in Windows (the LAPS AdmPwd GPO Extension / CSE installation does this for
-you):
-C:\Program Files\LAPS\CSE\AdmPwd.dll</p>
+<p>In order to utilize LAPS, a minor Active Directory Schema update is required, and a Group Policy Client Side Extension (CSE) must be installed on each managed computer. When LAPS is installed, the file <code class="docutils literal notranslate"><span class="pre">AdmPwd.dll</span></code> must be present in the following location and registered in Windows (the LAPS AdmPwd GPO Extension / CSE installation does this for you): <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\LAPS\CSE\AdmPwd.dll</span> </code></p>
 </section>
 <section id="id2">
 <h1>18.2.2<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-Computer Configuration\Policies\Administrative Templates\LAPS\Do not allow
-password expiration time longer than required by policy
-Note: This Group Policy path does not exist by default. An additional Group Policy template
-(AdmPwd.admx/adml) is required - it is included with Microsoft Local Administrator
-Password Solution (LAPS).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\LAPS\Do</span> <span class="pre">not</span> <span class="pre">allow</span> <span class="pre">password</span> <span class="pre">expiration</span> <span class="pre">time</span> <span class="pre">longer</span> <span class="pre">than</span> <span class="pre">required</span> <span class="pre">by</span> <span class="pre">policy</span> </code>Note: This Group Policy path does not exist by default. An additional Group Policy template (<code class="docutils literal notranslate"><span class="pre">AdmPwd.admx/adml</span></code>) is required - it is included with Microsoft Local Administrator Password Solution (LAPS).</p>
 </section>
 <section id="id3">
 <h1>18.2.3<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-Computer Configuration\Policies\Administrative Templates\LAPS\Enable Local
-Admin Password Management
-Note: This Group Policy path does not exist by default. An additional Group Policy template
-(AdmPwd.admx/adml) is required - it is included with Microsoft Local Administrator
-Password Solution (LAPS).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\LAPS\Enable</span> <span class="pre">Local</span> <span class="pre">Admin</span> <span class="pre">Password</span> <span class="pre">Management</span> </code>Note: This Group Policy path does not exist by default. An additional Group Policy template (<code class="docutils literal notranslate"><span class="pre">AdmPwd.admx/adml</span></code>) is required - it is included with Microsoft Local Administrator Password Solution (LAPS).</p>
 </section>
 <section id="id4">
 <h1>18.2.4<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
-and configure the Password Complexity option to Large letters + small letters +
-numbers + special characters:
-Computer Configuration\Policies\Administrative Templates\LAPS\Password
-Settings
-Note: This Group Policy path does not exist by default. An additional Group Policy template
-(AdmPwd.admx/adml) is required - it is included with Microsoft Local Administrator
-Password Solution (LAPS).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and configure the <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">Complexity</span></code> option to <code class="docutils literal notranslate"><span class="pre">Large</span> <span class="pre">letters</span> <span class="pre">+</span> <span class="pre">small</span> <span class="pre">letters</span> <span class="pre">+</span> <span class="pre">numbers</span> <span class="pre">+</span> <span class="pre">special</span> <span class="pre">characters</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\LAPS\Password</span> <span class="pre">Settings</span> </code>Note: This Group Policy path does not exist by default. An additional Group Policy template (<code class="docutils literal notranslate"><span class="pre">AdmPwd.admx/adml</span></code>) is required - it is included with Microsoft Local Administrator Password Solution (LAPS).</p>
 </section>
 <section id="id5">
 <h1>18.2.5<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
-and configure the Password Length option to 15 or more:
-Computer Configuration\Policies\Administrative Templates\LAPS\Password
-Settings
-Note: This Group Policy path does not exist by default. An additional Group Policy template
-(AdmPwd.admx/adml) is required - it is included with Microsoft Local Administrator
-Password Solution (LAPS).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and configure the <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">Length</span></code> option to <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">or</span> <span class="pre">more</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\LAPS\Password</span> <span class="pre">Settings</span> </code>Note: This Group Policy path does not exist by default. An additional Group Policy template (<code class="docutils literal notranslate"><span class="pre">AdmPwd.admx/adml</span></code>) is required - it is included with Microsoft Local Administrator Password Solution (LAPS).</p>
 </section>
 <section id="id6">
 <h1>18.2.6<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h1>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled,
-and configure the Password Age (Days) option to 30 or fewer:
-Computer Configuration\Policies\Administrative Templates\LAPS\Password
-Settings
-Note: This Group Policy path does not exist by default. An additional Group Policy template
-(AdmPwd.admx/adml) is required - it is included with Microsoft Local Administrator
-Password Solution (LAPS).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and configure the <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">Age</span> <span class="pre">(Days)</span></code> option to <code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">or</span> <span class="pre">fewer</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Administrative</span> <span class="pre">Templates\LAPS\Password</span> <span class="pre">Settings</span> </code>Note: This Group Policy path does not exist by default. An additional Group Policy template (<code class="docutils literal notranslate"><span class="pre">AdmPwd.admx/adml</span></code>) is required - it is included with Microsoft Local Administrator Password Solution (LAPS).</p>
 </section>
 
         </article>

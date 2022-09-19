@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Windows Defender Firewall with Advanced Security" href="9.html" /><link rel="prev" title="Local Policies" href="2.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="9 - Windows Defender Firewall with Advanced Security" href="9.html" /><link rel="prev" title="2 - Local Policies" href="2.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
-        <title>System Services - CIS Benchmark Breakdown</title>
+        <title>5 - System Services - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -226,425 +226,320 @@
         </div>
         <article role="main">
           <section id="system-services">
-<h1>System Services<a class="headerlink" href="#system-services" title="Permalink to this heading">#</a></h1>
+<h1>5 - System Services<a class="headerlink" href="#system-services" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>5<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="id2">
 <h3>5<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled:
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Bluetooth Audio Gateway Service
-Note: This service was first introduced in Windows 10 Release 1803. It appears to have
-replaced the older Bluetooth Handsfree Service (BthHFSrv), which was removed from
-Windows in that release (it is not simply a rename, but a different service).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Bluetooth</span> <span class="pre">Audio</span> <span class="pre">Gateway</span> <span class="pre">Service</span> </code>Note: This service was first introduced in Windows 10 Release 1803. It appears to have replaced the older Bluetooth Handsfree Service (BthHFSrv), which was removed from Windows in that release (it is not simply a rename, but a different service).</p>
 </section>
 </section>
 <section id="id3">
 <h2>5.2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <section id="id4">
 <h3>5.2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Bluetooth Support Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Bluetooth</span> <span class="pre">Support</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id5">
 <h2>5.3<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <section id="id6">
 <h3>5.3<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Computer Browser</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Computer</span> <span class="pre">Browser</span> </code></p>
 </section>
 </section>
 <section id="id7">
 <h2>5.4<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
 <section id="id8">
 <h3>5.4<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Downloaded Maps Manager</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Downloaded</span> <span class="pre">Maps</span> <span class="pre">Manager</span> </code></p>
 </section>
 </section>
 <section id="id9">
 <h2>5.5<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <section id="id10">
 <h3>5.5<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Geolocation Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Geolocation</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id11">
 <h2>5.6<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
 <section id="id12">
 <h3>5.6<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\IIS Admin Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\IIS</span> <span class="pre">Admin</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id13">
 <h2>5.7<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
 <section id="id14">
 <h3>5.7<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Infrared monitor service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Infrared</span> <span class="pre">monitor</span> <span class="pre">service</span> </code></p>
 </section>
 </section>
 <section id="id15">
 <h2>5.8<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
 <section id="id16">
 <h3>5.8<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Internet Connection Sharing (ICS)</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Internet</span> <span class="pre">Connection</span> <span class="pre">Sharing</span> <span class="pre">(ICS)</span> </code></p>
 </section>
 </section>
 <section id="id17">
 <h2>5.9<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
 <section id="id18">
 <h3>5.9<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Link-Layer Topology Discovery Mapper</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Link-Layer</span> <span class="pre">Topology</span> <span class="pre">Discovery</span> <span class="pre">Mapper</span> </code></p>
 </section>
 </section>
 <section id="id19">
 <h2>5.10<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
 <section id="id20">
 <h3>5.10<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\LxssManager</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\LxssManager</span> </code></p>
 </section>
 </section>
 <section id="id21">
 <h2>5.11<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h2>
 <section id="id22">
 <h3>5.11<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Microsoft FTP Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Microsoft</span> <span class="pre">FTP</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id23">
 <h2>5.12<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
 <section id="id24">
 <h3>5.12<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Microsoft iSCSI Initiator Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Microsoft</span> <span class="pre">iSCSI</span> <span class="pre">Initiator</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id25">
 <h2>5.13<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h2>
 <section id="id26">
 <h3>5.13<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\OpenSSH SSH Server</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\OpenSSH</span> <span class="pre">SSH</span> <span class="pre">Server</span> </code></p>
 </section>
 </section>
 <section id="id27">
 <h2>5.14<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h2>
 <section id="id28">
 <h3>5.14<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Peer Name Resolution Protocol</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Peer</span> <span class="pre">Name</span> <span class="pre">Resolution</span> <span class="pre">Protocol</span> </code></p>
 </section>
 </section>
 <section id="id29">
 <h2>5.15<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h2>
 <section id="id30">
 <h3>5.15<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Peer Networking Grouping</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Peer</span> <span class="pre">Networking</span> <span class="pre">Grouping</span> </code></p>
 </section>
 </section>
 <section id="id31">
 <h2>5.16<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h2>
 <section id="id32">
 <h3>5.16<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Peer Networking Identity Manager</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Peer</span> <span class="pre">Networking</span> <span class="pre">Identity</span> <span class="pre">Manager</span> </code></p>
 </section>
 </section>
 <section id="id33">
 <h2>5.17<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h2>
 <section id="id34">
 <h3>5.17<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\PNRP Machine Name Publication Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\PNRP</span> <span class="pre">Machine</span> <span class="pre">Name</span> <span class="pre">Publication</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id35">
 <h2>5.18<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h2>
 <section id="id36">
 <h3>5.18<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled:
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Print Spooler</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Print</span> <span class="pre">Spooler</span> </code></p>
 </section>
 </section>
 <section id="id37">
 <h2>5.19<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h2>
 <section id="id38">
 <h3>5.19<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Problem Reports and Solutions Control Panel Support</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Problem</span> <span class="pre">Reports</span> <span class="pre">and</span> <span class="pre">Solutions</span> <span class="pre">Control</span> <span class="pre">Panel</span> <span class="pre">Support</span> </code></p>
 </section>
 </section>
 <section id="id39">
 <h2>5.20<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h2>
 <section id="id40">
 <h3>5.20<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Remote Access Auto Connection Manager</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Remote</span> <span class="pre">Access</span> <span class="pre">Auto</span> <span class="pre">Connection</span> <span class="pre">Manager</span> </code></p>
 </section>
 </section>
 <section id="id41">
 <h2>5.21<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h2>
 <section id="id42">
 <h3>5.21<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Remote Desktop Configuration</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Remote</span> <span class="pre">Desktop</span> <span class="pre">Configuration</span> </code></p>
 </section>
 </section>
 <section id="id43">
 <h2>5.22<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h2>
 <section id="id44">
 <h3>5.22<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Remote Desktop Services</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Remote</span> <span class="pre">Desktop</span> <span class="pre">Services</span> </code></p>
 </section>
 </section>
 <section id="id45">
 <h2>5.23<a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h2>
 <section id="id46">
 <h3>5.23<a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Remote Desktop Services UserMode Port Redirector</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Remote</span> <span class="pre">Desktop</span> <span class="pre">Services</span> <span class="pre">UserMode</span> <span class="pre">Port</span> <span class="pre">Redirector</span> </code></p>
 </section>
 </section>
 <section id="id47">
 <h2>5.24<a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h2>
 <section id="id48">
 <h3>5.24<a class="headerlink" href="#id48" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Remote Procedure Call (RPC) Locator</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Remote</span> <span class="pre">Procedure</span> <span class="pre">Call</span> <span class="pre">(RPC)</span> <span class="pre">Locator</span> </code></p>
 </section>
 </section>
 <section id="id49">
 <h2>5.25<a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h2>
 <section id="id50">
 <h3>5.25<a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Remote Registry</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Remote</span> <span class="pre">Registry</span> </code></p>
 </section>
 </section>
 <section id="id51">
 <h2>5.26<a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h2>
 <section id="id52">
 <h3>5.26<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Routing and Remote Access</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Routing</span> <span class="pre">and</span> <span class="pre">Remote</span> <span class="pre">Access</span> </code></p>
 </section>
 </section>
 <section id="id53">
 <h2>5.27<a class="headerlink" href="#id53" title="Permalink to this heading">#</a></h2>
 <section id="id54">
 <h3>5.27<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Server</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Server</span> </code></p>
 </section>
 </section>
 <section id="id55">
 <h2>5.28<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h2>
 <section id="id56">
 <h3>5.28<a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Simple TCP/IP Services</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Simple</span> <span class="pre">TCP/IP</span> <span class="pre">Services</span> </code></p>
 </section>
 </section>
 <section id="id57">
 <h2>5.29<a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h2>
 <section id="id58">
 <h3>5.29<a class="headerlink" href="#id58" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\SNMP Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\SNMP</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id59">
 <h2>5.30<a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h2>
 <section id="id60">
 <h3>5.30<a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Special Administration Console Helper</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Special</span> <span class="pre">Administration</span> <span class="pre">Console</span> <span class="pre">Helper</span> </code></p>
 </section>
 </section>
 <section id="id61">
 <h2>5.31<a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h2>
 <section id="id62">
 <h3>5.31<a class="headerlink" href="#id62" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\SSDP Discovery</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\SSDP</span> <span class="pre">Discovery</span> </code></p>
 </section>
 </section>
 <section id="id63">
 <h2>5.32<a class="headerlink" href="#id63" title="Permalink to this heading">#</a></h2>
 <section id="id64">
 <h3>5.32<a class="headerlink" href="#id64" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\UPnP Device Host</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\UPnP</span> <span class="pre">Device</span> <span class="pre">Host</span> </code></p>
 </section>
 </section>
 <section id="id65">
 <h2>5.33<a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h2>
 <section id="id66">
 <h3>5.33<a class="headerlink" href="#id66" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Web Management Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Web</span> <span class="pre">Management</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id67">
 <h2>5.34<a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h2>
 <section id="id68">
 <h3>5.34<a class="headerlink" href="#id68" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows Error Reporting Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">Error</span> <span class="pre">Reporting</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id69">
 <h2>5.35<a class="headerlink" href="#id69" title="Permalink to this heading">#</a></h2>
 <section id="id70">
 <h3>5.35<a class="headerlink" href="#id70" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows Event Collector</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">Event</span> <span class="pre">Collector</span> </code></p>
 </section>
 </section>
 <section id="id71">
 <h2>5.36<a class="headerlink" href="#id71" title="Permalink to this heading">#</a></h2>
 <section id="id72">
 <h3>5.36<a class="headerlink" href="#id72" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows Media Player Network Sharing Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">Media</span> <span class="pre">Player</span> <span class="pre">Network</span> <span class="pre">Sharing</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id73">
 <h2>5.37<a class="headerlink" href="#id73" title="Permalink to this heading">#</a></h2>
 <section id="id74">
 <h3>5.37<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows Mobile Hotspot Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">Mobile</span> <span class="pre">Hotspot</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id75">
 <h2>5.38<a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h2>
 <section id="id76">
 <h3>5.38<a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows Push Notifications System Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">Push</span> <span class="pre">Notifications</span> <span class="pre">System</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id77">
 <h2>5.39<a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h2>
 <section id="id78">
 <h3>5.39<a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows PushToInstall Service (PushToInstall)</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">PushToInstall</span> <span class="pre">Service</span> <span class="pre">(PushToInstall)</span> </code></p>
 </section>
 </section>
 <section id="id79">
 <h2>5.40<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h2>
 <section id="id80">
 <h3>5.40<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Windows Remote Management (WS-Management)</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Windows</span> <span class="pre">Remote</span> <span class="pre">Management</span> <span class="pre">(WS-Management)</span> </code></p>
 </section>
 </section>
 <section id="id81">
 <h2>5.41<a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h2>
 <section id="id82">
 <h3>5.41<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled
-or ensure the service is not installed.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\World Wide Web Publishing Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\World</span> <span class="pre">Wide</span> <span class="pre">Web</span> <span class="pre">Publishing</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id83">
 <h2>5.42<a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h2>
 <section id="id84">
 <h3>5.42<a class="headerlink" href="#id84" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Xbox Accessory Management Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Xbox</span> <span class="pre">Accessory</span> <span class="pre">Management</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 <section id="id85">
 <h2>5.43<a class="headerlink" href="#id85" title="Permalink to this heading">#</a></h2>
 <section id="id86">
 <h3>5.43<a class="headerlink" href="#id86" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Xbox Live Auth Manager</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Xbox</span> <span class="pre">Live</span> <span class="pre">Auth</span> <span class="pre">Manager</span> </code></p>
 </section>
 </section>
 <section id="id87">
 <h2>5.44<a class="headerlink" href="#id87" title="Permalink to this heading">#</a></h2>
 <section id="id88">
 <h3>5.44<a class="headerlink" href="#id88" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Xbox Live Game Save</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Xbox</span> <span class="pre">Live</span> <span class="pre">Game</span> <span class="pre">Save</span> </code></p>
 </section>
 </section>
 <section id="id89">
 <h2>5.45<a class="headerlink" href="#id89" title="Permalink to this heading">#</a></h2>
 <section id="id90">
 <h3>5.45<a class="headerlink" href="#id90" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: Disabled.
-Computer Configuration\Policies\Windows Settings\Security Settings\System
-Services\Xbox Live Networking Service</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Xbox</span> <span class="pre">Live</span> <span class="pre">Networking</span> <span class="pre">Service</span> </code></p>
 </section>
 </section>
 </section>
@@ -659,7 +554,7 @@ Services\Xbox Live Networking Service</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Windows Defender Firewall with Advanced Security</div>
+                <div class="title">9 - Windows Defender Firewall with Advanced Security</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -670,7 +565,7 @@ Services\Xbox Live Networking Service</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Local Policies</div>
+                <div class="title">2 - Local Policies</div>
                 
               </div>
             </a>
@@ -706,7 +601,7 @@ Services\Xbox Live Networking Service</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">System Services</a><ul>
+<li><a class="reference internal" href="#">5 - System Services</a><ul>
 <li><a class="reference internal" href="#id1">5</a><ul>
 <li><a class="reference internal" href="#id2">5</a></li>
 </ul>

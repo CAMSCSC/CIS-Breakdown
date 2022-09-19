@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Advanced Audit Policy Config" href="17.html" /><link rel="prev" title="System Services" href="5.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="17 - Advanced Audit Policy Config" href="17.html" /><link rel="prev" title="5 - System Services" href="5.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
-        <title>Windows Defender Firewall with Advanced Security - CIS Benchmark Breakdown</title>
+        <title>9 - Windows Defender Firewall with Advanced Security - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -226,210 +226,121 @@
         </div>
         <article role="main">
           <section id="windows-defender-firewall-with-advanced-security">
-<h1>Windows Defender Firewall with Advanced Security<a class="headerlink" href="#windows-defender-firewall-with-advanced-security" title="Permalink to this heading">#</a></h1>
+<h1>9 - Windows Defender Firewall with Advanced Security<a class="headerlink" href="#windows-defender-firewall-with-advanced-security" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>9<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="id2">
 <h3>9<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to On
-(recommended):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Firewall state</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">(recommended)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Firewall</span> <span class="pre">state</span> </code></p>
 </section>
 </section>
 <section id="id3">
 <h2>9.1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <section id="id4">
 <h3>9.1.2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Block
-(default):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Inbound connections</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">(default)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Inbound</span> <span class="pre">connections</span> </code></p>
 </section>
 <section id="id5">
 <h3>9.1.3<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Allow
-(default):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Outbound connections   ### 9.1.4<br />
-To establish the recommended configuration via GP, set the following UI path to No:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Settings
-Customize\Display a notification   ### 9.1.5<br />
-To establish the recommended configuration via GP, set the following UI path to</p>
-<p>Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Logging Customize\Name</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">(default)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Outbound</span> <span class="pre">connections</span>&#160; </code></p>
 </section>
 <section id="id6">
-<h3>9.1.6<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 16,384 KB
-or greater:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Logging Customize\Size
-limit (KB)</p>
+<h3>9.1.4<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">No</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Settings</span> <span class="pre">Customize\Display</span> <span class="pre">a</span> <span class="pre">notification</span>&#160; </code></p>
 </section>
 <section id="id7">
-<h3>9.1.7<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Yes:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Logging Customize\Log
-dropped packets</p>
+<h3>9.1.5<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">%SystemRoot%\System32\logfiles\firewall\domainfw.log</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Name</span> </code></p>
 </section>
 <section id="id8">
-<h3>9.1.8<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Yes:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Domain Profile\Logging Customize\Log
-successful connections</p>
-</section>
+<h3>9.1.6<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">16,384</span> <span class="pre">KB</span> <span class="pre">or</span> <span class="pre">greater</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Size</span> <span class="pre">limit</span> <span class="pre">(KB)</span> </code></p>
 </section>
 <section id="id9">
-<h2>9.2<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<h3>9.1.7<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Yes</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Log</span> <span class="pre">dropped</span> <span class="pre">packets</span> </code></p>
+</section>
 <section id="id10">
-<h3>9.2<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to On
-(recommended):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Firewall state   ### 9.2.2<br />
-To establish the recommended configuration via GP, set the following UI path to Block
-(default):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Inbound connections</p>
+<h3>9.1.8<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Yes</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Domain</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Log</span> <span class="pre">successful</span> <span class="pre">connections</span> </code></p>
+</section>
 </section>
 <section id="id11">
-<h3>9.2.3<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Allow
-(default):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Outbound connections</p>
-</section>
+<h2>9.2<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
 <section id="id12">
-<h3>9.2.4<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to No:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Settings
-Customize\Display a notification   ### 9.2.5<br />
-To establish the recommended configuration via GP, set the following UI path to</p>
-<p>Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Logging Customize\Name</p>
+<h3>9.2<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">(recommended)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Firewall</span> <span class="pre">state</span>&#160; </code></p>
 </section>
 <section id="id13">
-<h3>9.2.6<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 16,384 KB
-or greater:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Logging Customize\Size
-limit (KB)</p>
+<h3>9.2.2<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">(default)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Inbound</span> <span class="pre">connections</span> </code></p>
 </section>
 <section id="id14">
-<h3>9.2.7<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Yes:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Logging Customize\Log
-dropped packets</p>
+<h3>9.2.3<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">(default)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Outbound</span> <span class="pre">connections</span> </code></p>
 </section>
 <section id="id15">
-<h3>9.2.8<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Yes:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Private Profile\Logging Customize\Log
-successful connections</p>
-</section>
+<h3>9.2.4<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">No</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Settings</span> <span class="pre">Customize\Display</span> <span class="pre">a</span> <span class="pre">notification</span>&#160; </code></p>
 </section>
 <section id="id16">
-<h2>9.3<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
+<h3>9.2.5<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">%SystemRoot%\System32\logfiles\firewall\privatefw.log</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Name</span> </code></p>
+</section>
 <section id="id17">
-<h3>9.3<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to On
-(recommended):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Firewall state   ### 9.3.2<br />
-To establish the recommended configuration via GP, set the following UI path to Block
-(default):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Inbound connections</p>
+<h3>9.2.6<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">16,384</span> <span class="pre">KB</span> <span class="pre">or</span> <span class="pre">greater</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Size</span> <span class="pre">limit</span> <span class="pre">(KB)</span> </code></p>
 </section>
 <section id="id18">
-<h3>9.3.3<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Allow
-(default):
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Outbound connections</p>
+<h3>9.2.7<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Yes</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Log</span> <span class="pre">dropped</span> <span class="pre">packets</span> </code></p>
 </section>
 <section id="id19">
-<h3>9.3.4<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to ‘No’:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Settings
-Customize\Display a notification</p>
+<h3>9.2.8<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Yes</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Private</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Log</span> <span class="pre">successful</span> <span class="pre">connections</span> </code></p>
+</section>
 </section>
 <section id="id20">
-<h3>9.3.5<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to No:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Settings Customize\Apply
-local firewall rules</p>
-</section>
+<h2>9.3<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
 <section id="id21">
-<h3>9.3.6<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to No:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Settings Customize\Apply
-local connection security rules</p>
+<h3>9.3<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">(recommended):</span></code> <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Firewall</span> <span class="pre">state</span>&#160; </code></p>
 </section>
 <section id="id22">
-<h3>9.3.7<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to</p>
-<p>Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Logging Customize\Name</p>
+<h3>9.3.2<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">(default)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Inbound</span> <span class="pre">connections</span> </code></p>
 </section>
 <section id="id23">
-<h3>9.3.8<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 16,384 KB
-or greater:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Logging Customize\Size
-limit (KB)</p>
+<h3>9.3.3<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">(default)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Outbound</span> <span class="pre">connections</span> </code></p>
 </section>
 <section id="id24">
-<h3>9.3.9<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Yes:
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Logging Customize\Log
-dropped packets</p>
+<h3>9.3.4<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to ‘No’: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Settings</span> <span class="pre">Customize\Display</span> <span class="pre">a</span> <span class="pre">notification</span> </code></p>
 </section>
 <section id="id25">
-<h3>9.3.10<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Yes.
-Computer Configuration\Policies\Windows Settings\Security Settings\Windows
-Firewall with Advanced Security\Windows Firewall with Advanced
-Security\Windows Firewall Properties\Public Profile\Logging Customize\Log
-successful connections</p>
+<h3>9.3.5<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">No</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Settings</span> <span class="pre">Customize\Apply</span> <span class="pre">local</span> <span class="pre">firewall</span> <span class="pre">rules</span> </code></p>
+</section>
+<section id="id26">
+<h3>9.3.6<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">No</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Settings</span> <span class="pre">Customize\Apply</span> <span class="pre">local</span> <span class="pre">connection</span> <span class="pre">security</span> <span class="pre">rules</span> </code></p>
+</section>
+<section id="id27">
+<h3>9.3.7<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">%SystemRoot%\System32\logfiles\firewall\publicfw.log</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Name</span> </code></p>
+</section>
+<section id="id28">
+<h3>9.3.8<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">16,384</span> <span class="pre">KB</span> <span class="pre">or</span> <span class="pre">greater</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Size</span> <span class="pre">limit</span> <span class="pre">(KB)</span> </code></p>
+</section>
+<section id="id29">
+<h3>9.3.9<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Yes</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Log</span> <span class="pre">dropped</span> <span class="pre">packets</span> </code></p>
+</section>
+<section id="id30">
+<h3>9.3.10<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Yes</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">with</span> <span class="pre">Advanced</span> <span class="pre">Security\Windows</span> <span class="pre">Firewall</span> <span class="pre">Properties\Public</span> <span class="pre">Profile\Logging</span> <span class="pre">Customize\Log</span> <span class="pre">successful</span> <span class="pre">connections</span> </code></p>
 </section>
 </section>
 </section>
@@ -444,7 +355,7 @@ successful connections</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Advanced Audit Policy Config</div>
+                <div class="title">17 - Advanced Audit Policy Config</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -455,7 +366,7 @@ successful connections</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">System Services</div>
+                <div class="title">5 - System Services</div>
                 
               </div>
             </a>
@@ -491,7 +402,7 @@ successful connections</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Windows Defender Firewall with Advanced Security</a><ul>
+<li><a class="reference internal" href="#">9 - Windows Defender Firewall with Advanced Security</a><ul>
 <li><a class="reference internal" href="#id1">9</a><ul>
 <li><a class="reference internal" href="#id2">9</a></li>
 </ul>
@@ -499,30 +410,35 @@ successful connections</p>
 <li><a class="reference internal" href="#id3">9.1</a><ul>
 <li><a class="reference internal" href="#id4">9.1.2</a></li>
 <li><a class="reference internal" href="#id5">9.1.3</a></li>
-<li><a class="reference internal" href="#id6">9.1.6</a></li>
-<li><a class="reference internal" href="#id7">9.1.7</a></li>
-<li><a class="reference internal" href="#id8">9.1.8</a></li>
+<li><a class="reference internal" href="#id6">9.1.4</a></li>
+<li><a class="reference internal" href="#id7">9.1.5</a></li>
+<li><a class="reference internal" href="#id8">9.1.6</a></li>
+<li><a class="reference internal" href="#id9">9.1.7</a></li>
+<li><a class="reference internal" href="#id10">9.1.8</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">9.2</a><ul>
-<li><a class="reference internal" href="#id10">9.2</a></li>
-<li><a class="reference internal" href="#id11">9.2.3</a></li>
-<li><a class="reference internal" href="#id12">9.2.4</a></li>
-<li><a class="reference internal" href="#id13">9.2.6</a></li>
-<li><a class="reference internal" href="#id14">9.2.7</a></li>
-<li><a class="reference internal" href="#id15">9.2.8</a></li>
+<li><a class="reference internal" href="#id11">9.2</a><ul>
+<li><a class="reference internal" href="#id12">9.2</a></li>
+<li><a class="reference internal" href="#id13">9.2.2</a></li>
+<li><a class="reference internal" href="#id14">9.2.3</a></li>
+<li><a class="reference internal" href="#id15">9.2.4</a></li>
+<li><a class="reference internal" href="#id16">9.2.5</a></li>
+<li><a class="reference internal" href="#id17">9.2.6</a></li>
+<li><a class="reference internal" href="#id18">9.2.7</a></li>
+<li><a class="reference internal" href="#id19">9.2.8</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id16">9.3</a><ul>
-<li><a class="reference internal" href="#id17">9.3</a></li>
-<li><a class="reference internal" href="#id18">9.3.3</a></li>
-<li><a class="reference internal" href="#id19">9.3.4</a></li>
-<li><a class="reference internal" href="#id20">9.3.5</a></li>
-<li><a class="reference internal" href="#id21">9.3.6</a></li>
-<li><a class="reference internal" href="#id22">9.3.7</a></li>
-<li><a class="reference internal" href="#id23">9.3.8</a></li>
-<li><a class="reference internal" href="#id24">9.3.9</a></li>
-<li><a class="reference internal" href="#id25">9.3.10</a></li>
+<li><a class="reference internal" href="#id20">9.3</a><ul>
+<li><a class="reference internal" href="#id21">9.3</a></li>
+<li><a class="reference internal" href="#id22">9.3.2</a></li>
+<li><a class="reference internal" href="#id23">9.3.3</a></li>
+<li><a class="reference internal" href="#id24">9.3.4</a></li>
+<li><a class="reference internal" href="#id25">9.3.5</a></li>
+<li><a class="reference internal" href="#id26">9.3.6</a></li>
+<li><a class="reference internal" href="#id27">9.3.7</a></li>
+<li><a class="reference internal" href="#id28">9.3.8</a></li>
+<li><a class="reference internal" href="#id29">9.3.9</a></li>
+<li><a class="reference internal" href="#id30">9.3.10</a></li>
 </ul>
 </li>
 </ul>

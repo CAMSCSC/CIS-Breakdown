@@ -1,29 +1,11 @@
 
 ### 1.3  
-To establish the recommended configuration via GP, set the following UI path to Enabled: 
-Computer Configuration\Policies\Windows Settings\Security Settings\Account 
-Policy\Kerberos Policy\Enforce user logon restrictions 
-   
+To establish the recommended configuration via GP, set the following UI path to `Enabled`: `Computer Configuration\Policies\Windows Settings\Security Settings\Account Policy\Kerberos Policy\Enforce user logon restrictions `  
 ### 1.3.2  
-To establish the recommended configuration via GP, set the following UI path to 600 or 
-fewer minutes, but not 0: 
-Computer Configuration\Policies\Windows Settings\Security Settings\Account 
-Policy\Kerberos Policy\Maximum lifetime for service ticket 
-
+To establish the recommended configuration via GP, set the following UI path to `600 or fewer minutes, but not 0`: `Computer Configuration\Policies\Windows Settings\Security Settings\Account Policy\Kerberos Policy\Maximum lifetime for service ticket `
 ### 1.3.3  
-To establish the recommended configuration via GP, set the following UI path to 10 or 
-fewer hours, but not 0: 
-Computer Configuration\Policies\Windows Settings\Security Settings\Account 
-Policy\Kerberos Policy\Maximum lifetime for user ticket 
-   
+To establish the recommended configuration via GP, set the following UI path to `10 or fewer hours, but not 0`: `Computer Configuration\Policies\Windows Settings\Security Settings\Account Policy\Kerberos Policy\Maximum lifetime for user ticket `  
 ### 1.3.4  
-To establish the recommended configuration via GP, set the following UI path to 7 or 
-fewer days: 
-Computer Configuration\Policies\Windows Settings\Security Settings\Account 
-Policy\Kerberos Policy\Maximum lifetime for user ticket renewal 
-   
+To establish the recommended configuration via GP, set the following UI path to `7 or fewer days`: `Computer Configuration\Policies\Windows Settings\Security Settings\Account Policy\Kerberos Policy\Maximum lifetime for user ticket renewal `  
 ### 1.3.5  
-To establish the recommended configuration via GP, set the following UI path to 5 or 
-fewer minutes: 
-Computer Configuration\Policies\Windows Settings\Security Settings\Account 
-Policy\Kerberos Policy\Maximum tolerance for computer clock synchronization   
+To establish the recommended configuration via GP, set the following UI path to `5 or fewer minutes`: `Computer Configuration\Policies\Windows Settings\Security Settings\Account Policy\Kerberos Policy\Maximum tolerance for computer clock synchronization  `

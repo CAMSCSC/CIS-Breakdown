@@ -227,18 +227,7 @@
         <article role="main">
           <section id="id1">
 <h1>20.19<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>Configure the directory service to terminate LDAP-based network connections to the
-directory server after 300 (5 minutes) or less of inactivity:
-Open an elevated Command Prompt (run as administrator), type ntdsutil
-At the ntdsutil: prompt: type LDAP policies
-At the ldap policy: prompt: type connections
-At the server connections: prompt: type connect to server [host-name] (where [host-
-name] is the computer name of the domain controller)
-At the server connections: prompt, type q
-At the ldap policy: prompt: type Set MaxConnIdleTime to 300
-Type Commit Changes to save
-Type Show values to verify changes
-Type q at the ldap policy: and ntdsutil: prompts to exit</p>
+<p>Configure the directory service to terminate LDAP-based network connections to the directory server after <code class="docutils literal notranslate"><span class="pre">300</span> <span class="pre">(5</span> <span class="pre">minutes)</span> <span class="pre">or</span> <span class="pre">less</span></code> of inactivity:  Open an elevated Command Prompt (run as administrator), type ntdsutil  At the ntdsutil: prompt: type LDAP policies  At the ldap policy: prompt: type connections  At the server connections: prompt: type connect to server [host-name] (where [host-name] is the computer name of the domain controller)  At the server connections: prompt, type q  At the ldap policy: prompt: type Set MaxConnIdleTime to 300  Type Commit Changes to save  Type Show values to verify changes  Type q at the ldap policy: and ntdsutil: prompts to exit</p>
 </section>
 
         </article>

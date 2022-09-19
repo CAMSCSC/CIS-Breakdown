@@ -1,15 +1,3 @@
 
 ### 5.5  
-To establish the recommended configuration via GP, set the following UI path to: Disabled 
-or ensure the service is not installed. 
-Computer Configuration\Policies\Windows Settings\Security Settings\System 
-Services\Simple TCP/IP Services 
-OR 
-To Uninstall the Simple TCP/IP Services (simptcp) feature: 
-  Start "Server Manager" 
-  Select the server with the role 
-  Scroll down to "ROLES AND FEATURES" in the right pane 
-  Select "Remove Roles and Features" from the drop-down "TASKS" list 
-  Select the appropriate server on the "Server Selection" page and click "Next" 
-  Deselect "Simple TCP/IP Services" on the "Features" page 
-  Click "Next" and "Remove" as prompted (if installed). 
+To establish the recommended configuration via GP, set the following UI path to: `Disabled` or ensure the service is not installed. `Computer Configuration\Policies\Windows Settings\Security Settings\System Services\Simple TCP/IP Services `OR To Uninstall the Simple TCP/IP Services (simptcp) feature:  Start "Server Manager"  Select the server with the role  Scroll down to "ROLES AND FEATURES" in the right pane  Select "Remove Roles and Features" from the drop-down "TASKS" list  Select the appropriate server on the "Server Selection" page and click "Next"  Deselect "Simple TCP/IP Services" on the "Features" page  Click "Next" and "Remove" as prompted (if installed). 

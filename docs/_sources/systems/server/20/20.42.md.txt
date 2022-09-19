@@ -1,4 +1,3 @@
 
 ### 20.42  
-Update the system to a Version 1809 (Build 17763.xxx) or newer. 
-   
+Update the system to a `Version 1809 (Build 17763.xxx)` or newer.   

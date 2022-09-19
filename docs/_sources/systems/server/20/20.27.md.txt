@@ -1,8 +1,3 @@
 
 ### 20.27  
-To establish the recommended configuration, set the NTFS permissions on the file below to 
-TrustedInstaller - Full Control, Administrators - Read & Execute, SYSTEM - Read 
-& Execute, Users - Read & Execute, ALL APPLICATION PACKAGES - Read & Execute, and 
-ALL RESTRICTED APPLICATION PACKAGES - Read & Execute: 
-%SystemRoot%\ System32\Eventvwr.exe 
-   
+To establish the recommended configuration, set the NTFS permissions on the file below to `TrustedInstaller - Full Control`, `Administrators - Read & Execute`, `SYSTEM - Read & Execute`, `Users - Read & Execute`, `ALL APPLICATION PACKAGES - Read & Execute`, and `ALL RESTRICTED APPLICATION PACKAGES - Read & Execute`: `%SystemRoot%\ System32\Eventvwr.exe `  

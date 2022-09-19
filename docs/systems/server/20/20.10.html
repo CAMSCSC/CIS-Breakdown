@@ -227,25 +227,7 @@
         <article role="main">
           <section id="id1">
 <h1>20.10<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>Modify permissions on the SYSVOL directory, if necessary. Do not allow greater than Read
-&amp; execute permissions for standard user accounts or groups. The defaults below meet this
-requirement:
-Open File Explorer
-Navigate to \Windows\SYSVOL (or the directory noted previously if different)
-Right-click the directory and select properties
-Select the Security tab
-Click Advanced
-Configure the audit permission settings.</p>
-<p>C:\Windows\SYSVOL</p>
-<p>Type - “Allow” for all</p>
-<p>Inherited from - “None” for all</p>
-<p>Principal - Access - Applies to</p>
-<p>Authenticated Users - Read &amp; execute - This folder, subfolder, and files,
-Server Operators - Read &amp; execute- This folder, subfolder, and files,
-Administrators - Special - This folder only (Special = Basic Permissions: all
-selected except Full control), CREATOR OWNER - Full control - Subfolders and
-files only, Administrators - Full control - Subfolders and files only, and
-SYSTEM - Full control - This folder, subfolders, and files</p>
+<p>Modify permissions on the SYSVOL directory, if necessary. Do not allow greater than <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span></code> permissions for standard user accounts or groups. The defaults below meet this requirement:  Open File Explorer  Navigate to \Windows\SYSVOL (or the directory noted previously if different)  Right-click the directory and select properties  Select the Security tab  Click Advanced Configure the audit permission settings.  C:\Windows\SYSVOL  <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">&quot;Allow&quot;</span> <span class="pre">for</span> <span class="pre">all</span> </code> <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">&quot;None&quot;</span> <span class="pre">for</span> <span class="pre">all</span> </code> Principal - Access - Applies to  <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolder,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Operators</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolder,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span> <span class="pre">(Special</span> <span class="pre">=</span> <span class="pre">Basic</span> <span class="pre">Permissions:</span> <span class="pre">all</span> <span class="pre">selected</span> <span class="pre">except</span> <span class="pre">Full</span> <span class="pre">control)</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, and <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p>
 </section>
 
         </article>

@@ -1,9 +1,3 @@
 
 ### 20.49  
-To establish the recommended configuration, set the NTFS permissions on the file below to 
-Eventlog - Full Control, SYSTEM - Full Control, and Administrators - Full 
-Control: 
-%SystemRoot%\ System32\winevt\Logs\Security.evtx 
-Note: If the location of the event logs has been changed, when adding permissions, the 
-event log user, Eventlog must be entered as NT Service\Eventlog. 
-   
+To establish the recommended configuration, set the NTFS permissions on the file below to `Eventlog - Full Control`, `SYSTEM - Full Control`, and `Administrators - Full Control`: `%SystemRoot%\ System32\winevt\Logs\Security.evtx `Note: If the location of the event logs has been changed, when adding permissions, the event log user, `Eventlog` must be entered as `NT Service\Eventlog`.   

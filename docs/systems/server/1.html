@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="System Services" href="5.html" /><link rel="prev" title="Overview - Windows 10 Server 2019" href="overview.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="5 - System Services" href="5.html" /><link rel="prev" title="Overview - Windows 10 Server 2019" href="overview.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
-        <title>Account Policies - CIS Benchmark Breakdown</title>
+        <title>1 - Account Policies - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -226,114 +226,70 @@
         </div>
         <article role="main">
           <section id="account-policies">
-<h1>Account Policies<a class="headerlink" href="#account-policies" title="Permalink to this heading">#</a></h1>
+<h1>1 - Account Policies<a class="headerlink" href="#account-policies" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>1.1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="id2">
 <h3>1.1.4<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 1 or more
-day(s):
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Password Policy\Minimum password age</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">or</span> <span class="pre">more</span> <span class="pre">day(s)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Password</span> <span class="pre">Policy\Minimum</span> <span class="pre">password</span> <span class="pre">age</span> </code></p>
 </section>
 <section id="id3">
 <h3>1.1.5<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 14 or
-more character(s):
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Password Policy\Minimum password length</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">14</span> <span class="pre">or</span> <span class="pre">more</span> <span class="pre">character(s)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Password</span> <span class="pre">Policy\Minimum</span> <span class="pre">password</span> <span class="pre">length</span>&#160; </code></p>
 </section>
 <section id="id4">
 <h3>1.1.6<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Password Policy\Password must meet complexity requirements</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Password</span> <span class="pre">Policy\Password</span> <span class="pre">must</span> <span class="pre">meet</span> <span class="pre">complexity</span> <span class="pre">requirements</span> </code></p>
 </section>
 <section id="id5">
 <h3>1.1.7<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Password Policy\Relax minimum password length limits
-Note: This setting is only available within the built-in OS security template of Windows 10
-Release 2004 and Server 2022 (or newer), and is not available via older versions of the OS,
-or via downloadable Administrative Templates (ADMX/ADML). Therefore, you must use a
-Windows 10 Release 2004 or Server 2022 system (or newer) to view or edit this setting
-with the Group Policy Management Console (GPMC) or Group Policy Management Editor
-(GPME).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Password</span> <span class="pre">Policy\Relax</span> <span class="pre">minimum</span> <span class="pre">password</span> <span class="pre">length</span> <span class="pre">limits</span> </code>Note: This setting is only available within the built-in OS security template of Windows 10 Release 2004 and Server 2022 (or newer), and is not available via older versions of the OS, or via downloadable Administrative Templates (ADMX/ADML). Therefore, you must use a Windows 10 Release 2004 or Server 2022 system (or newer) to view or edit this setting with the Group Policy Management Console (GPMC) or Group Policy Management Editor (GPME).</p>
 </section>
 <section id="id6">
 <h3>1.1.8<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Disabled:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Password Policy\Store passwords using reversible encryption</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Password</span> <span class="pre">Policy\Store</span> <span class="pre">passwords</span> <span class="pre">using</span> <span class="pre">reversible</span> <span class="pre">encryption</span> </code></p>
 </section>
 </section>
 <section id="id7">
 <h2>1.2<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
 <section id="id8">
 <h3>1.2<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 15 or
-more minute(s):
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Account Lockout Policy\Account lockout duration</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">or</span> <span class="pre">more</span> <span class="pre">minute(s)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Account</span> <span class="pre">Lockout</span> <span class="pre">Policy\Account</span> <span class="pre">lockout</span> <span class="pre">duration</span> </code></p>
 </section>
 <section id="id9">
 <h3>1.2.2<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 5 or
-fewer invalid login attempt(s), but not 0:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Account Lockout Policy\Account lockout threshold</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">or</span> <span class="pre">fewer</span> <span class="pre">invalid</span> <span class="pre">login</span> <span class="pre">attempt(s),</span> <span class="pre">but</span> <span class="pre">not</span> <span class="pre">0</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Account</span> <span class="pre">Lockout</span> <span class="pre">Policy\Account</span> <span class="pre">lockout</span> <span class="pre">threshold</span> </code></p>
 </section>
 <section id="id10">
 <h3>1.2.3<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 3 or
-fewer invalid login attempt(s), but not 0:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Account Lockout Policy\Account lockout threshold</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">or</span> <span class="pre">fewer</span> <span class="pre">invalid</span> <span class="pre">login</span> <span class="pre">attempt(s),</span> <span class="pre">but</span> <span class="pre">not</span> <span class="pre">0</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Account</span> <span class="pre">Lockout</span> <span class="pre">Policy\Account</span> <span class="pre">lockout</span> <span class="pre">threshold</span> </code></p>
 </section>
 <section id="id11">
 <h3>1.2.4<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 15 or
-more minute(s):
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policies\Account Lockout Policy\Reset account lockout counter after</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">or</span> <span class="pre">more</span> <span class="pre">minute(s)</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policies\Account</span> <span class="pre">Lockout</span> <span class="pre">Policy\Reset</span> <span class="pre">account</span> <span class="pre">lockout</span> <span class="pre">counter</span> <span class="pre">after</span> </code></p>
 </section>
 </section>
 <section id="id12">
 <h2>1.3<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
 <section id="id13">
 <h3>1.3<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to Enabled:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policy\Kerberos Policy\Enforce user logon restrictions</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policy\Kerberos</span> <span class="pre">Policy\Enforce</span> <span class="pre">user</span> <span class="pre">logon</span> <span class="pre">restrictions</span> </code></p>
 </section>
 <section id="id14">
 <h3>1.3.2<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 600 or
-fewer minutes, but not 0:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policy\Kerberos Policy\Maximum lifetime for service ticket</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">600</span> <span class="pre">or</span> <span class="pre">fewer</span> <span class="pre">minutes,</span> <span class="pre">but</span> <span class="pre">not</span> <span class="pre">0</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policy\Kerberos</span> <span class="pre">Policy\Maximum</span> <span class="pre">lifetime</span> <span class="pre">for</span> <span class="pre">service</span> <span class="pre">ticket</span> </code></p>
 </section>
 <section id="id15">
 <h3>1.3.3<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 10 or
-fewer hours, but not 0:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policy\Kerberos Policy\Maximum lifetime for user ticket</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">or</span> <span class="pre">fewer</span> <span class="pre">hours,</span> <span class="pre">but</span> <span class="pre">not</span> <span class="pre">0</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policy\Kerberos</span> <span class="pre">Policy\Maximum</span> <span class="pre">lifetime</span> <span class="pre">for</span> <span class="pre">user</span> <span class="pre">ticket</span> </code></p>
 </section>
 <section id="id16">
 <h3>1.3.4<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 7 or
-fewer days:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policy\Kerberos Policy\Maximum lifetime for user ticket renewal</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">or</span> <span class="pre">fewer</span> <span class="pre">days</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policy\Kerberos</span> <span class="pre">Policy\Maximum</span> <span class="pre">lifetime</span> <span class="pre">for</span> <span class="pre">user</span> <span class="pre">ticket</span> <span class="pre">renewal</span> </code></p>
 </section>
 <section id="id17">
 <h3>1.3.5<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to 5 or
-fewer minutes:
-Computer Configuration\Policies\Windows Settings\Security Settings\Account
-Policy\Kerberos Policy\Maximum tolerance for computer clock synchronization</p>
+<p>To establish the recommended configuration via GP, set the following UI path to <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">or</span> <span class="pre">fewer</span> <span class="pre">minutes</span></code>: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\Account</span> <span class="pre">Policy\Kerberos</span> <span class="pre">Policy\Maximum</span> <span class="pre">tolerance</span> <span class="pre">for</span> <span class="pre">computer</span> <span class="pre">clock</span> <span class="pre">synchronization</span>&#160; </code></p>
 </section>
 </section>
 </section>
@@ -348,7 +304,7 @@ Policy\Kerberos Policy\Maximum tolerance for computer clock synchronization</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">System Services</div>
+                <div class="title">5 - System Services</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -395,7 +351,7 @@ Policy\Kerberos Policy\Maximum tolerance for computer clock synchronization</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Account Policies</a><ul>
+<li><a class="reference internal" href="#">1 - Account Policies</a><ul>
 <li><a class="reference internal" href="#id1">1.1</a><ul>
 <li><a class="reference internal" href="#id2">1.1.4</a></li>
 <li><a class="reference internal" href="#id3">1.1.5</a></li>

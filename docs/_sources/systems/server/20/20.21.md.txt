@@ -1,21 +1,3 @@
 
 ### 20.21  
-Install the following DoD Root CA certificates in the Trusted Certificates Store: 
-DoD Root CA 2, DoD Root CA 3, DoD Root CA 4, and DoD Root CA 5 
-With the Value for the thumbprint filed as followed: 
-DoD Root CA 2 
-Thumbprint: 8C941B34EA1EA6ED9AE2BC54CF687252B4C9B561 
-Valid to: Wednesday, December 5, 2029 
-DoD Root CA 3 
-Thumbprint: D73CA91102A2204A36459ED32213B467D7CE97FB 
-Valid to: Sunday, December 30, 2029 
-DoD Root CA 4 
-Thumbprint: B8269F25DBD937ECAFD4C35A9838571723F2D026 
-Valid to: Sunday, July 25, 2032 
-DoD Root CA 5 
-Thumbprint: 4ECB5CC3095670454DA1CBD410FC921F46B8564B 
-Valid to: Friday, June 14, 2041 
-Note: The InstallRoot tool is available on IASE at http://iase.disa.mil/pki-
-pke/Pages/tools.aspx. 
-Note #2: The Certificate Store can be loaded by executing the Microsoft Management 
-Console (MMC) and loading the Certificates snap-in. 
+Install the following DoD Root CA certificates in the Trusted Certificates Store: `DoD Root CA 2`, `DoD Root CA 3`, `DoD Root CA 4`, and `DoD Root CA 5 `With the Value for the thumbprint filed as followed: DoD Root CA 2 `Thumbprint: 8C941B34EA1EA6ED9AE2BC54CF687252B4C9B561` Valid to: Wednesday, December 5, 2029 DoD Root CA 3 `Thumbprint: D73CA91102A2204A36459ED32213B467D7CE97FB` Valid to: Sunday, December 30, 2029 DoD Root CA 4 `Thumbprint: B8269F25DBD937ECAFD4C35A9838571723F2D026` Valid to: Sunday, July 25, 2032 DoD Root CA 5 `Thumbprint: 4ECB5CC3095670454DA1CBD410FC921F46B8564B` Valid to: Friday, June 14, 2041 Note: The InstallRoot tool is available on IASE at http://iase.disa.mil/pki-pke/Pages/tools.aspx. Note #2: The Certificate Store can be loaded by executing the Microsoft Management Console (MMC) and loading the Certificates snap-in. 

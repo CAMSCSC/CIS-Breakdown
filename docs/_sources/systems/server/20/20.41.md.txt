@@ -1,14 +1,3 @@
 
 ### 20.41  
-Remove any unauthorized or standard user accounts from the Administrators group. 
-Stand-alone system 
-  Open Local Users and Groups 
-  Select Groups and review the Administrators group for unauthorized accounts or 
-standard user accounts that should not have administrator privileges. 
-Remove any unauthorized or standard user accounts. 
- 
-Domain-joined system 
-  Open Active Directory Users and Computers and review the Administrators group 
-for unauthorized accounts or standard user accounts that should not have 
-administrator privileges. 
-Remove any unauthorized or standard user accounts. 
+Remove any unauthorized or standard user accounts from the `Administrators` group. Stand-alone system  Open Local Users and Groups  Select Groups and review the `Administrators` group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.  Domain-joined system  Open Active Directory Users and Computers and review the `Administrators` group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts. 
