@@ -1,3 +1,19 @@
 
 ### 20.8  
-Configure the audit settings for Infrastructure object to include at least the following: `Type - Fail`, `Principal - Everyone`, `Access - Full Control`, and `Inherited from - None`.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click the Infrastructure object and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Configure the above audit permission settings.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Type - Success  Principal - Everyone  Access - Special  Inherited from - None  (Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - (blank)  Inherited from - (CN of domain) 
+Configure the audit settings for Infrastructure object to include at least the following: `Type - Fail`, `Principal - Everyone`, `Access - Full Control`, and `Inherited from - None`. 
+* Open Active Directory Users and Computers 
+* Ensure Advanced Features is selected in the View menu 
+* Select System under the domain being reviewed 
+* Right-click the Infrastructure object and select Properties 
+* Select the Security tab 
+* Select the Advanced button 
+* Select the Auditing tab Configure the above audit permission settings.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default. 
+* Type - Success 
+* Principal - Everyone 
+* Access - Special 
+* Inherited from - None 
+* (Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed: 
+* Type - Success 
+* Principal - Everyone 
+* Access - (blank) 
+* Inherited from - (CN of domain) 

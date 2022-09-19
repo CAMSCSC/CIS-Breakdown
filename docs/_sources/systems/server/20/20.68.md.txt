@@ -1,3 +1,8 @@
 
 ### 20.68  
-To enable UEFI firmware to run in `UEFI` mode, not Legacy BIOS mode.  Open the PC BIOS menu. This menu can usually be accessed by pressing a key during the bootup sequence, such as F1, F2, F12, or Esc  OR from Windows, hold the Shift key while selecting Restart. Go to Troubleshoot > Advanced Options: UEFI Firmware Settings  Find the Boot Device Menu select the command that identifies both the firmware mode and the device  Select UEFI mode  Save changes and exit. The PC will reboot 
+To enable UEFI firmware to run in `UEFI` mode, not Legacy BIOS mode. 
+* Open the PC BIOS menu. This menu can usually be accessed by pressing a key during the bootup sequence, such as F1, F2, F12, or Esc 
+* OR from Windows, hold the Shift key while selecting Restart. Go to Troubleshoot > Advanced Options: UEFI Firmware Settings 
+* Find the Boot Device Menu select the command that identifies both the firmware mode and the device 
+* Select UEFI mode 
+* Save changes and exit. The PC will reboot 

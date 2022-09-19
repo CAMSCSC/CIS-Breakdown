@@ -1,4 +1,4 @@
-# 2 - Local Policies
+# Local Policies
 
 ## 2.2  
  ```{include} ./2/2.2.md

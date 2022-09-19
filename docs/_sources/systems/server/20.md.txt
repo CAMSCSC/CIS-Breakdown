@@ -1,4 +1,4 @@
-# 20 - Additional STIG Settings
+# Additional STIG Settings
 
 ## 20.1  
  ```{include} ./20/20.1.md

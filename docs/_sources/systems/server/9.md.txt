@@ -1,4 +1,4 @@
-# 9 - Windows Defender Firewall with Advanced Security
+# Windows Defender Firewall with Advanced Security
 
 ## 9.1  
  ```{include} ./9/9.1.md

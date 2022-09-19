@@ -1,3 +1,10 @@
 
 ### 5.2  
-To establish the recommended configuration via GP, set the following UI path to: `Not Installed`. `Computer Configuration\Policies\Windows Settings\Security Settings\System Services\Peer Name Resolution Protocol `OR To Uninstall the Peer Name Resolution Protocol feature:  Start "Server Manager"  Select the server with the role  Scroll down to "ROLES AND FEATURES" in the right pane  Select "Remove Roles and Features" from the drop-down "TASKS" list  Select the appropriate server on the "Server Selection" page and click "Next"  Deselect "Peer Name Resolution Protocol" on the "Features" page  Click "Next" and "Remove" as prompted (if installed). 
+To establish the recommended configuration via GP, set the following UI path to: `Not Installed`. `Computer Configuration\Policies\Windows Settings\Security Settings\System Services\Peer Name Resolution Protocol `OR To Uninstall the Peer Name Resolution Protocol feature: 
+* Start "Server Manager" 
+* Select the server with the role 
+* Scroll down to "ROLES AND FEATURES" in the right pane 
+* Select "Remove Roles and Features" from the drop-down "TASKS" list 
+* Select the appropriate server on the "Server Selection" page and click "Next" 
+* Deselect "Peer Name Resolution Protocol" on the "Features" page 
+* Click "Next" and "Remove" as prompted (if installed). 

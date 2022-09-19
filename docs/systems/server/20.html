@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Overview - Ubuntu 18.04 / Debian 10" href="../ubuntu/overview.html" /><link rel="prev" title="19 - Admin Templates (User)" href="19.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Overview - Ubuntu 18.04 / Debian 10" href="../ubuntu/overview.html" /><link rel="prev" title="Admin Templates (User)" href="19.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
-        <title>20 - Additional STIG Settings - CIS Benchmark Breakdown</title>
+        <title>Additional STIG Settings - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -226,7 +226,7 @@
         </div>
         <article role="main">
           <section id="additional-stig-settings">
-<h1>20 - Additional STIG Settings<a class="headerlink" href="#additional-stig-settings" title="Permalink to this heading">#</a></h1>
+<h1>Additional STIG Settings<a class="headerlink" href="#additional-stig-settings" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>20.1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="id2">
@@ -238,35 +238,115 @@
 <h2>20.2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <section id="id4">
 <h3>20.2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>Configure the audit settings for AdminSDHolder object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>, and <code class="docutils literal notranslate"><span class="pre">Applies</span> <span class="pre">to</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">object</span> <span class="pre">only</span></code>  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click the AdminSDHolder object  Select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab. Configure the above audit permission settings.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Type - Success  Principal - Everyone  Access - Special  Inherited from - None  Applies to - This object only  (Access - Special = Write all properties, Modify permissions, Modify owner)</p>
+<p>Configure the audit settings for AdminSDHolder object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>, and <code class="docutils literal notranslate"><span class="pre">Applies</span> <span class="pre">to</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">object</span> <span class="pre">only</span></code></p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select System under the domain being reviewed</p></li>
+<li><p>Right-click the AdminSDHolder object</p></li>
+<li><p>Select Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button</p></li>
+<li><p>Select the Auditing tab. Configure the above audit permission settings.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - Special</p></li>
+<li><p>Inherited from - None</p></li>
+<li><p>Applies to - This object only</p></li>
+<li><p>(Access - Special = Write all properties, Modify permissions, Modify owner)</p></li>
+</ul>
 </section>
 </section>
 <section id="id5">
 <h2>20.3<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <section id="id6">
 <h3>20.3<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>Limit the permissions on the Domain Controllers OU to restrict changes to: <code class="docutils literal notranslate"><span class="pre">System</span></code>, <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Admins</span></code>, <code class="docutils literal notranslate"><span class="pre">Enterprise</span> <span class="pre">Admins</span></code> and <code class="docutils literal notranslate"><span class="pre">Administrators</span></code>.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select the Domain Controllers OU  Right-click and select Properties  Select the Security tab Ensure the permissions are set to the above recommendation.  Note The default permissions listed below satisfy this requirement. The permissions shown are at the summary level. More detailed permissions can be viewed by selecting the Advanced button, the desired Permission entry, and the View or Edit button.  Note #2 Except where noted otherwise, the special permissions may include a wide range of permissions and properties and are acceptable for this requirement.  Summary: <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">SELF</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, and <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Special</span> <span class="pre">permissions</span></code> The special permissions for Authenticated Users are Read types. If detailed permissions include any Create, Delete, Modify, or Write Permissions or Properties it is not in compliance with this recommendation.</p>
+<p>Limit the permissions on the Domain Controllers OU to restrict changes to: <code class="docutils literal notranslate"><span class="pre">System</span></code>, <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Admins</span></code>, <code class="docutils literal notranslate"><span class="pre">Enterprise</span> <span class="pre">Admins</span></code> and <code class="docutils literal notranslate"><span class="pre">Administrators</span></code>.</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select the Domain Controllers OU</p></li>
+<li><p>Right-click and select Properties</p></li>
+<li><p>Select the Security tab Ensure the permissions are set to the above recommendation.  Note The default permissions listed below satisfy this requirement. The permissions shown are at the summary level. More detailed permissions can be viewed by selecting the Advanced button, the desired Permission entry, and the View or Edit button.  Note #2 Except where noted otherwise, the special permissions may include a wide range of permissions and properties and are acceptable for this requirement.  Summary: <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">SELF</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, and <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Special</span> <span class="pre">permissions</span></code> The special permissions for Authenticated Users are Read types. If detailed permissions include any Create, Delete, Modify, or Write Permissions or Properties it is not in compliance with this recommendation.</p></li>
+</ul>
 </section>
 </section>
 <section id="id7">
 <h2>20.4<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
 <section id="id8">
 <h3>20.4<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p>Configure the audit settings for Domain Controllers Organizational Unit (OU) object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click the Domain Controllers Organizational Unit (OU) object and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Note: These audit settings apply to this object and all descendant objects.  Note #2: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Type - Success  Principal - Everyone  Access - Special  Inherited from - None  (Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - (blank)  Inherited from - (CN of domain)</p>
+<p>Configure the audit settings for Domain Controllers Organizational Unit (OU) object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>.</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select System under the domain being reviewed</p></li>
+<li><p>Right-click the Domain Controllers Organizational Unit (OU) object and select Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button</p></li>
+<li><p>Select the Auditing tab Note: These audit settings apply to this object and all descendant objects.  Note #2: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - Special</p></li>
+<li><p>Inherited from - None</p></li>
+<li><p>(Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - (blank)</p></li>
+<li><p>Inherited from - (CN of domain)</p></li>
+</ul>
 </section>
 </section>
 <section id="id9">
 <h2>20.5<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <section id="id10">
 <h3>20.5<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>Configure audit settings for Domain object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>. These audit settings apply to this object only.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click the Domain object and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - (blank)  Inherited from - None  Applies to - Special OR  Type - Success  Principal - Domain Users  Access - All extended rights  Inherited from - None Applies to - This object only  Type - Success  Principal - Administrators  Access - All extended rights  Inherited from - None</p>
+<p>Configure audit settings for Domain object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>. These audit settings apply to this object only.</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select System under the domain being reviewed</p></li>
+<li><p>Right-click the Domain object and select Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button</p></li>
+<li><p>Select the Auditing tab Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Two instances with the following summary information will be listed:</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - (blank)</p></li>
+<li><p>Inherited from - None</p></li>
+<li><p>Applies to - Special OR</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Domain Users</p></li>
+<li><p>Access - All extended rights</p></li>
+<li><p>Inherited from - None Applies to - This object only</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Administrators</p></li>
+<li><p>Access - All extended rights</p></li>
+<li><p>Inherited from - None</p></li>
+</ul>
 </section>
 </section>
 <section id="id11">
 <h2>20.6<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
 <section id="id12">
 <h3>20.6<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p>Configure the audit settings for Group Policy objects to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>. Note: These audit settings apply to this object and all descendant objects or Descendant groupPolicyContainer objects.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click Policies and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Ensure at least the above auditing permissions are set.  Note: The three Success types listed below are defaults inherited from the Parent Object. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference.  Type - Success  Principal - Everyone  Access - Special (Permissions: Write all properties, Modify permissions; Properties: all “Write” type selected)  Inherited from - Parent Object Applies to - Descendant groupPolicyContainer objects Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - blank (Permissions: none selected; Properties: one instance - Write gPLink, one instance - Write gPOptions)  Inherited from - Parent Object Applies to - Descendant Organization Unit Objects</p>
+<p>Configure the audit settings for Group Policy objects to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>. Note: These audit settings apply to this object and all descendant objects or Descendant groupPolicyContainer objects.</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select System under the domain being reviewed</p></li>
+<li><p>Right-click Policies and select Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button</p></li>
+<li><p>Select the Auditing tab Ensure at least the above auditing permissions are set.  Note: The three Success types listed below are defaults inherited from the Parent Object. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference.</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - Special (Permissions: Write all properties, Modify permissions; Properties: all “Write” type selected)</p></li>
+<li><p>Inherited from - Parent Object Applies to - Descendant groupPolicyContainer objects Two instances with the following summary information will be listed:</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - blank (Permissions: none selected; Properties: one instance - Write gPLink, one instance - Write gPOptions)</p></li>
+<li><p>Inherited from - Parent Object Applies to - Descendant Organization Unit Objects</p></li>
+</ul>
 </section>
 </section>
 <section id="id13">
@@ -280,28 +360,77 @@
 <h2>20.8<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
 <section id="id16">
 <h3>20.8<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
-<p>Configure the audit settings for Infrastructure object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click the Infrastructure object and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Configure the above audit permission settings.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Type - Success  Principal - Everyone  Access - Special  Inherited from - None  (Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - (blank)  Inherited from - (CN of domain)</p>
+<p>Configure the audit settings for Infrastructure object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>.</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select System under the domain being reviewed</p></li>
+<li><p>Right-click the Infrastructure object and select Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button</p></li>
+<li><p>Select the Auditing tab Configure the above audit permission settings.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - Special</p></li>
+<li><p>Inherited from - None</p></li>
+<li><p>(Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - (blank)</p></li>
+<li><p>Inherited from - (CN of domain)</p></li>
+</ul>
 </section>
 </section>
 <section id="id17">
 <h2>20.9<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
 <section id="id18">
 <h3>20.9<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
-<p>Configure the audit settings for RID Manager$ object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code>  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu  Select System under the domain being reviewed  Right-click the RID Manager$ object and select Properties  Select the Security tab  Select the Advanced button  Select the Auditing tab Configure the above audit permissions.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Type - Success  Principal - Everyone  Access - Special  Inherited from - None  (Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:  Type - Success  Principal - Everyone  Access - (blank)  Inherited from - (CN of domain)</p>
+<p>Configure the audit settings for RID Manager$ object to include at least the following: <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">Fail</span></code>, <code class="docutils literal notranslate"><span class="pre">Principal</span> <span class="pre">-</span> <span class="pre">Everyone</span></code>, <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, and <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">None</span></code></p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu</p></li>
+<li><p>Select System under the domain being reviewed</p></li>
+<li><p>Right-click the RID Manager$ object and select Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button</p></li>
+<li><p>Select the Auditing tab Configure the above audit permissions.  Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - Special</p></li>
+<li><p>Inherited from - None</p></li>
+<li><p>(Access - Special = Write all properties, All extended rights, Change RID master) Two instances with the following summary information will be listed:</p></li>
+<li><p>Type - Success</p></li>
+<li><p>Principal - Everyone</p></li>
+<li><p>Access - (blank)</p></li>
+<li><p>Inherited from - (CN of domain)</p></li>
+</ul>
 </section>
 </section>
 <section id="id19">
 <h2>20.10<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
 <section id="id20">
 <h3>20.10<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
-<p>Modify permissions on the SYSVOL directory, if necessary. Do not allow greater than <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span></code> permissions for standard user accounts or groups. The defaults below meet this requirement:  Open File Explorer  Navigate to \Windows\SYSVOL (or the directory noted previously if different)  Right-click the directory and select properties  Select the Security tab  Click Advanced Configure the audit permission settings.  C:\Windows\SYSVOL  <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">&quot;Allow&quot;</span> <span class="pre">for</span> <span class="pre">all</span> </code> <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">&quot;None&quot;</span> <span class="pre">for</span> <span class="pre">all</span> </code> Principal - Access - Applies to  <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolder,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Operators</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolder,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span> <span class="pre">(Special</span> <span class="pre">=</span> <span class="pre">Basic</span> <span class="pre">Permissions:</span> <span class="pre">all</span> <span class="pre">selected</span> <span class="pre">except</span> <span class="pre">Full</span> <span class="pre">control)</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, and <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p>
+<p>Modify permissions on the SYSVOL directory, if necessary. Do not allow greater than <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span></code> permissions for standard user accounts or groups. The defaults below meet this requirement:</p>
+<ul class="simple">
+<li><p>Open File Explorer</p></li>
+<li><p>Navigate to \Windows\SYSVOL (or the directory noted previously if different)</p></li>
+<li><p>Right-click the directory and select properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Click Advanced Configure the audit permission settings.  C:\Windows\SYSVOL  <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">-</span> <span class="pre">&quot;Allow&quot;</span> <span class="pre">for</span> <span class="pre">all</span> </code> <code class="docutils literal notranslate"><span class="pre">Inherited</span> <span class="pre">from</span> <span class="pre">-</span> <span class="pre">&quot;None&quot;</span> <span class="pre">for</span> <span class="pre">all</span> </code> Principal - Access - Applies to  <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolder,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Operators</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolder,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span> <span class="pre">(Special</span> <span class="pre">=</span> <span class="pre">Basic</span> <span class="pre">Permissions:</span> <span class="pre">all</span> <span class="pre">selected</span> <span class="pre">except</span> <span class="pre">Full</span> <span class="pre">control)</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, and <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p></li>
+</ul>
 </section>
 </section>
 <section id="id21">
 <h2>20.11<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h2>
 <section id="id22">
 <h3>20.11<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
-<p>To configure all user accounts, including administrator accounts in Active Directory to enable the option Smart card is required for interactive logon, do the following:  Open Active Directory Users and Computer  Right click the user account and select properties  Select the account tab  Ensure Smart card is required for interactive logon is checked</p>
+<p>To configure all user accounts, including administrator accounts in Active Directory to enable the option Smart card is required for interactive logon, do the following:</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computer</p></li>
+<li><p>Right click the user account and select properties</p></li>
+<li><p>Select the account tab</p></li>
+<li><p>Ensure Smart card is required for interactive logon is checked</p></li>
+</ul>
 </section>
 </section>
 <section id="id23">
@@ -336,7 +465,11 @@
 <h2>20.16<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h2>
 <section id="id32">
 <h3>20.16<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
-<p>Maintain the default permissions for the registry keys of the HKEY_LOCAL_MACHINE hive as noted below.  Open Regedit  Right-click on the registry areas noted below If the default settings are not present change the permissions to the following: Select Permissions and the Advanced button.  HKEY_LOCAL_MACHINE\SECURITY Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to: <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, and <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span> </code> HKEY_LOCAL_MACHINE\SOFTWARE Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span> </code></p>
+<p>Maintain the default permissions for the registry keys of the HKEY_LOCAL_MACHINE hive as noted below.</p>
+<ul class="simple">
+<li><p>Open Regedit</p></li>
+<li><p>Right-click on the registry areas noted below If the default settings are not present change the permissions to the following: Select Permissions and the Advanced button.  HKEY_LOCAL_MACHINE\SECURITY Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to: <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, and <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span> </code> HKEY_LOCAL_MACHINE\SOFTWARE Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">subkeys</span> </code></p></li>
+</ul>
 </section>
 </section>
 <section id="id33">
@@ -357,7 +490,18 @@
 <h2>20.19<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h2>
 <section id="id38">
 <h3>20.19<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
-<p>Configure the directory service to terminate LDAP-based network connections to the directory server after <code class="docutils literal notranslate"><span class="pre">300</span> <span class="pre">(5</span> <span class="pre">minutes)</span> <span class="pre">or</span> <span class="pre">less</span></code> of inactivity:  Open an elevated Command Prompt (run as administrator), type ntdsutil  At the ntdsutil: prompt: type LDAP policies  At the ldap policy: prompt: type connections  At the server connections: prompt: type connect to server [host-name] (where [host-name] is the computer name of the domain controller)  At the server connections: prompt, type q  At the ldap policy: prompt: type Set MaxConnIdleTime to 300  Type Commit Changes to save  Type Show values to verify changes  Type q at the ldap policy: and ntdsutil: prompts to exit</p>
+<p>Configure the directory service to terminate LDAP-based network connections to the directory server after <code class="docutils literal notranslate"><span class="pre">300</span> <span class="pre">(5</span> <span class="pre">minutes)</span> <span class="pre">or</span> <span class="pre">less</span></code> of inactivity:</p>
+<ul class="simple">
+<li><p>Open an elevated Command Prompt (run as administrator), type ntdsutil</p></li>
+<li><p>At the ntdsutil: prompt: type LDAP policies</p></li>
+<li><p>At the ldap policy: prompt: type connections</p></li>
+<li><p>At the server connections: prompt: type connect to server [host-name] (where [host-name] is the computer name of the domain controller)</p></li>
+<li><p>At the server connections: prompt, type q</p></li>
+<li><p>At the ldap policy: prompt: type Set MaxConnIdleTime to 300</p></li>
+<li><p>Type Commit Changes to save</p></li>
+<li><p>Type Show values to verify changes</p></li>
+<li><p>Type q at the ldap policy: and ntdsutil: prompts to exit</p></li>
+</ul>
 </section>
 </section>
 <section id="id39">
@@ -406,7 +550,11 @@
 <h2>20.26<a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h2>
 <section id="id52">
 <h3>20.26<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h3>
-<p>Remove any emergency administrator accounts after a crisis has been resolved or configure the accounts to automatically expire within 72 hours. Domain accounts can be configured with an account expiration date, under Account properties. Local accounts can be configured to expire with the following command:  Open the Command Prompt  Type Net user [username] /expires:[mm/dd/yyyy] where username is the name of the temporary user account</p>
+<p>Remove any emergency administrator accounts after a crisis has been resolved or configure the accounts to automatically expire within 72 hours. Domain accounts can be configured with an account expiration date, under Account properties. Local accounts can be configured to expire with the following command:</p>
+<ul class="simple">
+<li><p>Open the Command Prompt</p></li>
+<li><p>Type Net user [username] /expires:[mm/dd/yyyy] where username is the name of the temporary user account</p></li>
+</ul>
 </section>
 </section>
 <section id="id53">
@@ -420,7 +568,16 @@
 <h2>20.28<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h2>
 <section id="id56">
 <h3>20.28<a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h3>
-<p>To Uninstall the Fax Server role:  Start “Server Manager”  Select the server with the role  Scroll down to “ROLES AND FEATURES” in the right pane  Select “Remove Roles and Features” from the drop-down “TASKS” list  Select the appropriate server on the “Server Selection” page and click “Next”  Deselect “Fax Server” on the “Roles” page  Click “Next” and “Remove” as prompted (if installed).</p>
+<p>To Uninstall the Fax Server role:</p>
+<ul class="simple">
+<li><p>Start “Server Manager”</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to “ROLES AND FEATURES” in the right pane</p></li>
+<li><p>Select “Remove Roles and Features” from the drop-down “TASKS” list</p></li>
+<li><p>Select the appropriate server on the “Server Selection” page and click “Next”</p></li>
+<li><p>Deselect “Fax Server” on the “Roles” page</p></li>
+<li><p>Click “Next” and “Remove” as prompted (if installed).</p></li>
+</ul>
 </section>
 </section>
 <section id="id57">
@@ -434,7 +591,14 @@
 <h2>20.30<a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h2>
 <section id="id60">
 <h3>20.30<a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
-<p>To configure the FTP service to prevent anonymous logons:  Open Internet Information Services (IIS) Manager  Select the server  Double-click FTP Authentication  Select Anonymous Authentication  Select <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> under Actions</p>
+<p>To configure the FTP service to prevent anonymous logons:</p>
+<ul class="simple">
+<li><p>Open Internet Information Services (IIS) Manager</p></li>
+<li><p>Select the server</p></li>
+<li><p>Double-click FTP Authentication</p></li>
+<li><p>Select Anonymous Authentication</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> under Actions</p></li>
+</ul>
 </section>
 </section>
 <section id="id61">
@@ -483,7 +647,13 @@
 <h2>20.37<a class="headerlink" href="#id73" title="Permalink to this heading">#</a></h2>
 <section id="id74">
 <h3>20.37<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h3>
-<p>Configure the permissions on shared printers to restrict standard users to only have Print permissions. Open Printers &amp; scanners in Settings. For each printer:  Select the printer  Select Manage  Select Printer Properties  Select the Sharing tab If <code class="docutils literal notranslate"><span class="pre">Share</span> <span class="pre">this</span> <span class="pre">printer</span></code> is checked, select the Security tab and change the permissions.</p>
+<p>Configure the permissions on shared printers to restrict standard users to only have Print permissions. Open Printers &amp; scanners in Settings. For each printer:</p>
+<ul class="simple">
+<li><p>Select the printer</p></li>
+<li><p>Select Manage</p></li>
+<li><p>Select Printer Properties</p></li>
+<li><p>Select the Sharing tab If <code class="docutils literal notranslate"><span class="pre">Share</span> <span class="pre">this</span> <span class="pre">printer</span></code> is checked, select the Security tab and change the permissions.</p></li>
+</ul>
 </section>
 </section>
 <section id="id75">
@@ -504,14 +674,26 @@
 <h2>20.40<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h2>
 <section id="id80">
 <h3>20.40<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h3>
-<p>Remove any unauthorized or standard user accounts from the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group. Stand-alone system  Open Local Users and Groups  Navigate to Groups  Review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts. Domain-joined system  Open Active Directory Users and Computers  Review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> and <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Admins</span></code> groups (which must be replaced with a domain member server administrator group) group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.</p>
+<p>Remove any unauthorized or standard user accounts from the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group. Stand-alone system</p>
+<ul class="simple">
+<li><p>Open Local Users and Groups</p></li>
+<li><p>Navigate to Groups</p></li>
+<li><p>Review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts. Domain-joined system</p></li>
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> and <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Admins</span></code> groups (which must be replaced with a domain member server administrator group) group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.</p></li>
+</ul>
 </section>
 </section>
 <section id="id81">
 <h2>20.41<a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h2>
 <section id="id82">
 <h3>20.41<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h3>
-<p>Remove any unauthorized or standard user accounts from the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group. Stand-alone system  Open Local Users and Groups  Select Groups and review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.  Domain-joined system  Open Active Directory Users and Computers and review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.</p>
+<p>Remove any unauthorized or standard user accounts from the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group. Stand-alone system</p>
+<ul class="simple">
+<li><p>Open Local Users and Groups</p></li>
+<li><p>Select Groups and review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.  Domain-joined system</p></li>
+<li><p>Open Active Directory Users and Computers and review the <code class="docutils literal notranslate"><span class="pre">Administrators</span></code> group for unauthorized accounts or standard user accounts that should not have administrator privileges. Remove any unauthorized or standard user accounts.</p></li>
+</ul>
 </section>
 </section>
 <section id="id83">
@@ -525,7 +707,13 @@
 <h2>20.43<a class="headerlink" href="#id85" title="Permalink to this heading">#</a></h2>
 <section id="id86">
 <h3>20.43<a class="headerlink" href="#id86" title="Permalink to this heading">#</a></h3>
-<p>Maintain the Allow type permissions on organization-defined OUs to be at least as restrictive as the defaults below.  Open Active Directory Users and Computers  Ensure Advanced Features is selected in the View menu For each OU that is defined (folder in folder icon) excluding the Domain Controllers OU:  Right-click the OU and select Properties  Select the Security tab Set the permission to the following: <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Self</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Enterprise</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Enterprise</span> <span class="pre">Key</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Write,</span> <span class="pre">Create</span> <span class="pre">all</span> <span class="pre">child</span> <span class="pre">objects,</span> <span class="pre">Generate</span> <span class="pre">resultant</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">policy</span> <span class="pre">(logging),</span> <span class="pre">Generate</span> <span class="pre">resultant</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">policy</span> <span class="pre">(planning),</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Pre-Windows</span> <span class="pre">2000</span> <span class="pre">Compatible</span> <span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, and <code class="docutils literal notranslate"><span class="pre">ENTERPRISE</span> <span class="pre">DOMAIN</span> <span class="pre">CONTROLLERS</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Special</span> <span class="pre">permissions</span> </code> Note: The special permissions for Authenticated Users are Read type.  Note #2: The special permissions for Pre-Windows 2000 Compatible Access are for Read types.  Note #3: Document any additional permissions above Read with the ISSO if an approved distributed administration model (help desk or other user support staff) is implemented.</p>
+<p>Maintain the Allow type permissions on organization-defined OUs to be at least as restrictive as the defaults below.</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Ensure Advanced Features is selected in the View menu For each OU that is defined (folder in folder icon) excluding the Domain Controllers OU:</p></li>
+<li><p>Right-click the OU and select Properties</p></li>
+<li><p>Select the Security tab Set the permission to the following: <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Self</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Authenticated</span> <span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Enterprise</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Enterprise</span> <span class="pre">Key</span> <span class="pre">Admins</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Write,</span> <span class="pre">Create</span> <span class="pre">all</span> <span class="pre">child</span> <span class="pre">objects,</span> <span class="pre">Generate</span> <span class="pre">resultant</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">policy</span> <span class="pre">(logging),</span> <span class="pre">Generate</span> <span class="pre">resultant</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">policy</span> <span class="pre">(planning),</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Pre-Windows</span> <span class="pre">2000</span> <span class="pre">Compatible</span> <span class="pre">Access</span> <span class="pre">-</span> <span class="pre">Special</span> <span class="pre">permissions</span></code>, and <code class="docutils literal notranslate"><span class="pre">ENTERPRISE</span> <span class="pre">DOMAIN</span> <span class="pre">CONTROLLERS</span> <span class="pre">-</span> <span class="pre">Read,</span> <span class="pre">Special</span> <span class="pre">permissions</span> </code> Note: The special permissions for Authenticated Users are Read type.  Note #2: The special permissions for Pre-Windows 2000 Compatible Access are for Read types.  Note #3: Document any additional permissions above Read with the ISSO if an approved distributed administration model (help desk or other user support staff) is implemented.</p></li>
+</ul>
 </section>
 </section>
 <section id="id87">
@@ -546,14 +734,26 @@
 <h2>20.46<a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h2>
 <section id="id92">
 <h3>20.46<a class="headerlink" href="#id92" title="Permalink to this heading">#</a></h3>
-<p>Configure all enabled user account passwords to expire. Domain Controllers:  Open Active Directory Users and Computers  Uncheck <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">never</span> <span class="pre">expires</span></code> for all enabled user accounts Member servers and standalone systems  Open Computer Management  Go to Users  Uncheck <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">never</span> <span class="pre">expires</span></code> for all enabled user accounts Note: Document any exceptions with the ISSO.</p>
+<p>Configure all enabled user account passwords to expire. Domain Controllers:</p>
+<ul class="simple">
+<li><p>Open Active Directory Users and Computers</p></li>
+<li><p>Uncheck <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">never</span> <span class="pre">expires</span></code> for all enabled user accounts Member servers and standalone systems</p></li>
+<li><p>Open Computer Management</p></li>
+<li><p>Go to Users</p></li>
+<li><p>Uncheck <code class="docutils literal notranslate"><span class="pre">Password</span> <span class="pre">never</span> <span class="pre">expires</span></code> for all enabled user accounts Note: Document any exceptions with the ISSO.</p></li>
+</ul>
 </section>
 </section>
 <section id="id93">
 <h2>20.47<a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h2>
 <section id="id94">
 <h3>20.47<a class="headerlink" href="#id94" title="Permalink to this heading">#</a></h3>
-<p>Maintain the default permissions for program file directories (Program Files and Program Files [x86]) and configure 2.3.10.5 Ensure ‘Network access: Let Everyone permissions apply to anonymous users’ is set to ‘Disabled’ (WN19-SO-000240). Changing in File Explorer: View the Properties of program file directories (Program Files and Program Files [x86]).  For each folder, view the Properties  Select the Security tab  Select the Advanced button <code class="docutils literal notranslate"><span class="pre">TrustedInstaller</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">subfolders</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">RESTRICTED</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p>
+<p>Maintain the default permissions for program file directories (Program Files and Program Files [x86]) and configure 2.3.10.5 Ensure ‘Network access: Let Everyone permissions apply to anonymous users’ is set to ‘Disabled’ (WN19-SO-000240). Changing in File Explorer: View the Properties of program file directories (Program Files and Program Files [x86]).</p>
+<ul class="simple">
+<li><p>For each folder, view the Properties</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button <code class="docutils literal notranslate"><span class="pre">TrustedInstaller</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">subfolders</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">RESTRICTED</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p></li>
+</ul>
 </section>
 </section>
 <section id="id95">
@@ -581,14 +781,24 @@
 <h2>20.51<a class="headerlink" href="#id101" title="Permalink to this heading">#</a></h2>
 <section id="id102">
 <h3>20.51<a class="headerlink" href="#id102" title="Permalink to this heading">#</a></h3>
-<p>Maintain the default permissions for the system drive’s root directory and configure 2.3.10.5 Ensure ‘Network access: Let Everyone permissions apply to anonymous users’ is set to ‘Disabled’ (WN19-SO-000240). Changing in File Explorer:  View the Properties of the system drive’s root directory (usually C:)  Select the Security tab  Select the Advanced button Change the permissions to match the default.  Default permissions: C:  Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Create</span> <span class="pre">folders/append</span> <span class="pre">data</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">subfolders</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Create</span> <span class="pre">files/write</span> <span class="pre">data</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">only</span></code>, and <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code></p>
+<p>Maintain the default permissions for the system drive’s root directory and configure 2.3.10.5 Ensure ‘Network access: Let Everyone permissions apply to anonymous users’ is set to ‘Disabled’ (WN19-SO-000240). Changing in File Explorer:</p>
+<ul class="simple">
+<li><p>View the Properties of the system drive’s root directory (usually C:)</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button Change the permissions to match the default.  Default permissions: C:  Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Create</span> <span class="pre">folders/append</span> <span class="pre">data</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">subfolders</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Create</span> <span class="pre">files/write</span> <span class="pre">data</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">only</span></code>, and <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">Control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code></p></li>
+</ul>
 </section>
 </section>
 <section id="id103">
 <h2>20.52<a class="headerlink" href="#id103" title="Permalink to this heading">#</a></h2>
 <section id="id104">
 <h3>20.52<a class="headerlink" href="#id104" title="Permalink to this heading">#</a></h3>
-<p>Maintain the default permissions for the Windows installation directory and configure 2.3.10.5 Ensure ‘Network access: Let Everyone permissions apply to anonymous users’ is set to ‘Disabled’ (WN19-SO-000240).  View the Properties of the Windows installation directory  Select the Security tab  Select the Advanced button Change the permissions to match the default.  Default permissions: \Windows Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to <code class="docutils literal notranslate"><span class="pre">TrustedInstaller</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">subfolders</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">RESTRICTED</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p>
+<p>Maintain the default permissions for the Windows installation directory and configure 2.3.10.5 Ensure ‘Network access: Let Everyone permissions apply to anonymous users’ is set to ‘Disabled’ (WN19-SO-000240).</p>
+<ul class="simple">
+<li><p>View the Properties of the Windows installation directory</p></li>
+<li><p>Select the Security tab</p></li>
+<li><p>Select the Advanced button Change the permissions to match the default.  Default permissions: \Windows Type - “Allow” for all Inherited from - “None” for all Principal - Access - Applies to <code class="docutils literal notranslate"><span class="pre">TrustedInstaller</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">subfolders</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Modify</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Administrators</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, <code class="docutils literal notranslate"><span class="pre">CREATOR</span> <span class="pre">OWNER</span> <span class="pre">-</span> <span class="pre">Full</span> <span class="pre">control</span> <span class="pre">-</span> <span class="pre">Subfolders</span> <span class="pre">and</span> <span class="pre">files</span> <span class="pre">only</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span> <span class="pre">RESTRICTED</span> <span class="pre">APPLICATION</span> <span class="pre">PACKAGES</span> <span class="pre">-</span> <span class="pre">Read</span> <span class="pre">&amp;</span> <span class="pre">execute</span> <span class="pre">-</span> <span class="pre">This</span> <span class="pre">folder,</span> <span class="pre">subfolders,</span> <span class="pre">and</span> <span class="pre">files</span></code></p></li>
+</ul>
 </section>
 </section>
 <section id="id105">
@@ -623,7 +833,18 @@
 <h2>20.57<a class="headerlink" href="#id113" title="Permalink to this heading">#</a></h2>
 <section id="id114">
 <h3>20.57<a class="headerlink" href="#id114" title="Permalink to this heading">#</a></h3>
-<p>To uninstall the SMBv1 protocol:  Start Server Manager  Select the server with the role  Scroll down to ROLES AND FEATURES in the right pane  Select Remove Roles and Features from the drop-down TASKS list  Select the appropriate server on the Server Selection page and click Next  Deselect SMB 1.0/CIFS File Sharing Support on the Features page  Click next and Remove as prompted (if installed). OR  Open Windows PowerShell with elevated privileges (run as administrator)  Type Uninstall-WindowsFeature -Name FS-SMB1 -Restart (Omit the Restart parameter if an immediate restart of the system cannot be done.)</p>
+<p>To uninstall the SMBv1 protocol:</p>
+<ul class="simple">
+<li><p>Start Server Manager</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to ROLES AND FEATURES in the right pane</p></li>
+<li><p>Select Remove Roles and Features from the drop-down TASKS list</p></li>
+<li><p>Select the appropriate server on the Server Selection page and click Next</p></li>
+<li><p>Deselect SMB 1.0/CIFS File Sharing Support on the Features page</p></li>
+<li><p>Click next and Remove as prompted (if installed). OR</p></li>
+<li><p>Open Windows PowerShell with elevated privileges (run as administrator)</p></li>
+<li><p>Type Uninstall-WindowsFeature -Name FS-SMB1 -Restart (Omit the Restart parameter if an immediate restart of the system cannot be done.)</p></li>
+</ul>
 </section>
 </section>
 <section id="id115">
@@ -658,21 +879,43 @@
 <h2>20.62<a class="headerlink" href="#id123" title="Permalink to this heading">#</a></h2>
 <section id="id124">
 <h3>20.62<a class="headerlink" href="#id124" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration, navigate to the the following and <code class="docutils literal notranslate"><span class="pre">Uninstall</span></code> the Telnet Client feature: To Uninstall the Telnet Client feature:  Start Server Manager  Select the server with the role  Scroll down to ROLES AND FEATURES in the right pane  Select Remove Roles and Features from the drop-down TASKS list  Select the appropriate server on the Server Selection page and click Next  Deselect Telnet Client on the Features page  Click Next and Remove as prompted (if installed).</p>
+<p>To establish the recommended configuration, navigate to the the following and <code class="docutils literal notranslate"><span class="pre">Uninstall</span></code> the Telnet Client feature: To Uninstall the Telnet Client feature:</p>
+<ul class="simple">
+<li><p>Start Server Manager</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to ROLES AND FEATURES in the right pane</p></li>
+<li><p>Select Remove Roles and Features from the drop-down TASKS list</p></li>
+<li><p>Select the appropriate server on the Server Selection page and click Next</p></li>
+<li><p>Deselect Telnet Client on the Features page</p></li>
+<li><p>Click Next and Remove as prompted (if installed).</p></li>
+</ul>
 </section>
 </section>
 <section id="id125">
 <h2>20.63<a class="headerlink" href="#id125" title="Permalink to this heading">#</a></h2>
 <section id="id126">
 <h3>20.63<a class="headerlink" href="#id126" title="Permalink to this heading">#</a></h3>
-<p>Remove any temporary user accounts after a crisis has been resolved or configure the accounts to automatically expire within 72 hours. Domain accounts can be configured with an account expiration date, under Account properties. Local accounts can be configured to expire with the following command:  Open the Command Prompt  Type Net user [username] /expires:[mm/dd/yyyy] where username is the name of the temporary user account</p>
+<p>Remove any temporary user accounts after a crisis has been resolved or configure the accounts to automatically expire within 72 hours. Domain accounts can be configured with an account expiration date, under Account properties. Local accounts can be configured to expire with the following command:</p>
+<ul class="simple">
+<li><p>Open the Command Prompt</p></li>
+<li><p>Type Net user [username] /expires:[mm/dd/yyyy] where username is the name of the temporary user account</p></li>
+</ul>
 </section>
 </section>
 <section id="id127">
 <h2>20.64<a class="headerlink" href="#id127" title="Permalink to this heading">#</a></h2>
 <section id="id128">
 <h3>20.64<a class="headerlink" href="#id128" title="Permalink to this heading">#</a></h3>
-<p>To Uninstall the TFTP Client feature:  Start “Server Manager”  Select the server with the role  Scroll down to “ROLES AND FEATURES” in the right pane  Select “Remove Roles and Features” from the drop-down “TASKS” list  Select the appropriate server on the “Server Selection” page and click “Next”  Deselect “TFTP Client” on the “Features” page  Click “Next” and “Remove” as prompted (if installed).</p>
+<p>To Uninstall the TFTP Client feature:</p>
+<ul class="simple">
+<li><p>Start “Server Manager”</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to “ROLES AND FEATURES” in the right pane</p></li>
+<li><p>Select “Remove Roles and Features” from the drop-down “TASKS” list</p></li>
+<li><p>Select the appropriate server on the “Server Selection” page and click “Next”</p></li>
+<li><p>Deselect “TFTP Client” on the “Features” page</p></li>
+<li><p>Click “Next” and “Remove” as prompted (if installed).</p></li>
+</ul>
 </section>
 </section>
 <section id="id129">
@@ -693,14 +936,27 @@
 <h2>20.67<a class="headerlink" href="#id133" title="Permalink to this heading">#</a></h2>
 <section id="id134">
 <h3>20.67<a class="headerlink" href="#id134" title="Permalink to this heading">#</a></h3>
-<p>If no anti-virus software is in use, install Windows Defender or third-party anti-virus.  Open PowerShell  Type Install-WindowsFeature -Name Windows-Defender For third-party anti-virus, install per anti-virus instructions and disable Windows Defender.  Open PowerShell  Type Uninstall-WindowsFeature -Name Windows-Defender</p>
+<p>If no anti-virus software is in use, install Windows Defender or third-party anti-virus.</p>
+<ul class="simple">
+<li><p>Open PowerShell</p></li>
+<li><p>Type Install-WindowsFeature -Name Windows-Defender For third-party anti-virus, install per anti-virus instructions and disable Windows Defender.</p></li>
+<li><p>Open PowerShell</p></li>
+<li><p>Type Uninstall-WindowsFeature -Name Windows-Defender</p></li>
+</ul>
 </section>
 </section>
 <section id="id135">
 <h2>20.68<a class="headerlink" href="#id135" title="Permalink to this heading">#</a></h2>
 <section id="id136">
 <h3>20.68<a class="headerlink" href="#id136" title="Permalink to this heading">#</a></h3>
-<p>To enable UEFI firmware to run in <code class="docutils literal notranslate"><span class="pre">UEFI</span></code> mode, not Legacy BIOS mode.  Open the PC BIOS menu. This menu can usually be accessed by pressing a key during the bootup sequence, such as F1, F2, F12, or Esc  OR from Windows, hold the Shift key while selecting Restart. Go to Troubleshoot &gt; Advanced Options: UEFI Firmware Settings  Find the Boot Device Menu select the command that identifies both the firmware mode and the device  Select UEFI mode  Save changes and exit. The PC will reboot</p>
+<p>To enable UEFI firmware to run in <code class="docutils literal notranslate"><span class="pre">UEFI</span></code> mode, not Legacy BIOS mode.</p>
+<ul class="simple">
+<li><p>Open the PC BIOS menu. This menu can usually be accessed by pressing a key during the bootup sequence, such as F1, F2, F12, or Esc</p></li>
+<li><p>OR from Windows, hold the Shift key while selecting Restart. Go to Troubleshoot &gt; Advanced Options: UEFI Firmware Settings</p></li>
+<li><p>Find the Boot Device Menu select the command that identifies both the firmware mode and the device</p></li>
+<li><p>Select UEFI mode</p></li>
+<li><p>Save changes and exit. The PC will reboot</p></li>
+</ul>
 </section>
 </section>
 <section id="id137">
@@ -721,7 +977,16 @@
 <h2>20.71<a class="headerlink" href="#id141" title="Permalink to this heading">#</a></h2>
 <section id="id142">
 <h3>20.71<a class="headerlink" href="#id142" title="Permalink to this heading">#</a></h3>
-<p>To Uninstall the Windows PowerShell 2.0 Engine feature:  Open Server Manager  Select the server with the role  Scroll down to ROLES AND FEATURES in the right pane  Select Remove Roles and Features from the drop-down TASKS list  Select the appropriate server on the Server Selection page and click next  Deselect Windows PowerShell 2.0 Engine under Windows PowerShell on the Features page  Click next and Remove as prompted (if installed) Note: Windows PowerShell 5.0 added advanced logging features that can provide additional detail when malware has been run on a system.</p>
+<p>To Uninstall the Windows PowerShell 2.0 Engine feature:</p>
+<ul class="simple">
+<li><p>Open Server Manager</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to ROLES AND FEATURES in the right pane</p></li>
+<li><p>Select Remove Roles and Features from the drop-down TASKS list</p></li>
+<li><p>Select the appropriate server on the Server Selection page and click next</p></li>
+<li><p>Deselect Windows PowerShell 2.0 Engine under Windows PowerShell on the Features page</p></li>
+<li><p>Click next and Remove as prompted (if installed) Note: Windows PowerShell 5.0 added advanced logging features that can provide additional detail when malware has been run on a system.</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -747,7 +1012,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">19 - Admin Templates (User)</div>
+                <div class="title">Admin Templates (User)</div>
                 
               </div>
             </a>
@@ -783,7 +1048,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">20 - Additional STIG Settings</a><ul>
+<li><a class="reference internal" href="#">Additional STIG Settings</a><ul>
 <li><a class="reference internal" href="#id1">20.1</a><ul>
 <li><a class="reference internal" href="#id2">20.1</a></li>
 </ul>

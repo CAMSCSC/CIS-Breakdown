@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="9 - Windows Defender Firewall with Advanced Security" href="9.html" /><link rel="prev" title="1 - Account Policies" href="1.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Windows Defender Firewall with Advanced Security" href="9.html" /><link rel="prev" title="Account Policies" href="1.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.09.15"/>
-        <title>5 - System Services - CIS Benchmark Breakdown</title>
+        <title>System Services - CIS Benchmark Breakdown</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -226,19 +226,37 @@
         </div>
         <article role="main">
           <section id="system-services">
-<h1>5 - System Services<a class="headerlink" href="#system-services" title="Permalink to this heading">#</a></h1>
+<h1>System Services<a class="headerlink" href="#system-services" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>5<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="id2">
 <h3>5<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Installed</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Microsoft</span> <span class="pre">FTP</span> <span class="pre">Service</span> </code>OR To Uninstall the FTP Server role:  Start Server Manager  Select the server with the role  Scroll down to ROLES AND FEATURES in the right pane  Select Remove Roles and Features from the drop-down TASKS list  Select the appropriate server on the Server Selection page and click Next  Deselect FTP Server under Web Server (IIS) on the Roles page  Click Next and Remove as prompted (if installed).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Installed</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Microsoft</span> <span class="pre">FTP</span> <span class="pre">Service</span> </code>OR To Uninstall the FTP Server role:</p>
+<ul class="simple">
+<li><p>Start Server Manager</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to ROLES AND FEATURES in the right pane</p></li>
+<li><p>Select Remove Roles and Features from the drop-down TASKS list</p></li>
+<li><p>Select the appropriate server on the Server Selection page and click Next</p></li>
+<li><p>Deselect FTP Server under Web Server (IIS) on the Roles page</p></li>
+<li><p>Click Next and Remove as prompted (if installed).</p></li>
+</ul>
 </section>
 </section>
 <section id="id3">
 <h2>5.2<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <section id="id4">
 <h3>5.2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Installed</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Peer</span> <span class="pre">Name</span> <span class="pre">Resolution</span> <span class="pre">Protocol</span> </code>OR To Uninstall the Peer Name Resolution Protocol feature:  Start “Server Manager”  Select the server with the role  Scroll down to “ROLES AND FEATURES” in the right pane  Select “Remove Roles and Features” from the drop-down “TASKS” list  Select the appropriate server on the “Server Selection” page and click “Next”  Deselect “Peer Name Resolution Protocol” on the “Features” page  Click “Next” and “Remove” as prompted (if installed).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Installed</span></code>. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Peer</span> <span class="pre">Name</span> <span class="pre">Resolution</span> <span class="pre">Protocol</span> </code>OR To Uninstall the Peer Name Resolution Protocol feature:</p>
+<ul class="simple">
+<li><p>Start “Server Manager”</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to “ROLES AND FEATURES” in the right pane</p></li>
+<li><p>Select “Remove Roles and Features” from the drop-down “TASKS” list</p></li>
+<li><p>Select the appropriate server on the “Server Selection” page and click “Next”</p></li>
+<li><p>Deselect “Peer Name Resolution Protocol” on the “Features” page</p></li>
+<li><p>Click “Next” and “Remove” as prompted (if installed).</p></li>
+</ul>
 </section>
 </section>
 <section id="id5">
@@ -259,7 +277,16 @@
 <h2>5.5<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <section id="id10">
 <h3>5.5<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Simple</span> <span class="pre">TCP/IP</span> <span class="pre">Services</span> </code>OR To Uninstall the Simple TCP/IP Services (simptcp) feature:  Start “Server Manager”  Select the server with the role  Scroll down to “ROLES AND FEATURES” in the right pane  Select “Remove Roles and Features” from the drop-down “TASKS” list  Select the appropriate server on the “Server Selection” page and click “Next”  Deselect “Simple TCP/IP Services” on the “Features” page  Click “Next” and “Remove” as prompted (if installed).</p>
+<p>To establish the recommended configuration via GP, set the following UI path to: <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> or ensure the service is not installed. <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">Configuration\Policies\Windows</span> <span class="pre">Settings\Security</span> <span class="pre">Settings\System</span> <span class="pre">Services\Simple</span> <span class="pre">TCP/IP</span> <span class="pre">Services</span> </code>OR To Uninstall the Simple TCP/IP Services (simptcp) feature:</p>
+<ul class="simple">
+<li><p>Start “Server Manager”</p></li>
+<li><p>Select the server with the role</p></li>
+<li><p>Scroll down to “ROLES AND FEATURES” in the right pane</p></li>
+<li><p>Select “Remove Roles and Features” from the drop-down “TASKS” list</p></li>
+<li><p>Select the appropriate server on the “Server Selection” page and click “Next”</p></li>
+<li><p>Deselect “Simple TCP/IP Services” on the “Features” page</p></li>
+<li><p>Click “Next” and “Remove” as prompted (if installed).</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -274,7 +301,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">9 - Windows Defender Firewall with Advanced Security</div>
+                <div class="title">Windows Defender Firewall with Advanced Security</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -285,7 +312,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1 - Account Policies</div>
+                <div class="title">Account Policies</div>
                 
               </div>
             </a>
@@ -321,7 +348,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">5 - System Services</a><ul>
+<li><a class="reference internal" href="#">System Services</a><ul>
 <li><a class="reference internal" href="#id1">5</a><ul>
 <li><a class="reference internal" href="#id2">5</a></li>
 </ul>
