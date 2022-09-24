@@ -1,7 +1,0 @@
-Edit `/etc/securetty` to only contain authorized terminals.
-
-If `/etc/securetty` does not exist, a template copy can be found at `/usr/share/doc/util-linux/examples/securetty`, which can be copied using:
-```bash
-sudo cp /usr/share/doc/util-linux/examples/securetty /etc/securetty
-```
-

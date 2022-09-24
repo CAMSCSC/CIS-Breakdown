@@ -1,7 +1,0 @@
-
-### 20.67  
-If no anti-virus software is in use, install Windows Defender or third-party anti-virus. 
-* Open PowerShell 
-* Type Install-WindowsFeature -Name Windows-Defender For third-party anti-virus, install per anti-virus instructions and disable Windows Defender. 
-* Open PowerShell 
-* Type Uninstall-WindowsFeature -Name Windows-Defender 

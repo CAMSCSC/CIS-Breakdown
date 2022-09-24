@@ -1,3 +1,0 @@
-
-### 20.44  
-Remove any unresolved SIDs found in User Rights assignments and determined to not be for currently valid accounts or groups by removing the accounts or groups from the appropriate group policy.   

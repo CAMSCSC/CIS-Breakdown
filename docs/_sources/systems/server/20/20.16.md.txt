@@ -1,5 +1,0 @@
-
-### 20.16  
-Maintain the default permissions for the registry keys of the HKEY_LOCAL_MACHINE hive as noted below. 
-* Open Regedit 
-* Right-click on the registry areas noted below If the default settings are not present change the permissions to the following: Select Permissions and the Advanced button.  HKEY_LOCAL_MACHINE\SECURITY Type - "Allow" for all Inherited from - "None" for all Principal - Access - Applies to: `SYSTEM - Full Control - This key and subkeys`, and `Administrators - Special - This key and subkeys ` HKEY_LOCAL_MACHINE\SOFTWARE Type - "Allow" for all Inherited from - "None" for all Principal - Access - Applies to `Users - Read - This key and subkeys`, `Administrators - Full Control - This key and subkeys`, `SYSTEM - Full Control - This key and subkeys`, `CREATOR OWNER - Full Control - This key and subkeys`, and `ALL APPLICATION PACKAGES - Read - This key and subkeys `  

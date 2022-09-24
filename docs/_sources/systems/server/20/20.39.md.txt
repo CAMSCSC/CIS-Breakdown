@@ -1,3 +1,0 @@
-
-### 20.39  
-Configure the system to, at a minimum, off-load audit records of interconnected systems in real time and off-load standalone systems weekly.   

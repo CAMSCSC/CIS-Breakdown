@@ -1,3 +1,0 @@
-
-### 20.65  
-Document the roles and features required for the system to operate. Uninstall roles and features that are not required.   

@@ -1,3 +1,0 @@
-
-### 20.36  
-Ensure each member of the Backup Operators group has separate accounts for backup functions and standard user functions. 

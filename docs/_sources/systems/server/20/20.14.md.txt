@@ -1,3 +1,0 @@
-
-### 20.14  
-Install a DoD approved HBSS software and ensure it is operating continuously. In addition, a documented configuration for an installed HBSS or if the HBSS software needs to be created.  

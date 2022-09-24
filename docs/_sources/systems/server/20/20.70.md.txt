@@ -1,3 +1,0 @@
-
-### 20.70  
-If a standard user account is found to have administrative privileges, remove the privileges from the standard user account, and create an administrative account for the user. 

@@ -1,7 +1,0 @@
-
-### 20.43  
-Maintain the Allow type permissions on organization-defined OUs to be at least as restrictive as the defaults below. 
-* Open Active Directory Users and Computers 
-* Ensure Advanced Features is selected in the View menu For each OU that is defined (folder in folder icon) excluding the Domain Controllers OU: 
-* Right-click the OU and select Properties 
-* Select the Security tab Set the permission to the following: `CREATOR OWNER - Special permissions`, `Self - Special permissions`, `Authenticated Users - Read, Special permissions`, `SYSTEM - Full Control`, `Domain Admins - Full Control`, `Enterprise Admins - Full Control`, `Key Admins - Special permissions`, `Enterprise Key Admins - Special permissions`, `Administrators - Read, Write, Create all child objects, Generate resultant set of policy (logging), Generate resultant set of policy (planning), Special permissions`, `Pre-Windows 2000 Compatible Access - Special permissions`, and `ENTERPRISE DOMAIN CONTROLLERS - Read, Special permissions ` Note: The special permissions for Authenticated Users are Read type.  Note #2: The special permissions for Pre-Windows 2000 Compatible Access are for Read types.  Note #3: Document any additional permissions above Read with the ISSO if an approved distributed administration model (help desk or other user support staff) is implemented. 

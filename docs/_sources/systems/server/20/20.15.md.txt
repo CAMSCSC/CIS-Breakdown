@@ -1,3 +1,0 @@
-
-### 20.15  
-Move shares used to store files owned by users to a different logical partition than the directory server data files. 

@@ -1,6 +1,0 @@
-In `/etc/logrotate.conf` change the `create` line to:
-
-```
-create 0640 root utmp
-```
-

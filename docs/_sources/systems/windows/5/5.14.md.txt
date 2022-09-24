@@ -1,3 +1,0 @@
-
-### 5.14  
-To establish the recommended configuration via GP, set the following UI path to: `Disabled`. `Computer Configuration\Policies\Windows Settings\Security Settings\System Services\Peer Name Resolution Protocol `

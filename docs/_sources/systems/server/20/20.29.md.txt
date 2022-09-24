@@ -1,3 +1,0 @@
-
-### 20.29  
-Configure the FTP sites to allow access only to specific FTP shared resources. Do not allow access to other areas of the system.   

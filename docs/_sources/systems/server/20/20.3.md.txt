@@ -1,8 +1,0 @@
-
-### 20.3  
-Limit the permissions on the Domain Controllers OU to restrict changes to: `System`, `Domain Admins`, `Enterprise Admins` and `Administrators`. 
-* Open Active Directory Users and Computers 
-* Ensure Advanced Features is selected in the View menu 
-* Select the Domain Controllers OU 
-* Right-click and select Properties 
-* Select the Security tab Ensure the permissions are set to the above recommendation.  Note The default permissions listed below satisfy this requirement. The permissions shown are at the summary level. More detailed permissions can be viewed by selecting the Advanced button, the desired Permission entry, and the View or Edit button.  Note #2 Except where noted otherwise, the special permissions may include a wide range of permissions and properties and are acceptable for this requirement.  Summary: `CREATOR OWNER - Special permissions`, `SELF - Special permissions`, and `Authenticated Users - Read, Special permissions` The special permissions for Authenticated Users are Read types. If detailed permissions include any Create, Delete, Modify, or Write Permissions or Properties it is not in compliance with this recommendation.   
