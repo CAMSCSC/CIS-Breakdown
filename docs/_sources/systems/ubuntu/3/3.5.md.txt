@@ -1,0 +1,5 @@
+Run `apt-get install gufw` to install gufw.
+
+Then run `gufw` to open the program, and change the settings to match the image below.
+
+![UFW Configuration](/img/ufw.png)
