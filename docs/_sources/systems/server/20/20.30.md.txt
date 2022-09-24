@@ -1,0 +1,8 @@
+
+### 20.30  
+To configure the FTP service to prevent anonymous logons: 
+* Open Internet Information Services (IIS) Manager 
+* Select the server 
+* Double-click FTP Authentication 
+* Select Anonymous Authentication 
+* Select `Disabled` under Actions 

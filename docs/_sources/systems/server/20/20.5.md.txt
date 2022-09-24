@@ -1,0 +1,23 @@
+
+### 20.5  
+Configure audit settings for Domain object to include at least the following: `Type - Fail`, `Principal - Everyone`, `Access - Full Control`, and `Inherited from - None`. These audit settings apply to this object only. 
+* Open Active Directory Users and Computers 
+* Ensure Advanced Features is selected in the View menu 
+* Select System under the domain being reviewed 
+* Right-click the Domain object and select Properties 
+* Select the Security tab 
+* Select the Advanced button 
+* Select the Auditing tab Note: The success types listed below are defaults. Where Special is listed in the summary screens for Access, detailed Permissions are provided for reference. Various Properties selections may also exist by default.  Two instances with the following summary information will be listed: 
+* Type - Success 
+* Principal - Everyone 
+* Access - (blank) 
+* Inherited from - None 
+* Applies to - Special OR 
+* Type - Success 
+* Principal - Domain Users 
+* Access - All extended rights 
+* Inherited from - None Applies to - This object only 
+* Type - Success 
+* Principal - Administrators 
+* Access - All extended rights 
+* Inherited from - None   

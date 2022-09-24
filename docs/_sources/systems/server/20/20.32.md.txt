@@ -1,0 +1,3 @@
+
+### 20.32  
+Reset the krbtgt account password via PowerShell. PowerShell scripts to reset the password can be found at the following Microsoft webpage: Browse code samples | Microsoft Docs Note: The password must be changed twice to effectively remove the password history. Changing the password once and waiting for replication to complete and then changing again reduces the risk of issues. Changing the password twice in rapid succession forces clients to re-authenticate (including application services) but is desired if a compromise is suspected. 

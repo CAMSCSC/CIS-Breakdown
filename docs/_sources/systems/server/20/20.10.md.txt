@@ -1,0 +1,8 @@
+
+### 20.10  
+Modify permissions on the SYSVOL directory, if necessary. Do not allow greater than `Read & execute` permissions for standard user accounts or groups. The defaults below meet this requirement: 
+* Open File Explorer 
+* Navigate to \Windows\SYSVOL (or the directory noted previously if different) 
+* Right-click the directory and select properties 
+* Select the Security tab 
+* Click Advanced Configure the audit permission settings.  C:\Windows\SYSVOL  `Type - "Allow" for all ` `Inherited from - "None" for all ` Principal - Access - Applies to  `Authenticated Users - Read & execute - This folder, subfolder, and files`, `Server Operators - Read & execute- This folder, subfolder, and files`, `Administrators - Special - This folder only (Special = Basic Permissions: all selected except Full control)`, `CREATOR OWNER - Full control - Subfolders and files only`, `Administrators - Full control - Subfolders and files only`, and `SYSTEM - Full control - This folder, subfolders, and files` 
