@@ -1,0 +1,73 @@
+### 5.5.1 Set Shadow Suite Parameters
+
+In `/etc/login.defs` change the parameters to:
+```
+PASS_MIN_DAYS 1
+PASS_MAX_DAYS 365
+PASS_WARN_AGE 7
+```
+
+Then run for every user:
+```bash
+useradd -D -f 30
+chage --inactive 30 <user>
+```
+
+Make sure any users do not have a password change date in the future by running:
+```bash
+awk -F : '/^[^:]+:[^!*]/{print $1}' /etc/shadow | while read -r usr; do ["$(date --date="$(chage --list "$usr" | grep '^Last password change' | cut -d: -f2)" +%s)" -gt "$(date "+%s")" ] && echo "user: $usr password changedate: $(chage --list "$usr" | grep '^Last password change' | cut -d: -f2)"; done
+```
+
+If a user has a password change date in the future, reset or expire the password.
+
+### 5.5.2 - Secure system accounts
+
+Set all system accounts to a non-login shell by running:
+```bash
+awk -F: '$1!~/(root|sync|shutdown|halt|^\+)/ && $3<'"$(awk
+'/^\s*UID_MIN/{print $2}' /etc/login.defs)"' &&$7!~/((\/usr)?\/sbin\/nologin)/ &&
+$7!~/(\/bin)?\/false/ {print $1}'
+/etc/passwd | while read -r user; do usermod -s "$(which nologin)" "$user"; done
+```
+
+### 5.5.3 - Ensure default group for root is GID 0
+
+Run `usermod -g 0 root`.
+
+### 5.5.4 - Ensure default user umask is 027 or more restrictive
+
+Run the following command to check if any files have an unrestrictive umask.
+```bash
+grep -RPi '(^|^[^#]*)\s*umask\s+([0-7][0-7][01][0-7]\b|[0-7][0-7][0-7][0-6]\b|[0-7][01][0-7]\b|[0-7][0-7][0-6]\b|(u=[rwx]{0,3},)?(g=[rwx]{0,3},)?o=[rwx]+\b|(u=[rwx]{1,3},)?g=[^rx]{1,3}(,o=[rwx]{0,3})?\b)' /etc/login.defs /etc/profile* /etc/bash.bashrc*
+```
+
+Edit the returned files to change the umask to `027`. For example:
+```
+UMASK           027
+```
+
+Then, set the default umask by editing `/etc/login.defs` 
+and make sure the following paramers are set:
+```
+UMASK 027
+
+USERGROUPS_ENAB no
+```
+
+### 5.5.5 Ensure defualt user shell timeout is 900 seconds or less
+
+Make sure that `TMOUT` is configured by running the command:
+```bash
+for f in /etc/bash.bashrc /etc/profile /etc/profile.d/*.sh ; do grep -Eq '(^|^[^#]*;)\s*(readonly|export(\s+[^$#;]+\s*)*)?\s*TMOUT=(900|[1-8][0-9][0-9]|[1-9][0-9]|[1-9])\b' $f && grep -Eq '(^|^[^#]*;)\s*readonly\s+TMOUT\b' $f && grep -Eq '(^|^[^#]*;)\s*export\s+([^$#;]+\s+)*TMOUT\b' $f && echo "TMOUT correctly configured in file: $f"; done
+```
+
+If `TMOUT` is not configured correctly, open the file and ensure that it matches
+```
+TMOUT=900
+readonly TMOUT
+export TMOUT
+```
+or
+```
+readonly TMOUT=900 ; export TMOUT
+```

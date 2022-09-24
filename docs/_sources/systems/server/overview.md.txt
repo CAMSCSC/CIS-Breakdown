@@ -1,0 +1,7 @@
+# Overview - Windows 10 Server 2019
+
+```{admonition} Warning
+This section is still under construction. Please check back later or view the source benchmark on the [CIS website](https://downloads.cisecurity.org/#/).
+```
+
+This is an overview for the Windows 10 Server CIS Benchmark. Although many steps are shared with the Windows 10 Enterprise benchmark, there are also many crucial differences, so this should not be used interchangably.
